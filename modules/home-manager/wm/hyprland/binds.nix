@@ -47,10 +47,10 @@ in
 
       # special apps
       (mkBind modKey "Q" "exec, ${special_app} kitty")
-      (mkBind modKey "W" "exec, ${special_workspace "discord" "discord"}")
-      (mkBind modKey "E" "exec, ${special_workspace "telegram-desktop" "telegram"}")
-      (mkBind modKey "R" "exec, ${special_app} librewolf")
-      (mkBind modKey "T" "exec, ${special_app} firefox-nightly")
+      (mkBind modKey "W" "exec, ${special_app} librewolf")
+      (mkBind modKey "E" "exec, ${special_app} firefox-nightly")
+      (mkBind modKey "R" "exec, ${special_workspace "discord" "discord"}")
+      (mkBind modKey "T" "exec, ${special_workspace "telegram-desktop" "telegram"}")
 
       # apps
       (mkBind superKey "l" "exec, librewolf")
