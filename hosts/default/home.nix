@@ -58,6 +58,7 @@
     obs-studio
     xwaylandvideobridge
     kdePackages.kdeconnect-kde
+    bat
   ];
 
   home.file = {
@@ -72,9 +73,13 @@
     ".config/BetterDiscord/themes/translucence-plus.css" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/discord/blur-theme.css";
     };
-    ".librewolf/afnctw1x.default/chrome/userChrome.css" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/librewolf/userChrome.css";
+    ".librewolf/afnctw1x.default/chrome" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/librewolf/colorful-minimalist";
+      recursive = true;
     };
+    # ".librewolf/afnctw1x.default/chrome/userChrome.css" = {
+    #   source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/librewolf/userChrome.css";
+    # };
     ".mozilla/firefox/pus15frm.default/chrome/userChrome.css" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/userChrome.css";
     };

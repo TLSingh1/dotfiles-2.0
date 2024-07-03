@@ -1,0 +1,82 @@
+#root.root {--frame-el-overlay-hover-bg: #ed0e29ff;}
+#root.root {--tabs-indent: 15px;}
+#root.root {--tabs-height: 32px;}
+#root.root {--ctx-menu-fg: whitesmoke;}
+#root.root {--tabs-activated-shadow: 0 1px 4px -1px rgba(0,0,0,0.282), inset 0 0 0 1px rgba(255,255,255,0.031);}
+#root.root {--tabs-lvl-opacity: 0.16;}
+#root.root {--ctx-menu-shadow: 0 0 0 1px rgba(255,255,255,0.086), 0 1px 16px 0 rgba(0,0,0,0.282);}
+#root.root {--ctx-menu-separator: black;}
+#root.root {--ctx-menu-font: 1rem JetBrains Mono;}
+#root.root {--ctx-menu-border-radius: 5px;}
+#root.root {--status-notice: #00e9fb;}
+#root.root {--tabs-font: 1rem JetBrains Mono;}
+
+/* ----------- Tab title styles ----------- */
+
+/* tabs indent when hovering over sidebar. Useful when using the left sidebar variant */
+/* .ScrollBox:not(:hover) {--tabs-indent: 0px;} */
+
+.Tab .title {
+  transition: all 5s ease;
+  display: inline-block;
+} 
+
+/* enable scrolling */
+.Tab:hover .title {margin-left: -10rem;}
+
+/* moves container indicator to the left */
+.Tab .ctx { left: 1px; }
+
+.Tab[data-discarded="true"] .title { 
+    text-decoration: line-through; 
+    opacity: 75%;
+}
+.Tab[data-unread="true"] .title {font-style: italic;}
+.Tab .fav > .child-count {display: none;} /* hide group counts */
+
+.Tab .fav > .fav-icon { /* gives favicon dropshadow */
+    width: var(32px);
+    height: var(32px);
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.4)) !important;
+}
+.Tab .audio {
+    top: 3px !important;
+    left: 10px !important;
+    filter: drop-shadow(0px 0px 1px black);
+}
+.Tab[data-pin="true"] .audio {
+    top: 12px !important;
+    left: 15px !important;
+    filter: drop-shadow(0px 0px 1px black);
+}
+
+/* ----------- Tab colors ----------- */
+:root { /* change colors as you like */
+	--red: #8200007f;
+	--orange: #e65e0481;
+	--yellow: #ffd71060;
+	--green: #0082007f;
+	--lightblue: #00c3ff7f;
+	--blue: #3333ff7f;
+	--purple: #cc00ff42;
+	--black: #50505099;
+	--white: #d9edf575;
+}
+
+.Tab[title*="https://github.com"], 
+.PinnedTab[title*="https://github.com"] {
+	--tabs-activated-bg: var(--white); /* current background */
+	--frame-el-overlay-hover-bg: var(--white); /* hover bg */
+}
+
+/* ----------- Pinned Tab Bar Shadow ----------- */
+.PinnedTabsBar {
+	box-shadow: inset -2px 0px 30px rgba(0, 0, 0, 0.23);
+}
+
+#root[data-pinned-tabs-position="panel"] .PinnedDock {
+	justify-content: flex-end;
+}
+#root[data-pinned-tabs-position="panel"]:not(:hover) .PinnedDock {
+	flex-direction: row-reverse;
+}
