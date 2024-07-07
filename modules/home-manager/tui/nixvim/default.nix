@@ -11,12 +11,53 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
+    colorschemes.rose-pine = {
+      enable = false;
+    };
+    # i like this one
+    colorschemes.oxocarbon = {
+      enable = false;
+    };
+    # i like this one
+    colorschemes.onedark = {
+      enable = true;
+    };
+    colorschemes.one = {
+      enable = false;
+    };
+    colorschemes.nord = {
+      enable = false;
+    };
+    colorschemes.nightfox = {
+      enable = false;
+    };
+    colorschemes.modus = {
+      enable = false;
+    };
+    colorschemes.melange = {
+      enable = false;
+    };
     colorschemes.kanagawa = {
       enable = false;
       settings.transparent = false;
     };
+    colorschemes.gruvbox = {
+      enable = false;
+    };
+    colorschemes.dracula = {
+      enable = false;
+    };
+    colorschemes.catppuccin = {
+      enable = false;
+    };
+    colorschemes.ayu = {
+      enable = false;
+    };
+    colorschemes.tokyonight = {
+      enable = false;
+    };
     colorschemes.cyberdream = {
-      enable = true;
+      enable = false;
       settings = {
         transparent = true;
         italic_comments = true;
@@ -25,9 +66,10 @@
         };
       };
     };
-    extraPlugins = with pkgs.vimPlugins; [
-      neorg
-      neorg-telescope
+    extraPlugins = with pkgs; [
+      vimPlugins.neorg
+      vimPlugins.neorg-telescope
+      winbar
     ];
     extraLuaPackages = luaPkgs: with luaPkgs; [
       lua-utils-nvim
@@ -177,17 +219,48 @@
 
 
       local highlight = {
-          "CursorColumn",
-          "Whitespace",
+          "RainbowRed",
+          "RainbowYellow",
+          "RainbowBlue",
+          "RainbowOrange",
+          "RainbowGreen",
+          "RainbowViolet",
+          "RainbowCyan",
       }
-      require("ibl").setup {
-          indent = { highlight = highlight, char = "" },
-          whitespace = {
-              highlight = highlight,
-              remove_blankline_trail = false,
-          },
-          scope = { enabled = false },
-      }
+      local hooks = require "ibl.hooks"
+      -- create the highlight groups in the highlight setup hook, so they are reset
+      -- every time the colorscheme changes
+      hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+          vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+          vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+          vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+          vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+          vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+          vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+          vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+      end)
+
+      vim.g.rainbow_delimiters = { highlight = highlight }
+      require("ibl").setup { scope = { highlight = highlight } }
+
+      hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
+
+      require("winbar").setup({
+        -- your configuration comes here, for example:
+        icons = true,
+        diagnostics = true,
+        buf_modified = true,
+        buf_modified_symbol = "M",
+        -- or use an icon
+        -- buf_modified_symbol = "●"
+        dim_inactive = {
+            enabled = false,
+            highlight = "WinbarNC",
+            icons = true, -- whether to dim the icons
+            name = true, -- whether to dim the name
+        }
+      })
+
     '';
   };
 }

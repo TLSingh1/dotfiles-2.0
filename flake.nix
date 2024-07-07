@@ -49,6 +49,7 @@
             inputs.neorg-overlay.overlays.default
             (final: prev: {
               materia-theme-transparent = prev.callPackage ./packages/materia-theme-transparent.nix {};
+              winbar = prev.callPackage ./packages/winbar.nix {};
             })
           ];
         }

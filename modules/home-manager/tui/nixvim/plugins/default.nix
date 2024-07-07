@@ -1,7 +1,7 @@
 {
   imports = [
     ./auto-session.nix
-    ./bufferline.nix
+    # ./bufferline.nix
     ./cmp.nix
     ./comment.nix
     ./dashboard.nix

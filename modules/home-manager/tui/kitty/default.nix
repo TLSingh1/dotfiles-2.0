@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      size = 9;
+      size = 8;
       name = "Roboto";
     };
     keybindings = {
@@ -31,8 +31,16 @@
       url_color = "#4fd6be";
       cursor = "#c8d3f5";
       cursor_text_color = "#222436";
-     # modify_font = "underline_position 200% underline_thickness 200%";
-      modify_font = "underline_thickness 200% underline_position 200%";
+      modify_font = "underline_position 200%";
+      # modify_font = "underline_position 200% underline_thickness 200%";
+      # modify_font = [
+      #   "underline_thickness 200%"
+      #   "underline_position 200%"
+      # ];
+      # modify_font = {
+      #   "underline_thickness" = "200%";
+      #   "underline_position" = "200%";
+      # };
 
       # Tabs
       active_tab_background = "#82aaff";
