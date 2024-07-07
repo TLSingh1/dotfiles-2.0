@@ -62,6 +62,8 @@
     yarn
     prismlauncher
     caprine-bin
+    jdk17
+    mupdf
   ];
 
   home.file = {
