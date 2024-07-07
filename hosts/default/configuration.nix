@@ -134,6 +134,8 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    # one day ill figure out how to make this work
+    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
@@ -175,7 +177,28 @@
     meson
     wget
     jq
+    lshw
   ];
+
+  # NOTE: NVIDIA
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.graphics.enable = true;
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, meson, ninja, dart-sass, gnome, gtk-engine-murrine }:
+{ stdenv, fetchFromGitHub, meson, ninja, dart-sass, gnome-themes-extra, gtk-engine-murrine }:
 
 stdenv.mkDerivation {
   pname = "materia-theme-transparent";
@@ -14,7 +14,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [ meson ninja dart-sass ];
 
   propagatedUserEnvPkgs = [ 
-    gnome.gnome-themes-extra 
+    gnome-themes-extra 
     gtk-engine-murrine
   ];
 

@@ -15,6 +15,7 @@
     ./noice.nix
     ./notify.nix
     ./project.nix
+    ./rainbow-delimiters.nix
     ./telescope.nix
     ./toggleterm.nix
     ./ts-autotag.nix

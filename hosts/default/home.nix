@@ -41,8 +41,8 @@
     zoxide
     grim
     imagemagick
-    gnome.zenity
-    gnome.gnome-themes-extra
+    zenity
+    gnome-themes-extra
     gtk-engine-murrine
     xfce.thunar
     wl-color-picker
@@ -59,6 +59,9 @@
     xwaylandvideobridge
     kdePackages.kdeconnect-kde
     bat
+    yarn
+    prismlauncher
+    caprine-bin
   ];
 
   home.file = {

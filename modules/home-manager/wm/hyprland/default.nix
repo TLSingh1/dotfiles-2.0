@@ -1,4 +1,3 @@
-{ inputs, pkgs, ...}:
 {
   imports = [
     ./animations.nix
@@ -6,6 +5,7 @@
     ./decoration.nix
     ./execs.nix
     ./general.nix
+    # ./plugins.nix
     ./windowrules.nix
   ];
 
