@@ -24,6 +24,18 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    winbar-nvim = {
+      url = "github:Ramilito/winbar.nvim";
+      flake = false;
+    };
+    colorful-winsep = {
+      url = "github:nvim-zh/colorful-winsep.nvim";
+      flake = false;
+    };
+    incline = {
+      url = "github:b0o/incline.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -49,7 +61,22 @@
             inputs.neorg-overlay.overlays.default
             (final: prev: {
               materia-theme-transparent = prev.callPackage ./packages/materia-theme-transparent.nix {};
-              winbar = prev.callPackage ./packages/winbar.nix {};
+              vimPlugins = prev.vimPlugins // {
+                winbar-nvim = prev.vimUtils.buildVimPlugin {
+                  name = "winbar-nvim";
+                  src = inputs.winbar-nvim;
+                };
+                colorful-winsep = prev.vimUtils.buildVimPlugin {
+                  name = "colorful-winsep";
+                  src = inputs.colorful-winsep;
+                };
+                incline = prev.vimUtils.buildVimPlugin {
+                  name = "incline";
+                  src = inputs.incline;
+                };
+
+              };
+              # winbar = prev.callPackage ./packages/winbar.nix {};
             })
           ];
         }

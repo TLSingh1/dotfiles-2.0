@@ -12,8 +12,8 @@
     ActiveWindow.bg = "#161616";
     InactiveWindow.bg = "#000000";
     WinSeparator = {
-      fg = "#161616";
-      bg = "#161616";
+      fg = "#000000";
+      bg = "#000000";
     };
     EndOfBuffer = {
       fg = "#161616";

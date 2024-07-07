@@ -34,6 +34,22 @@
         "type": "github"
       }
     },
+    "colorful-winsep": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720258945,
+        "narHash": "sha256-Tbc10nvLTOTKLZk4I7+tbJgltyBLBs5dASCCeioyry4=",
+        "owner": "nvim-zh",
+        "repo": "colorful-winsep.nvim",
+        "rev": "93a063e25a78c2a50441f3d1ece548465159aa1f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-zh",
+        "repo": "colorful-winsep.nvim",
+        "type": "github"
+      }
+    },
     "devshell": {
       "inputs": {
         "flake-utils": "flake-utils_5",
@@ -559,6 +575,22 @@
         "type": "github"
       }
     },
+    "incline": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715926410,
+        "narHash": "sha256-5DoIvIdAZV7ZgmQO2XmbM3G+nNn4tAumsShoN3rDGrs=",
+        "owner": "b0o",
+        "repo": "incline.nvim",
+        "rev": "16fc9c073e3ea4175b66ad94375df6d73fc114c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "b0o",
+        "repo": "incline.nvim",
+        "type": "github"
+      }
+    },
     "lib-aggregate": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -900,15 +932,18 @@
     "root": {
       "inputs": {
         "ags": "ags",
+        "colorful-winsep": "colorful-winsep",
         "firefox-nightly": "firefox-nightly",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "hyprpicker": "hyprpicker",
+        "incline": "incline",
         "neorg-overlay": "neorg-overlay",
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
-        "sops-nix": "sops-nix"
+        "sops-nix": "sops-nix",
+        "winbar-nvim": "winbar-nvim"
       }
     },
     "sops-nix": {
@@ -1008,6 +1043,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "winbar-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719915515,
+        "narHash": "sha256-a9ztOTDuywF9b6Rwi0LmUhXMvYw2OIEgaBCQDjGxE3g=",
+        "owner": "Ramilito",
+        "repo": "winbar.nvim",
+        "rev": "637950156d12a7cb90606cd27b4269c7a91c65c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Ramilito",
+        "repo": "winbar.nvim",
         "type": "github"
       }
     },

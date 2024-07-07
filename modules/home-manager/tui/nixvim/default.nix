@@ -11,50 +11,8 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
-    colorschemes.rose-pine = {
-      enable = false;
-    };
-    # i like this one
-    colorschemes.oxocarbon = {
-      enable = false;
-    };
-    # i like this one
     colorschemes.onedark = {
       enable = true;
-    };
-    colorschemes.one = {
-      enable = false;
-    };
-    colorschemes.nord = {
-      enable = false;
-    };
-    colorschemes.nightfox = {
-      enable = false;
-    };
-    colorschemes.modus = {
-      enable = false;
-    };
-    colorschemes.melange = {
-      enable = false;
-    };
-    colorschemes.kanagawa = {
-      enable = false;
-      settings.transparent = false;
-    };
-    colorschemes.gruvbox = {
-      enable = false;
-    };
-    colorschemes.dracula = {
-      enable = false;
-    };
-    colorschemes.catppuccin = {
-      enable = false;
-    };
-    colorschemes.ayu = {
-      enable = false;
-    };
-    colorschemes.tokyonight = {
-      enable = false;
     };
     colorschemes.cyberdream = {
       enable = false;
@@ -66,10 +24,13 @@
         };
       };
     };
-    extraPlugins = with pkgs; [
-      vimPlugins.neorg
-      vimPlugins.neorg-telescope
-      winbar
+    extraPlugins = with pkgs.vimPlugins; [
+      neorg
+      neorg-telescope
+      winbar-nvim
+      colorful-winsep
+      incline
+      nvim-web-devicons
     ];
     extraLuaPackages = luaPkgs: with luaPkgs; [
       lua-utils-nvim
@@ -245,22 +206,62 @@
 
       hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 
-      require("winbar").setup({
-        -- your configuration comes here, for example:
-        icons = true,
-        diagnostics = true,
-        buf_modified = true,
-        buf_modified_symbol = "M",
-        -- or use an icon
-        -- buf_modified_symbol = "●"
-        dim_inactive = {
-            enabled = false,
-            highlight = "WinbarNC",
-            icons = true, -- whether to dim the icons
-            name = true, -- whether to dim the name
-        }
+      -- require("winbar").setup({
+      --   icons = true,
+      --   diagnostics = true,
+      --   buf_modified = true,
+      --   buf_modified_symbol = "M",
+      --   dim_inactive = {
+      --     enabled = false,
+      --     highlight = "WinbarNC",
+      --     icons = true,
+      --     name = true,
+      --   }
+      -- })
+
+      require("colorful-winsep").setup({
+        -- highlight for Window separator
+        hi = {
+          bg = "#161616",
+          fg = "#161616",
+        },
+        -- This plugin will not be activated for filetype in the following table.
+        no_exec_files = { "packer", "TelescopePrompt", "mason", "CompetiTest", "NvimTree" },
+        -- Symbols for separator lines, the order: horizontal, vertical, top left, top right, bottom left, bottom right.
+        symbols = { "━", "┃", "┏", "┓", "┗", "┛" },
+        -- #70: https://github.com/nvim-zh/colorful-winsep.nvim/discussions/70
+        only_line_seq = true,
+        -- Smooth moving switch
+        smooth = true,
+        exponential_smoothing = true,
+        anchor = {
+          left = { height = 1, x = -1, y = -1 },
+          right = { height = 1, x = -1, y = 0 },
+          up = { width = 0, x = -1, y = 0 },
+          bottom = { width = 0, x = 1, y = 0 },
+       },
+       light_pollution = function(lines) end,
       })
 
+      require'nvim-web-devicons'.setup {
+        color_icons = true;
+        default = true;
+        strict = true;
+        override_by_filename = {
+          [".gitignore"] = {
+            icon = "",
+            color = "#f1502f",
+            name = "Gitignore"
+          }
+        };
+        override_by_extension = {
+          ["log"] = {
+            icon = "",
+            color = "#81e043",
+            name = "Log"
+          }
+        };
+      } 
     '';
   };
 }
