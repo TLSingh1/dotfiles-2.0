@@ -85,9 +85,24 @@
     # ".librewolf/afnctw1x.default/chrome/userChrome.css" = {
     #   source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/librewolf/userChrome.css";
     # };
-    ".mozilla/firefox/pus15frm.default/chrome/userChrome.css" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/userChrome.css";
+    # ".mozilla/firefox/pus15frm.default/chrome/userChrome.css" = {
+    #   source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/userChrome.css";
+    # };
+
+    ".mozilla/firefox/pus15frm.default/chrome/theme" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/theme";
+      recursive = true;
     };
+    ".mozilla/firefox/pus15frm.default/chrome/userChrome.css" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/userChrome.css";
+    };
+    ".mozilla/firefox/pus15frm.default/chrome/userContent.css" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/userContent.css";
+    };
+    ".mozilla/firefox/pus15frm.default/user.js" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/user.js";
+    };
+
   };
 
   # Home Manager can also manage your environment variables through
