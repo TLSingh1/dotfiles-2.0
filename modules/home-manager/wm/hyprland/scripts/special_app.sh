@@ -8,7 +8,7 @@ get_window_size() {
     "kitty") echo "600 400" ;;
     "discord") echo "600 400" ;;
     "librewolf") echo "800 500" ;;
-    "firefox-nightly") echo "800 600" ;;
+    "firefox-nightly") echo "800 500" ;;
     "telegram-desktop") echo "800 500" ;;
     *) echo "600 400" ;;
   esac

@@ -99,9 +99,6 @@
     ".mozilla/firefox/pus15frm.default/chrome/userContent.css" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/userContent.css";
     };
-    ".mozilla/firefox/pus15frm.default/user.js" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/user.js";
-    };
 
   };
 

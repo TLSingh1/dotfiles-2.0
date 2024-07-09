@@ -98,7 +98,7 @@
     }
     {
       action = ":Neotree float reveal <CR>";
-      key = "<leader>z";
+      key = "z";
       options = { silent = true; };
       mode = "n";
     }

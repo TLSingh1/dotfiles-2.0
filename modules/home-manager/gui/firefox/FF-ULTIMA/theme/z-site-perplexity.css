@@ -1,0 +1,5 @@
+@-moz-document regexp("^https?://(www\\.)?perplexity\\..*") {
+  * {
+    background-color: transparent !important;
+  }
+}

@@ -1,0 +1,40 @@
+@-moz-document url-prefix(about:home),
+url-prefix(about:newtab),
+url-prefix(about:config),
+url-prefix(about:addons) {
+  body {
+    background-color: transparent !important;
+  }
+
+  #toolbar {
+    background-color: transparent !important;
+  }
+
+  .main-search {
+    background: transparent !important;
+  }
+
+  .main-heading {
+    background: transparent !important;
+  }
+
+
+  #about-config-search {
+    background: transparent !important;
+  }
+
+  #prefs {
+    background-color: transparent !important;
+  }
+}
+
+
+@-moz-document regexp("^about?:..*") {
+  :root {
+    background: transparent !important;
+  }
+
+  .sticky-container {
+    background-color: transparent !important;
+  }
+}

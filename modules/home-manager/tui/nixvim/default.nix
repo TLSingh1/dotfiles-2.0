@@ -12,10 +12,10 @@
     viAlias = true;
     vimAlias = true;
     colorschemes.onedark = {
-      enable = true;
+      enable = false;
     };
     colorschemes.cyberdream = {
-      enable = false;
+      enable = true;
       settings = {
         transparent = true;
         italic_comments = true;

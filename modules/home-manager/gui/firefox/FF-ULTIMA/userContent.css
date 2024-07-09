@@ -18,5 +18,164 @@ To remove a certain feature, simple delete its line below, open website in new t
 
 @import url(theme/z-site-yt.css);
 
-/*@import url(theme/z-sites.css);*/
+@import url(theme/z-site-firefox.css);
 
+/*GITHUB*/
+@-moz-document domain("github.com") {
+  :root {
+    --bgColor-default: transparent !important;
+    --bgColor-inset: transparent !important;
+    --bgColor-muted: rgba(160, 160, 171, 0.3) !important;
+    --borderColor-default: rgba(160, 160, 171, 0.3) !important;
+    --borderColor-muted: rgba(160, 160, 171, 0.3) !important;
+  }
+
+  .color-bg-subtle {
+    background-color: transparent !important;
+  }
+
+  .input-contrast {
+    background-color: transparent !important;
+  }
+}
+
+/* GOOGLE */
+@-moz-document domain("google.com") {
+
+  body {
+    background: transparent !important;
+  }
+
+  .MV3Tnb,
+  .gb_x,
+  .FPdoLc.lJ9FBc,
+  .o3j99.qarstb,
+  .o3j99.c93Gbe,
+  .Lu57id,
+  .lJ9FBc,
+  .YR2tRd,
+  .QViVQe,
+  .s2agxb.mWcf0e,
+  #sfooter {
+    display: none !important;
+  }
+
+
+
+  #gb,
+  .CvDJxb,
+  .appbar,
+  .MjjYud,
+  .hlcw0c,
+  .dG2XIf,
+  .YbqTTb {
+    background-color: transparent !important;
+
+  }
+
+
+  .RNNXgb,
+  .cF4V5c {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+
+
+
+
+  .aajZCb {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+
+
+  .ZFiwCf,
+  .kLhEKe,
+  .p8Jhnd,
+  .S8ee5 {
+    background-color: transparent !important;
+
+  }
+
+  .b2Rnsc {
+    background-color: transparent !important;
+    border: 1px solid rgba(161, 161, 170, 0.1);
+  }
+
+
+  .GKS7s,
+  .Ww4FFb {
+    background-color: transparent !important;
+    border: 1px solid rgba(161, 161, 170, 0.1);
+  }
+
+  g-inner-card {
+    background-color: transparent !important;
+    border: 1px solid rgba(161, 161, 170, 0.1);
+  }
+
+  .REySof,
+  .NQyKp.h4wEae {
+    background-color: transparent !important;
+  }
+
+  .NQyKp.Hyaw8c.h4wEae.Maj6Tc {
+    border-color: rgba(161, 161, 170, 0.2) !important;
+  }
+
+  .UivI7b {
+    background: transparent !important;
+    border: 1px solid rgba(161, 161, 170, 0.2) !important;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+  }
+
+  .akqY6 {
+    background-color: rgba(161, 161, 170, 0.2) !important;
+    border: 1px solid rgba(161, 161, 170, 0.2) !important;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+  }
+
+  .zLSRge,
+  .Hwkikb.WY0eLb {
+    /*border: 1px solid rgba(161, 161, 170, 0.2) !important;*/
+    border-color: rgba(161, 161, 170, 0.2) !important;
+
+  }
+
+  .wdQNof {
+    border-color: rgba(161, 161, 170, 0.1) !important;
+  }
+
+  .gYJ4of.famfbb {
+    background-color: transparent !important;
+    border: 1px solid rgba(161, 161, 170, 0.1) !important;
+  }
+
+  g-fab {
+    background-color: rgba(161, 161, 170, 0.1) !important;
+  }
+
+  .GCSyeb {
+    background-color: rgba(161, 161, 170, 0.1) !important;
+  }
+
+  .aUSklf {
+    border-top: rgba(161, 161, 170, 0.1) !important;
+    border-width: 2px;
+  }
+
+  .GOE2if,
+  .ez8jFf,
+  .MsCHpb,
+  .iRPzcb,
+  hr {
+    border-color: rgba(161, 161, 170, 0.3) !important;
+  }
+
+  .ttwCMe {
+    background-color: transparent !important;
+  }
+
+}

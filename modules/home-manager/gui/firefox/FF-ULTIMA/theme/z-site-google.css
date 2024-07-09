@@ -1,0 +1,7 @@
+@-moz-document domain("google.com") {
+
+  body {
+    background: transparent !important;
+  }
+
+}
