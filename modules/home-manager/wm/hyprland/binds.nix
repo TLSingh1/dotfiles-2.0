@@ -44,6 +44,7 @@ in
       (mkBind modKey "22" "killactive,")
       (mkBind superKey "47" "exec, ags -t launcher")
       (mkBind superKey "119" "exec, ags -t powermenu")
+      (mkBind modKey "40" "hyprexpo:expo, toggle")
 
       # special apps
       (mkBind modKey "Q" "exec, ${special_app} kitty")
@@ -53,9 +54,9 @@ in
       (mkBind modKey "T" "exec, ${special_workspace "telegram-desktop" "telegram"}")
 
       # apps
-      (mkBind superKey "l" "exec, librewolf")
-      (mkBind superKey "k" "exec, firefox-nightly")
-      (mkBind superKey "j" "exec, google-chrome-stable")
+      # (mkBind superKey "l" "exec, librewolf")
+      (mkBind superKey "l" "exec, firefox-nightly")
+      (mkBind superKey "k" "exec, google-chrome-stable")
 
       (mkBind modKey "l" "movefocus, r")
       (mkBind modKey "h" "movefocus, l")

@@ -20,6 +20,52 @@ To remove a certain feature, simple delete its line below, open website in new t
 
 @import url(theme/z-site-firefox.css);
 
+/* YOUTUBE */
+@-moz-document domain("youtube.com") {
+
+  /* :root { */
+  /*   background-color: transparent !important; */
+  /* } */
+  html,
+  ytd-app,
+  ytd-mini-guide-renderer {
+    background-color: transparent !important;
+  }
+
+  ytd-mini-guide-entry-renderer {
+    background-color: transparent !important;
+    border: 1px solid rgba(160, 160, 171, 0.3) !important;
+  }
+
+  #items.ytd-mini-guide-renderer {
+    gap: 2rem !important;
+  }
+
+  a.ytd-mini-guide-entry-renderer {
+    padding: 8px 0 7px !important;
+  }
+
+  #background.ytd-masthead {
+    background-color: transparent !important;
+  }
+
+  #header {
+    display: none !important;
+  }
+
+  #container.ytd-searchbox {
+    background-color: transparent !important;
+    border-color: rgba(160, 160, 171, 0.3) !important;
+  }
+}
+
+/*TAILWIND DOCS*/
+@-moz-document domain("tailwindcss.com") {
+  .dark\:bg-slate-900:is(.dark *) {
+    background-color: transparent !important;
+  }
+}
+
 /*GITHUB*/
 @-moz-document domain("github.com") {
   :root {

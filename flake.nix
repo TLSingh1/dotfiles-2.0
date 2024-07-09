@@ -20,10 +20,10 @@
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
+    # hyprland-plugins = {
+    #   url = "github:hyprwm/hyprland-plugins";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
     winbar-nvim = {
       url = "github:Ramilito/winbar.nvim";
       flake = false;
@@ -47,7 +47,7 @@
     ags, 
     sops-nix,
     hyprpicker,
-    hyprland-plugins,
+    # hyprland-plugins,
     ... 
   }@inputs:
   {

@@ -5,16 +5,18 @@
     ./decoration.nix
     ./execs.nix
     ./general.nix
-    # ./plugins.nix
+    ./plugins.nix
     ./windowrules.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    plugins = [
-      # inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
-    ];
+    # plugins = [
+    #   pkgs.hyprlandPlugins.hyprexpo
+    #   pkgs.hyprlandPlugins.hyprtrails
+    #   # inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
+    # ];
     settings = {
       input = {
         touchpad = {

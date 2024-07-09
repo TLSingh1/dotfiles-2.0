@@ -64,6 +64,8 @@
     caprine-bin
     jdk17
     mupdf
+    hyprlandPlugins.hyprtrails
+    hyprlandPlugins.hyprexpo
   ];
 
   home.file = {
