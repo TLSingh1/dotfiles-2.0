@@ -48,8 +48,8 @@ in
 
       # special apps
       (mkBind modKey "Q" "exec, ${special_app} kitty")
-      (mkBind modKey "W" "exec, ${special_app} librewolf")
-      (mkBind modKey "E" "exec, ${special_app} firefox-nightly")
+      (mkBind modKey "W" "exec, ${special_app} firefox-nightly")
+      (mkBind modKey "E" "exec, pgrep qalculate-gtk && hyprctl dispatch togglespecialworkspace calculator || qalculate-gtk &")
       (mkBind modKey "R" "exec, ${special_workspace "discord" "discord"}")
       (mkBind modKey "T" "exec, ${special_workspace "telegram-desktop" "telegram"}")
 

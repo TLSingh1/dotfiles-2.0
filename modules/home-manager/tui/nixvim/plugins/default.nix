@@ -1,7 +1,7 @@
 {
   imports = [
     ./auto-session.nix
-    # ./bufferline.nix
+    ./bufferline.nix
     ./cmp.nix
     ./comment.nix
     ./dashboard.nix
@@ -18,6 +18,7 @@
     ./project.nix
     ./rainbow-delimiters.nix
     ./telescope.nix
+    ./todo-comments.nix
     ./toggleterm.nix
     ./ts-autotag.nix
     ./zen-mode.nix
@@ -48,13 +49,5 @@
       enable = true;
       enableLspFormat = true;
     };
-
-    nvim-tree = {
-      enable = false;
-      autoClose = true;
-      disableNetrw = true;
-      hijackUnnamedBufferWhenOpening = true;
-    };
-
   };
 }

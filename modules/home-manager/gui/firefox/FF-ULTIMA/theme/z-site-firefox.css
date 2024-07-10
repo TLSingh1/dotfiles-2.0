@@ -1,3 +1,10 @@
+@-moz-document url-prefix() {
+  :root {
+    --newtab-background-color: transparent !important;
+    --newtab-background-color-secondary: transparent !important;
+  }
+}
+
 @-moz-document url-prefix(about:home),
 url-prefix(about:newtab),
 url-prefix(about:config),
@@ -24,17 +31,6 @@ url-prefix(about:addons) {
   }
 
   #prefs {
-    background-color: transparent !important;
-  }
-}
-
-
-@-moz-document regexp("^about?:..*") {
-  :root {
-    background: transparent !important;
-  }
-
-  .sticky-container {
     background-color: transparent !important;
   }
 }

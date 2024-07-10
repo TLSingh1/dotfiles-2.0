@@ -64,6 +64,8 @@
     caprine-bin
     jdk17
     mupdf
+    mpv
+    ripgrep
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
   ];

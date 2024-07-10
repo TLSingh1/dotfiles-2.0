@@ -5,7 +5,7 @@ z-sites-newtab.css ~ NEW TABS
 
 z-sites.css ~ themes YOUTUBE and REDDIT
 
-z-site-scrollbars-and-pip.css ~ themes the scrollbar inside of your browser tab content
+G-site-scrollbars-and-pip.css ~ themes the scrollbar inside of your browser tab content
 
 To remove a certain feature, simple delete its line below, open website in new tab, no restart needed.
 */
@@ -18,7 +18,7 @@ To remove a certain feature, simple delete its line below, open website in new t
 
 @import url(theme/z-site-yt.css);
 
-@import url(theme/z-site-firefox.css);
+
 
 /* YOUTUBE */
 @-moz-document domain("youtube.com") {
@@ -124,15 +124,20 @@ To remove a certain feature, simple delete its line below, open website in new t
   .cF4V5c {
     background-color: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(10px) !important;
+    border: none !important;
   }
 
-
+  .xtSCL {
+    border: none !important;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+  }
 
 
 
   .aajZCb {
     background: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(10px) !important;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
   }
 
 
@@ -222,6 +227,10 @@ To remove a certain feature, simple delete its line below, open website in new t
 
   .ttwCMe {
     background-color: transparent !important;
+  }
+
+  #rhs.u7yw9 {
+    border-color: rgba(161, 161, 170, 0.3);
   }
 
 }

@@ -8,8 +8,8 @@
       "noblur,class:^(xwaylandvideobridge)$"
 
       # Qalculate-gtk
-      # "float,class:(qalculate-gtk)"
-      # "workspace special:calculator,class:(qalculate-gtk)"
+      "float,class:(qalculate-gtk)"
+      "workspace special:calculator,class:(qalculate-gtk)"
 
       # Kitty
       # "float,title:(fly_is_kitty)"
