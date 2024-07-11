@@ -47,6 +47,10 @@ Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/
 @import url(theme/override-mac.css);
 @import url(theme/override-styles.css);
 
+#identity-box.extensionPage label {
+  display: none !important;
+}
+
 /* #navigator-toolbox { */
 /*   visibility: collapse */
 /* } */

@@ -1,0 +1,11 @@
+.Gradient {
+	background-image: none !important;
+}
+
+.Dashboard.dark {
+	background-color: transparent;
+}
+
+html.theme-dark {
+	background-color: transparent;
+}

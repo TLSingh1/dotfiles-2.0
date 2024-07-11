@@ -6,6 +6,7 @@
         filetypes = [
           "norg"
           "dashboard"
+          "alpha"
         ];
       };
       scope = {

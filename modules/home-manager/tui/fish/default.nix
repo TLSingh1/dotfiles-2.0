@@ -6,6 +6,8 @@
       ls = "eza -l";
       tree = "eza -T";
       history = "history | nvim -";
+      cbonsai = "cbonsai -vlis 10000";
+      swim = "asciiquarium -t -s";
     };
     interactiveShellInit = ''
       set fish_greeting

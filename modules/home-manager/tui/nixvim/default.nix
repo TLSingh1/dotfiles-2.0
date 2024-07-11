@@ -1,6 +1,7 @@
 { pkgs, ...}:
 {
   imports = [
+    ./autocommands.nix
     ./options.nix
     ./keymaps.nix
     ./highlights.nix
@@ -205,6 +206,11 @@
       require("ibl").setup { scope = { highlight = highlight } }
 
       hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
+
+      hooks.register(
+        hooks.type.WHITESPACE,
+        hooks.builtin.hide_first_space_indent_level
+      )
 
       -- require("winbar").setup({
       --   icons = true,
@@ -516,6 +522,19 @@
 
       lualine.setup(config)
 
+      local status_ok, indent_blankline = pcall(require, "indent_blankline")
+      if not status_ok then
+      	return
+      end
+      
+      vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
+      vim.g.indent_blankline_filetype_exclude = {
+      	"help",
+      	"dashboard",
+      }
+      vim.g.indent_blankline_show_trailing_blankline_indent = true
+
     '';
   };
+
 }

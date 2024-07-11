@@ -66,6 +66,10 @@
     mupdf
     mpv
     ripgrep
+    ytermusic
+    cbonsai
+    pipes
+    asciiquarium-transparent
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
   ];
