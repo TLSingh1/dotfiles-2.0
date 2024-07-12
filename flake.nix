@@ -36,6 +36,10 @@
       url = "github:b0o/incline.nvim";
       flake = false;
     };
+    tdf = {
+      url = "github:itsjunetime/tdf";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -74,9 +78,11 @@
                   name = "incline";
                   src = inputs.incline;
                 };
-
               };
               # winbar = prev.callPackage ./packages/winbar.nix {};
+              tdf = prev.callPackage ./packages/tdf.nix {
+                src = inputs.tdf;
+              };
             })
           ];
         }

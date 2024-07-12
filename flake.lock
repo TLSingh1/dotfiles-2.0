@@ -912,6 +912,7 @@
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
         "sops-nix": "sops-nix",
+        "tdf": "tdf",
         "winbar-nvim": "winbar-nvim"
       }
     },
@@ -991,6 +992,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tdf": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720762900,
+        "narHash": "sha256-aWotrIVFzPM3sCa9wgXTNuPjgDI8u183KN5trL5c1z8=",
+        "owner": "itsjunetime",
+        "repo": "tdf",
+        "rev": "d4d144d53a8bc2580f2610e242014fadf8de11a4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "itsjunetime",
+        "repo": "tdf",
         "type": "github"
       }
     },

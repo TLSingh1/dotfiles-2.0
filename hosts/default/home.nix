@@ -70,6 +70,9 @@
     cbonsai
     pipes
     asciiquarium-transparent
+    cairo
+    poppler
+    tdf
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
   ];
