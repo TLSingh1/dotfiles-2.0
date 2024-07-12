@@ -75,6 +75,8 @@ in
 
       (mkBind modKey "60" "workspace, +1")
       (mkBind modKey "59" "workspace, -1")
+      (mkBind modKey "mouse:275" "workspace, -1")
+      (mkBind modKey "mouse:276" "workspace, +1")
     ] 
     ++ (mkWorkspaceBinds modKey superKey)
     ++ [
