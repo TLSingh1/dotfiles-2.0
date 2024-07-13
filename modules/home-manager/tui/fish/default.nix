@@ -20,3 +20,8 @@
   };
 }
 
+
+# set -x BROWSER 'firefox-nightly'
+# set -x XDG_BROWSER 'firefox-nightly'
+# set -x MANGAL_READER_BROWSER 'firefox-nightly'
+# set -x MANGAL_READER_READ_IN_BROWSER 'firefox-nightly'

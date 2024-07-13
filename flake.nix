@@ -20,10 +20,6 @@
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/hyprland-plugins";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
     winbar-nvim = {
       url = "github:Ramilito/winbar.nvim";
       flake = false;
@@ -34,10 +30,6 @@
     };
     incline = {
       url = "github:b0o/incline.nvim";
-      flake = false;
-    };
-    tdf = {
-      url = "github:itsjunetime/tdf";
       flake = false;
     };
   };
@@ -78,11 +70,9 @@
                   name = "incline";
                   src = inputs.incline;
                 };
+
               };
               # winbar = prev.callPackage ./packages/winbar.nix {};
-              tdf = prev.callPackage ./packages/tdf.nix {
-                src = inputs.tdf;
-              };
             })
           ];
         }

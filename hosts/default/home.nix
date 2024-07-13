@@ -70,11 +70,12 @@
     cbonsai
     pipes
     asciiquarium-transparent
-    cairo
-    poppler
     tdf
+    mangal
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
+    hyprlandPlugins.hyprwinwrap
+
   ];
 
   home.file = {
@@ -113,24 +114,34 @@
 
   };
 
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/tai/etc/profile.d/hm-session-vars.sh
-  #
   home.sessionVariables = {
     EDITOR = "nvim";
+    BROWSER = "firefox-nightly";
+    XDG_BROWSER = "firefox-nightly";
+    MANGAL_READER_READ_IN_BROWSER = "true";
+    MANGAL_READER_BROWSER = "firefox-nightly";
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "firefox-nightly.desktop";
+      "x-scheme-handler/http" = "firefox-nightly.desktop";
+      "x-scheme-handler/https" = "firefox-nightly.desktop";
+      "x-scheme-handler/about" = "firefox-nightly.desktop";
+      "x-scheme-handler/unknown" = "firefox-nightly.desktop";
+
+      "application/xhtml+xml" = "firefox-nightly.desktop";
+      "application/x-extension-htm" = "firefox-nightly.desktop";
+      "application/x-extension-html" = "firefox-nightly.desktop";
+      "application/x-extension-shtml" = "firefox-nightly.desktop";
+      "application/x-extension-xhtml" = "firefox-nightly.desktop";
+      "application/x-extension-xht" = "firefox-nightly.desktop";
+      "x-scheme-handler/ftp" = "firefox-nightly.desktop";
+      "x-scheme-handler/chrome" = "firefox-nightly.desktop";
+      "application/x-www-browser" = "firefox-nightly.desktop";
+      "application/json" = "firefox-nightly.desktop";
+    };
   };
 
   programs.git = {
