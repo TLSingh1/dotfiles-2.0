@@ -20,5 +20,8 @@
     hyprtrails = {
       color = "rgba(aba3dbff)";
     };
+    hyprwinwrap = {
+      class = "kitty-bg";
+    };
   };
 }
