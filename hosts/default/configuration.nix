@@ -81,7 +81,11 @@
   # Configure keymap in X11
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
+    displayManager.gdm.enable = false;
+    displayManager.sddm = {
+      enable = true;
+      theme = pkgs.callPackage ../../packages/neon-town-sddm.nix {};
+    };
     desktopManager.gnome.enable = true;
     xkb = {
       variant = "";
@@ -178,6 +182,9 @@
     wget
     jq
     lshw
+    sddm
+    nix-prefetch-git
+    (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
   ];
 
   # NOTE: NVIDIA

@@ -72,6 +72,8 @@
     asciiquarium-transparent
     tdf
     mangal
+    postman
+    okta-aws-cli
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
     hyprlandPlugins.hyprwinwrap
@@ -120,6 +122,13 @@
     XDG_BROWSER = "firefox-nightly";
     MANGAL_READER_READ_IN_BROWSER = "true";
     MANGAL_READER_BROWSER = "firefox-nightly";
+    OKTA_AWSCLI_ORG_DOMAIN = "enagonathletics.okta.com";
+    OKTA_AWSCLI_OIDC_CLIENT_ID = "0oa1qmrpslvkm9M9w1d8";
+    OKTA_AWSCLI_OPEN_BROWSER = "true";
+    OKTA_AWSCLI_FORMAT = "aws-credentials";
+    OKTA_AWSCLI_WRITE_AWS_CREDENTIALS = "true";
+    OKTA_AWSCLI_CACHE_ACCESS_TOKEN = "false";
+    OKTA_AWSCLI_SESSION_DURATION = 3600;
   };
 
   xdg.mimeApps = {

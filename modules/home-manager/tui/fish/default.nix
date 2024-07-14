@@ -8,6 +8,8 @@
       history = "history | nvim -";
       cbonsai = "cbonsai -vlis 10000";
       swim = "asciiquarium -t -s";
+      oac = "okta-aws-cli";
+      oacw= "okta-aws-cli web";
     };
     interactiveShellInit = ''
       set fish_greeting

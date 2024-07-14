@@ -12,7 +12,8 @@
       "workspace special:calculator,class:(qalculate-gtk)"
 
       # Kitty
-      "fullscreen,class:(kitty-bg)"
+      "float,noblur,class:(kitty-bg)"
+      # "noblur,float,noinitialfocus,pin,fullscreen,class:(kitty-bg)"
       # "float,title:(fly_is_kitty)"
       # "size 600 400,title:(fly_is_kitty)"
       # "workspace special:terminal, title:(fly_is_kitty)"
