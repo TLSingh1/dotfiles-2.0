@@ -1,5 +1,8 @@
 { pkgs, inputs, config, ... }:
 
+let
+  neon-town-sddm = pkgs.callPackage ../../packages/neon-town-sddm.nix {};
+in 
 {
   imports =
     [
@@ -82,15 +85,16 @@
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = false;
-    displayManager.sddm = {
-      enable = true;
-      theme = pkgs.callPackage ../../packages/neon-town-sddm.nix {};
-    };
     desktopManager.gnome.enable = true;
     xkb = {
       variant = "";
       layout = "us";
     };
+  };
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+    theme = "${neon-town-sddm}/share/sddm/themes/neon-town";
   };
 
   # Enable CUPS to print documents.
@@ -184,7 +188,7 @@
     lshw
     sddm
     nix-prefetch-git
-    (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
+    # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
   ];
 
   # NOTE: NVIDIA
