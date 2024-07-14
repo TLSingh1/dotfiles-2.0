@@ -57,6 +57,7 @@
             inputs.neorg-overlay.overlays.default
             (final: prev: {
               materia-theme-transparent = prev.callPackage ./packages/materia-theme-transparent.nix {};
+              neon-town-sddm = prev.callPackage ./packages/neon-town-sddm.nix {};
               vimPlugins = prev.vimPlugins // {
                 winbar-nvim = prev.vimUtils.buildVimPlugin {
                   name = "winbar-nvim";

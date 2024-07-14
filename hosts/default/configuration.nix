@@ -1,8 +1,4 @@
 { pkgs, inputs, config, ... }:
-
-let
-  neon-town-sddm = pkgs.callPackage ../../packages/neon-town-sddm.nix {};
-in 
 {
   imports =
     [
@@ -94,7 +90,7 @@ in
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "${neon-town-sddm}/share/sddm/themes/neon-town";
+    theme = "sddm-sugar-dark";
   };
 
   # Enable CUPS to print documents.
@@ -188,6 +184,9 @@ in
     lshw
     sddm
     nix-prefetch-git
+    neon-town-sddm
+    sddm-sugar-dark
+    # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
   ];
 
