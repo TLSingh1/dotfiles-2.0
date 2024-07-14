@@ -90,7 +90,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "sddm-sugar-dark";
+    theme = "sugar-dark";
   };
 
   # Enable CUPS to print documents.
@@ -186,6 +186,7 @@
     nix-prefetch-git
     neon-town-sddm
     sddm-sugar-dark
+    libsForQt5.qt5.qtgraphicaleffects
     # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
   ];
