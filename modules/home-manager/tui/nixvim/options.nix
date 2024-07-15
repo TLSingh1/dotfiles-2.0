@@ -31,7 +31,7 @@
       number = true;
       relativenumber = true;
       numberwidth = 4;
-      signcolumn = "no";
+      signcolumn = "yes";
       wrap = true;
       scrolloff = 8;
 # spell = true;

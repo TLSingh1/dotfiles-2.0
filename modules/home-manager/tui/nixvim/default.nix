@@ -15,8 +15,11 @@
     colorschemes.onedark = {
       enable = false;
     };
-    colorschemes.cyberdream = {
+    colorschemes.tokyonight = {
       enable = true;
+    };
+    colorschemes.cyberdream = {
+      enable = false;
       settings = {
         transparent = true;
         italic_comments = true;
@@ -228,8 +231,8 @@
       require("colorful-winsep").setup({
         -- highlight for Window separator
         hi = {
-          bg = "#161616",
-          fg = "#161616",
+          bg = "#222436",
+          fg = "#222436",
         },
         -- This plugin will not be activated for filetype in the following table.
         no_exec_files = { "packer", "TelescopePrompt", "mason", "CompetiTest", "NvimTree" },

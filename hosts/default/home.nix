@@ -73,11 +73,11 @@
     tdf
     mangal
     postman
+    tt
     okta-aws-cli
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
     hyprlandPlugins.hyprwinwrap
-
   ];
 
   home.file = {
@@ -129,6 +129,8 @@
     OKTA_AWSCLI_WRITE_AWS_CREDENTIALS = "true";
     OKTA_AWSCLI_CACHE_ACCESS_TOKEN = "false";
     OKTA_AWSCLI_SESSION_DURATION = 3600;
+    HYPRCURSOR_THEME = "Nordzy-cursors-white-HYPR";
+    HYPRCURSOR_SIZE = 24;
   };
 
   xdg.mimeApps = {
