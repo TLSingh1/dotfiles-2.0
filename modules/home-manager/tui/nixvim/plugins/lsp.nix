@@ -15,6 +15,7 @@
         lua-ls.enable = true;
         marksman.enable = true;
         nil-ls.enable = true;
+        nixd.enable = true;
         rust-analyzer = {
           enable = true;
           installCargo = false;
