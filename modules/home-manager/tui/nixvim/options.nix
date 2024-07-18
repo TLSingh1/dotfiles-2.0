@@ -45,7 +45,7 @@
 # foldlevel = 99;
 # foldenable = true;
 # foldlevelstart = 99;
-# winbar = " ";
+      # winbar = "";
     };
   };
 }

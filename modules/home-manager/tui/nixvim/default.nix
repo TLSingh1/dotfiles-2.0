@@ -328,21 +328,28 @@
       -- }
 
       local lualine = require("lualine")
-
+      local function file_path_with_parent()
+        local file = vim.fn.expand('%:t')
+        local parent = vim.fn.expand('%:h:t')
+        if parent == '.' then
+          return file
+        else
+          return parent .. '/' .. file
+        end
+      end
       local colors = {
-        bg       = "#202328",
-        fg       = "#bbc2cf",
-        yellow   = "#ECBE7B",
-        cyan     = "#008080",
-        darkblue = "#081633",
-        green    = "#98be65",
-        orange   = "#FF8800",
-        violet   = "#a9a1e1",
-        magenta  = "#c678dd",
-        blue     = "#51afef",
-        red      = "#ec5f67",
+        bg       = '#000000',
+        fg       = '#bbc2cf',
+        yellow   = '#ECBE7B',
+        cyan     = '#008080',
+        darkblue = '#081633',
+        green    = '#98be65',
+        orange   = '#FF8800',
+        violet   = '#a9a1e1',
+        magenta  = '#c678dd',
+        blue     = '#51afef',
+        red      = '#ec5f67',
       }
-
       local conditions = {
         buffer_not_empty = function()
           return vim.fn.empty(vim.fn.expand("%:t")) ~= 1
@@ -356,9 +363,28 @@
           return gitdir and #gitdir > 0 and #gitdir < #filepath
         end,
       }
-
+      local cursor_symbols = {
+        "▁",
+        "▂",
+        "▃",
+        "▄",
+        "▅",
+        "▆",
+        "▇",
+        "█",
+      }
+      local function cursor_location()
+        local current_line = vim.fn.line(".")
+        local total_lines = vim.fn.line("$")
+        local percentage = math.floor((current_line / total_lines) * 100)
+        local index = math.floor((percentage / 100) * (#cursor_symbols - 1)) + 1
+        return cursor_symbols[index]
+      end
       local config = {
         options = {
+          disabled_filetypes = {
+            statusline = { "alpha", "dashboard" },
+          },
           component_separators = "",
           section_separators = "",
           theme = {
@@ -383,39 +409,57 @@
           lualine_x = {},
         },
       }
-
       local function ins_left(component)
         table.insert(config.sections.lualine_c, component)
       end
-
       local function ins_right(component)
         table.insert(config.sections.lualine_x, component)
       end
-
-      ins_left {
+      ins_left({
         function()
-          return "▊"
+          return require("battery").get_status_line()
         end,
-        color = { fg = colors.blue },
-        padding = { left = 0, right = 1 },
-      }
-
-      ins_left {
+        color = { fg = "#1affff", bg = "#000000" },
+      })
+      ins_left({
         function()
-          return ""
+          local mode = vim.fn.mode()
+          local mode_symbols = {
+            n = " N",
+            i = " I",
+            v = " V",
+            [""] = " V",
+            V = " V",
+            c = " C",
+            no = " N",
+            s = " S",
+            S = " S",
+            [""] = " S",
+            ic = " I",
+            R = " R",
+            Rv = " R",
+            cv = " C",
+            ce = " C",
+            r = " R",
+            rm = " R",
+            ["r?"] = " R",
+            ["!"] = " !",
+            t = " T",
+          }
+          return mode_symbols[mode]
         end,
         color = function()
           local mode_color = {
             n = colors.red,
             i = colors.green,
             v = colors.blue,
-            [""] = colors.blue,
+            [""] = colors.blue,
             V = colors.blue,
             c = colors.magenta,
             no = colors.red,
             s = colors.orange,
             S = colors.orange,
-            [""] = colors.orange,
+            [""] = colors.orange,
             ic = colors.yellow,
             R = colors.violet,
             Rv = colors.violet,
@@ -429,101 +473,66 @@
           }
           return { fg = mode_color[vim.fn.mode()] }
         end,
-        padding = { right = 1 },
-      }
-
-      ins_left {
-        "filesize",
-        cond = conditions.buffer_not_empty,
-      }
-
-      ins_left {
-        "filename",
-        cond = conditions.buffer_not_empty,
-        color = { fg = colors.magenta, gui = "bold" },
-      }
-
-      ins_left { "location" }
-
-      ins_left { "progress", color = { fg = colors.fg, gui = "bold" } }
-
-      ins_left {
+        padding = { right = 1, left = 1 },
+      })
+      ins_left({
         "diagnostics",
         sources = { "nvim_diagnostic" },
-        symbols = { error = " ", warn = " ", info = " " },
+        symbols = { error = " ", warn = " ", info = " " },
         diagnostics_color = {
-          error = { fg = colors.red },
-          warn = { fg = colors.yellow },
-          info = { fg = colors.cyan },
+          color_error = { fg = colors.red },
+          color_warn = { fg = colors.yellow },
+          color_info = { fg = colors.cyan },
         },
-      }
-
-      ins_left {
+      })
+      ins_left({
         function()
           return "%="
         end,
-      }
-
-      ins_left {
-        function()
-          local msg = "No Active Lsp"
-          local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-          local clients = vim.lsp.get_active_clients()
-          if next(clients) == nil then
-            return msg
-          end
-          for _, client in ipairs(clients) do
-            local filetypes = client.config.filetypes
-            if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-              return client.name
-            end
-          end
-          return msg
-        end,
-        icon = " LSP:",
-        color = { fg = "#ffffff", gui = "bold" },
-      }
-
-      ins_right {
-        "o:encoding",
-        fmt = string.upper,
-        cond = conditions.hide_in_width,
-        color = { fg = colors.green, gui = "bold" },
-      }
-
-      ins_right {
-        "fileformat",
-        fmt = string.upper,
-        icons_enabled = false,
-        color = { fg = colors.green, gui = "bold" },
-      }
-
-      ins_right {
-        "branch",
-        icon = "",
-        color = { fg = colors.violet, gui = "bold" },
-      }
-
-      ins_right {
+      })
+      ins_left({
         "diff",
-        symbols = { added = " ", modified = "󰝤 ", removed = " " },
+        symbols = { added = " ", modified = "󰝤 ", removed = " " },
         diff_color = {
-          added = { fg = colors.green },
-        modified = { fg = colors.orange },
-          removed = { fg = colors.red },
+          added = { fg = "#81C784" },
+          modified = { fg = "#FFB74D" },
+          removed = { fg = "#E57373" },
         },
         cond = conditions.hide_in_width,
-      }
-
-      ins_right {
+      })
+      ins_left({
+        "branch",
+        icon = "",
+        color = { fg = "#BA68C8", gui = "bold" },
+      })
+      ins_right({
         function()
-          return "▊"
+          local names = {}
+          for i, server in pairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
+            table.insert(names, server.name)
+          end
+          local count = #names
+          return "" .. count .. " LSP"
         end,
-        color = { fg = colors.blue },
-        padding = { left = 1 },
-      }
-
+        icon = "🧠",
+        color = { fg = "#EF9A9A", gui = "bold" },
+      })
+      ins_right({
+        "progress",
+        color = {
+          fg = "#4DD0E1",
+          gui = "bold",
+        },
+      })
+      ins_right({
+        function()
+          return cursor_location()
+        end,
+        color = { fg = "#4DD0E1", gui = "bold" },
+      })
+      
       lualine.setup(config)
+
 
       local status_ok, indent_blankline = pcall(require, "indent_blankline")
       if not status_ok then
@@ -537,6 +546,20 @@
       }
       vim.g.indent_blankline_show_trailing_blankline_indent = true
 
+
+      function get_file_path_with_parent()
+        local file = vim.fn.expand("%:t")
+        local parent = vim.fn.expand("%:h:t")
+        if parent == "." then
+          return file
+        else
+          return parent .. "/" .. file
+        end
+      end
+
+      vim.opt.winbar = "%{%v:lua.get_file_path_with_parent()%}"
+      vim.api.nvim_set_hl(0, "WinBar", { bg = "#222436", fg = "#1affff", bold = true, italic = true })
+      vim.api.nvim_set_hl(0, "WinBarNC", { bg = "#000000" })
     '';
   };
 
