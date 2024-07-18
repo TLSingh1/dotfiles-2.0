@@ -5,6 +5,7 @@
     ./decoration.nix
     ./execs.nix
     ./general.nix
+    ./group.nix
     ./plugins.nix
     ./windowrules.nix
     ./workspacerules.nix

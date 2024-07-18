@@ -69,6 +69,9 @@ in
       (mkBind "${modKey} CTRL" "L" "movewindoworgroup, r")
 
       (mkBind modKey "F" "togglefloating,")
+      (mkBind modKey "G" "exec, hyprctl dispatch togglegroup")
+      (mkBind modKey "23" "exec, hyprctl dispatch changegroupactive")
+
       (mkBind modKey "P" "pseudo,")
       (mkBind modKey "m" "movetoworkspacesilent, special")
       (mkBind modKey "s" "togglespecialworkspace")
