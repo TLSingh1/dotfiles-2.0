@@ -7,9 +7,11 @@
     ./dashboard.nix
     ./gitsigns.nix
     ./hop.nix
+    ./image.nix
     ./indent-blankline.nix
     ./lsp.nix
     ./lualine.nix
+    ./markdown.nix
     ./navic.nix
     ./navbuddy.nix
     ./neo-tree.nix
@@ -25,14 +27,16 @@
   ];
 
   programs.nixvim.plugins = {
-    image = {
-      enable = true;
-      backend = "kitty";
-    };
     friendly-snippets.enable = true;
     treesitter = { enable = true; ensureInstalled = "all"; };
-    treesitter-context.enable = true;
-    treesitter-textobjects.enable = true;
+    treesitter-context = {
+      enable = true;
+      settings = {
+        max_lines = 3;
+        min_window_height = 40;
+      };
+    };
+    treesitter-textobjects.enable = false;
     # comment.enable = true;
     ts-context-commentstring.enable = true;
     ts-autotag.enable = true;

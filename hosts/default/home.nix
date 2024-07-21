@@ -77,6 +77,7 @@
     obsidian
     okta-aws-cli
     catppuccin-cursors.mochaMaroon
+    python3Packages.pylatexenc
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
     hyprlandPlugins.hyprwinwrap

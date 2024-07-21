@@ -32,6 +32,10 @@
       url = "github:b0o/incline.nvim";
       flake = false;
     };
+    markdown-nvim = {
+      url = "github:MeanderingProgrammer/markdown.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -71,7 +75,10 @@
                   name = "incline";
                   src = inputs.incline;
                 };
-
+                markdown-nvim = prev.vimUtils.buildVimPlugin {
+                  name = "markdown-nvim";
+                  src = inputs.markdown-nvim;
+                };
               };
               # winbar = prev.callPackage ./packages/winbar.nix {};
             })

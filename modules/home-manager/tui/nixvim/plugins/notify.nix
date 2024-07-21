@@ -4,6 +4,6 @@
     backgroundColour = "#1affff";
     fps = 30;
     render = "minimal";
-    timeout = 300;
+    timeout = 1000;
   };
 }
