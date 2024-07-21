@@ -76,8 +76,8 @@ in
       (mkBind modKey "m" "movetoworkspacesilent, special")
       (mkBind modKey "s" "togglespecialworkspace")
 
-      (mkBind modKey "60" "workspace, +1")
-      (mkBind modKey "59" "workspace, -1")
+      # (mkBind modKey "60" "workspace, +1")
+      # (mkBind modKey "59" "workspace, -1")
       (mkBind modKey "mouse:275" "workspace, -1")
       (mkBind modKey "mouse:276" "workspace, +1")
     ] 
@@ -93,6 +93,8 @@ in
     ];
 
     binde = [
+      (mkBinde modKey "60" "workspace, +1")
+      (mkBinde modKey "59" "workspace, -1")
       (mkBinde "" "67" "exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") 
       (mkBinde "" "68" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")
       (mkBinde "" "69" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")

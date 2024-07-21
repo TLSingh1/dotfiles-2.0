@@ -119,7 +119,7 @@
   users.users.tai = {
     isNormalUser = true;
     description = "tai";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     # packages = with pkgs; [
     # #  thunderbird
     # ];
@@ -187,6 +187,7 @@
     neon-town-sddm
     sddm-sugar-dark
     libsForQt5.qt5.qtgraphicaleffects
+    minikube
     # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
   ];
@@ -218,6 +219,19 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  # Docker
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+  hardware.nvidia-container-toolkit.enable = true;
+
+  # virtualisation.containers.cdi.dynamic.nvidia.enable = true;
+
 
   # List services that you want to enable:
   services.supergfxd.enable = true;

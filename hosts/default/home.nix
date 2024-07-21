@@ -75,6 +75,7 @@
     postman
     tt
     okta-aws-cli
+    catppuccin-cursors.mochaMaroon
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
     hyprlandPlugins.hyprwinwrap
@@ -129,7 +130,7 @@
     OKTA_AWSCLI_WRITE_AWS_CREDENTIALS = "true";
     OKTA_AWSCLI_CACHE_ACCESS_TOKEN = "false";
     OKTA_AWSCLI_SESSION_DURATION = 3600;
-    HYPRCURSOR_THEME = "Nordzy-cursors-white-HYPR";
+    HYPRCURSOR_THEME = "catppuccin-cursors.mochaMaroon";
     HYPRCURSOR_SIZE = 24;
   };
 
