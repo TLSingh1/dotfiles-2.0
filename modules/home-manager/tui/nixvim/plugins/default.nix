@@ -25,6 +25,10 @@
   ];
 
   programs.nixvim.plugins = {
+    image = {
+      enable = true;
+      backend = "kitty";
+    };
     friendly-snippets.enable = true;
     treesitter = { enable = true; ensureInstalled = "all"; };
     treesitter-context.enable = true;

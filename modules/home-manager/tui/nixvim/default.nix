@@ -36,10 +36,14 @@
       # incline
       nvim-web-devicons
     ];
+    extraPackages = with pkgs; [
+      imagemagick
+    ];
     extraLuaPackages = luaPkgs: with luaPkgs; [
       lua-utils-nvim
       nvim-nio
       pathlib-nvim
+      magick
     ];
     extraConfigLuaPost = ''
       local luasnip = require("luasnip")
