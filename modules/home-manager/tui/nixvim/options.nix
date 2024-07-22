@@ -41,10 +41,10 @@
       /* breakindentopt = "shift:2,min:40,sbr"; */
       linebreak = true;
       winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow";
-# foldcolumn = "1";
-# foldlevel = 99;
-# foldenable = true;
-# foldlevelstart = 99;
+      foldcolumn = "1";
+      foldlevel = 99;
+      foldenable = true;
+      foldlevelstart = 99;
       # winbar = "";
     };
   };

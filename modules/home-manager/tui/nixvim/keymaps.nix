@@ -31,6 +31,12 @@
       mode = "n";
     }
     {
+      action = ":IncRename ";
+      key = "<leader>rn";
+      options = { silent = true; };
+      mode = "n";
+    }
+    {
       action = "p:let @+=@0<CR>";
       key = "p";
       options = { silent = true; };

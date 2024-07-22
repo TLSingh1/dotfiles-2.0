@@ -25,6 +25,7 @@
     ./todo-comments.nix
     ./toggleterm.nix
     ./ts-autotag.nix
+    ./ufo.nix
     ./zen-mode.nix
   ];
 
