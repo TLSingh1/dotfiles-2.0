@@ -10,6 +10,7 @@
     ./gitsigns.nix
     ./hop.nix
     ./image.nix
+    ./inc-rename.nix
     ./indent-blankline.nix
     ./lsp.nix
     ./lualine.nix
