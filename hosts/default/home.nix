@@ -78,6 +78,7 @@
     okta-aws-cli
     catppuccin-cursors.mochaMaroon
     python3Packages.pylatexenc
+    texlive.combined.scheme-full
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
     hyprlandPlugins.hyprwinwrap

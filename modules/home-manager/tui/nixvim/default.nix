@@ -16,10 +16,10 @@
       enable = false;
     };
     colorschemes.tokyonight = {
-      enable = true;
+      enable = false;
     };
     colorschemes.cyberdream = {
-      enable = false;
+      enable = true;
       settings = {
         transparent = true;
         italic_comments = true;
@@ -563,7 +563,7 @@
       end
 
       vim.opt.winbar = "%{%v:lua.get_file_path_with_parent()%}"
-      vim.api.nvim_set_hl(0, "WinBar", { bg = "#222436", fg = "#1affff", bold = true, italic = true })
+      -- vim.api.nvim_set_hl(0, "WinBar", { bg = "#222436", fg = "#1affff", bold = true, italic = true })
       vim.api.nvim_set_hl(0, "WinBarNC", { bg = "#000000" })
 
 
@@ -679,6 +679,30 @@
       vim.opt.statuscolumn = [[%!v:lua.statuscolumn()]]
 
       require('render-markdown').setup({})
+
+      require'lspconfig'.lua_ls.setup {
+        on_init = function(client)
+          local path = client.workspace_folders[1].name
+          if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+            return
+          end
+      
+          client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+            runtime = {
+              version = 'LuaJIT'
+            },
+            workspace = {
+              checkThirdParty = false,
+              library = {
+                vim.env.VIMRUNTIME
+              }
+            }
+          })
+        end,
+        settings = {
+          Lua = {}
+        }
+      }
 
     '';
   };

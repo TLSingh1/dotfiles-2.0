@@ -11,7 +11,6 @@
     ./indent-blankline.nix
     ./lsp.nix
     ./lualine.nix
-    ./markdown.nix
     ./navic.nix
     ./navbuddy.nix
     ./neo-tree.nix

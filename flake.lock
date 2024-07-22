@@ -580,6 +580,22 @@
         "type": "github"
       }
     },
+    "markdown-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721417080,
+        "narHash": "sha256-YWcpS8K8ykAnC2qDXhl6kteSJ9pwxT4WXMqsFrwX7WM=",
+        "owner": "MeanderingProgrammer",
+        "repo": "markdown.nvim",
+        "rev": "123048b428eb85618780fcef9ea9f4d68b5d2508",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MeanderingProgrammer",
+        "repo": "markdown.nvim",
+        "type": "github"
+      }
+    },
     "mozilla": {
       "flake": false,
       "locked": {
@@ -908,6 +924,7 @@
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
         "incline": "incline",
+        "markdown-nvim": "markdown-nvim",
         "neorg-overlay": "neorg-overlay",
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
