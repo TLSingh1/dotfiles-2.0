@@ -14,6 +14,6 @@
     showBasename = true;
     showDirname = true;
     showModified = true;
-    showNavic = true;
+    showNavic = false;
   };
 }

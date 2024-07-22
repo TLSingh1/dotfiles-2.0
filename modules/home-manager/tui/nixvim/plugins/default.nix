@@ -2,6 +2,7 @@
   imports = [
     ./auto-session.nix
     ./barbecue.nix
+    ./better-escape.nix
     ./bufferline.nix
     ./cmp.nix
     ./comment.nix
