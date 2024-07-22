@@ -23,7 +23,7 @@
         };
         svelte.enable = true;
         tailwindcss.enable = true;
-        tsserver.enable = true;
+        tsserver.enable = false;
       };
     };
   };

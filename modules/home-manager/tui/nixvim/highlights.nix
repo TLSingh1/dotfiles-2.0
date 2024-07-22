@@ -25,6 +25,10 @@
     SignColumn = {
       bg = "#000000";
     };
+    NavbuddyFloatBorder = {
+      fg = "#1e2030";
+      bg = "#1e2030";
+    };
     # WinBar = {
     #   fg = "#1affff";
     #   bg = "#222436";

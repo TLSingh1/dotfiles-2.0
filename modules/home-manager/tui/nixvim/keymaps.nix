@@ -19,6 +19,12 @@
       mode = "n";
     }
     {
+      action = ":qa <CR>";
+      key = "<leader><leader>q";
+      options = { silent = true; };
+      mode = "n";
+    }
+    {
       action = ":qa! <CR>";
       key = "<leader>QA";
       options = { silent = true; };
@@ -98,7 +104,13 @@
     }
     {
       action = ":Neotree float reveal <CR>";
-      key = "z";
+      key = ";";
+      options = { silent = true; };
+      mode = "n";
+    }
+    {
+      action = ":Navbuddy <CR>";
+      key = "<leader><leader>;";
       options = { silent = true; };
       mode = "n";
     }

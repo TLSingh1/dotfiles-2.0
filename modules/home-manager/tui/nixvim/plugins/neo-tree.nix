@@ -35,7 +35,7 @@
         position = "50%";
       };
       mappings = {
-        "z" = "close_window";
+        ";" = "close_window";
       };
     };
     extraOptions = {

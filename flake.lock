@@ -929,6 +929,8 @@
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
         "sops-nix": "sops-nix",
+        "tailwind-tools": "tailwind-tools",
+        "typescript-tools": "typescript-tools",
         "winbar-nvim": "winbar-nvim"
       }
     },
@@ -1011,6 +1013,22 @@
         "type": "github"
       }
     },
+    "tailwind-tools": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720695412,
+        "narHash": "sha256-fOzypdU21/wfzImW9f3B9B8IM68OvW+WHeVABJgzuXw=",
+        "owner": "luckasRanarison",
+        "repo": "tailwind-tools.nvim",
+        "rev": "ce3ab3fd6ad05d08fbfc1ef84b3f5312cd05ee6d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "luckasRanarison",
+        "repo": "tailwind-tools.nvim",
+        "type": "github"
+      }
+    },
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
@@ -1029,6 +1047,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "typescript-tools": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721281922,
+        "narHash": "sha256-8WH/eCff1liDVaezZFvu6RqCtXU4Uwq80BlWiH+tQME=",
+        "owner": "pmizio",
+        "repo": "typescript-tools.nvim",
+        "rev": "f8c2e0b36b651c85f52ad5c5373ff8b07adc15a7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pmizio",
+        "repo": "typescript-tools.nvim",
         "type": "github"
       }
     },

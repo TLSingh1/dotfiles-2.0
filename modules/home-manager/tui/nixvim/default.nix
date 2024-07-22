@@ -16,10 +16,10 @@
       enable = false;
     };
     colorschemes.tokyonight = {
-      enable = false;
+      enable = true;
     };
     colorschemes.cyberdream = {
-      enable = true;
+      enable = false;
       settings = {
         transparent = true;
         italic_comments = true;
@@ -36,6 +36,10 @@
       # incline
       nvim-web-devicons
       markdown-nvim
+      typescript-tools
+      tailwind-tools
+      # tailwindcss-colorizer-cmp
+      # tw-values
     ];
     extraPackages = with pkgs; [
       imagemagick
@@ -137,6 +141,12 @@
 	      	["core.defaults"] = {},
 	      	["core.itero"] = {},
 	      	["core.export.markdown"] = {},
+	      	["core.latex.renderer"] = {
+            config = {
+              conceal = true,
+              render_on_enter = false,
+            },
+          },
 	      	["core.keybinds"] = {
 	      		config = {
 	      			hook = function(keybinds)
@@ -703,6 +713,9 @@
           Lua = {}
         }
       }
+
+      require("typescript-tools").setup {}
+      require("tailwind-tools").setup {}
 
     '';
   };

@@ -1,6 +1,7 @@
 {
   imports = [
     ./auto-session.nix
+    ./barbecue.nix
     ./bufferline.nix
     ./cmp.nix
     ./comment.nix

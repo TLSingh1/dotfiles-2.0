@@ -36,6 +36,22 @@
       url = "github:MeanderingProgrammer/markdown.nvim";
       flake = false;
     };
+    typescript-tools = {
+      url = "github:pmizio/typescript-tools.nvim";
+      flake = false;
+    };
+    tailwind-tools = {
+      url = "github:luckasRanarison/tailwind-tools.nvim";
+      flake = false;
+    };
+    # tailwindcss-colorizer-cmp = {
+    #   url = "github:roobert/tailwindcss-colorizer-cmp.nvim";
+    #   flake = false;
+    # };
+    # tw-values = {
+    #   url = "github:MaximilianLloyd/tw-values.nvim";
+    #   flake = false;
+    # };
   };
 
   outputs = {
@@ -79,6 +95,22 @@
                   name = "markdown-nvim";
                   src = inputs.markdown-nvim;
                 };
+                typescript-tools = prev.vimUtils.buildVimPlugin {
+                  name = "typescript-tools";
+                  src = inputs.typescript-tools;
+                };
+                tailwind-tools = prev.vimUtils.buildVimPlugin {
+                  name = "tailwind-tools";
+                  src = inputs.tailwind-tools;
+                };
+                # tailwindcss-colorizer-cmp = prev.vimUtils.buildVimPlugin {
+                #   name = "tailwindcss-colorizer-cmp";
+                #   src = inputs.tailwindcss-colorizer-cmp;
+                # };
+                # tw-values = prev.vimUtils.buildVimPlugin {
+                #   name = "tw-values";
+                #   src = inputs.tw-values;
+                # };
               };
               # winbar = prev.callPackage ./packages/winbar.nix {};
             })
