@@ -717,6 +717,9 @@
       require("typescript-tools").setup {}
       require("tailwind-tools").setup {}
 
+      -- require('ufo').setup()
+
+
       vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
       vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
       local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -731,7 +734,6 @@
           })
       end
       require('ufo').setup()
-
     '';
   };
 

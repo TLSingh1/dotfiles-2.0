@@ -7,6 +7,7 @@
     };
     sourceBuffer = {
       followNode = false;
+      highlight = false;
     };
   };
 }

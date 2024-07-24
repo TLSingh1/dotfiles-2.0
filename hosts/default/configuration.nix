@@ -8,6 +8,11 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [ 
+    "cgroup_enable=cpuset"
+    "cgroup_memory=1"
+    "cgroup_enable=memory"
+  ];
 
   # this was a test to get them in sops secrets in nix config
   # altho this is only from system config and not home-managr
@@ -50,6 +55,9 @@
 
 
   networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
+  networking.extraHosts = "localhost";
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -57,7 +65,6 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
@@ -87,6 +94,26 @@
       layout = "us";
     };
   };
+
+  services.kubernetes = {
+    kubelet = {
+      enable = true;
+      extraOpts = "--fail-swap-on=false";
+    };
+    masterAddress = "localhost";
+    easyCerts = true;
+    # apiserverAddress = "https://localhost:6443";
+    roles = [ "master" "node" ];
+    addons.dns.enable = true;
+
+    # apiserver.enable = true;
+    # controllerManager.enable = true;
+    # scheduler.enable = true;
+    # addonManager.enable = true;
+    # proxy.enable = true;
+    # flannel.enable = true;
+  };
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
@@ -119,7 +146,7 @@
   users.users.tai = {
     isNormalUser = true;
     description = "tai";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "kvm" ];
     # packages = with pkgs; [
     # #  thunderbird
     # ];
@@ -187,6 +214,10 @@
     neon-town-sddm
     sddm-sugar-dark
     libsForQt5.qt5.qtgraphicaleffects
+    kubernetes
+    kubernetes-helm
+    kubectl
+    kompose
     minikube
     # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})

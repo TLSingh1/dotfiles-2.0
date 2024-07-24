@@ -6,5 +6,6 @@
     ./kitty
     ./nixvim
     ./ranger
+    ./yazi
   ];
 }

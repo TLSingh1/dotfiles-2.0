@@ -9,7 +9,8 @@
       cbonsai = "cbonsai -vlis 10000";
       swim = "asciiquarium -t -s";
       oac = "okta-aws-cli";
-      oacw= "okta-aws-cli web";
+      oacw = "okta-aws-cli web";
+      k = "kubectl";
     };
     interactiveShellInit = ''
       set fish_greeting
