@@ -82,6 +82,12 @@
     hyprlandPlugins.hyprtrails
     hyprlandPlugins.hyprexpo
     hyprlandPlugins.hyprwinwrap
+    satty
+    ffmpeg
+    ffmpegthumbnailer
+    unar
+    poppler
+    neofetch
   ];
 
   home.file = {
@@ -116,6 +122,11 @@
     };
     ".mozilla/firefox/pus15frm.default/chrome/userContent.css" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/userContent.css";
+    };
+
+    ".config/yazi/flavors/tokyo-night.yazi" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/tui/yazi/tokyo-night.yazi";
+      recursive = true;
     };
 
   };

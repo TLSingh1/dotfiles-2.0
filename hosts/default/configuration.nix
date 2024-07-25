@@ -219,9 +219,18 @@
     kubectl
     kompose
     minikube
+    usbutils
+    msi-perkeyrgb
     # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
   ];
+
+  # NOTE: bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+  services.blueman.enable = true;
 
   # NOTE: NVIDIA
   services.xserver.videoDrivers = ["nvidia"];

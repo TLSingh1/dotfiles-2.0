@@ -612,6 +612,22 @@
         "type": "github"
       }
     },
+    "msi-perkeyrgb": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1572249114,
+        "narHash": "sha256-QG+Kchoy+kbg32EF0psnoowvmEVKnfIOsMcxR569RTg=",
+        "owner": "Askannz",
+        "repo": "msi-perkeyrgb",
+        "rev": "e185a29e864bdda952b336940b047b5f97419d46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Askannz",
+        "repo": "msi-perkeyrgb",
+        "type": "github"
+      }
+    },
     "neorg": {
       "flake": false,
       "locked": {
@@ -925,13 +941,15 @@
         "hyprpicker": "hyprpicker",
         "incline": "incline",
         "markdown-nvim": "markdown-nvim",
+        "msi-perkeyrgb": "msi-perkeyrgb",
         "neorg-overlay": "neorg-overlay",
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
         "sops-nix": "sops-nix",
         "tailwind-tools": "tailwind-tools",
         "typescript-tools": "typescript-tools",
-        "winbar-nvim": "winbar-nvim"
+        "winbar-nvim": "winbar-nvim",
+        "yazi-nvim": "yazi-nvim"
       }
     },
     "sops-nix": {
@@ -1109,6 +1127,22 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "yazi-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1721903069,
+        "narHash": "sha256-rruKzHsdlzyiCpledQr9pjHUMiweNNcLrn3rVZBxTa8=",
+        "owner": "mikavilpas",
+        "repo": "yazi.nvim",
+        "rev": "a197e9a8d4bcb506cef25fd7c72fcdd664659522",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mikavilpas",
+        "repo": "yazi.nvim",
         "type": "github"
       }
     }

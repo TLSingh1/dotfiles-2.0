@@ -80,6 +80,8 @@ in
       # (mkBind modKey "59" "workspace, -1")
       (mkBind modKey "mouse:275" "workspace, -1")
       (mkBind modKey "mouse:276" "workspace, +1")
+
+      # screenshots + annotate
     ] 
     ++ (mkWorkspaceBinds modKey superKey)
     ++ [
@@ -97,7 +99,8 @@ in
       (mkBinde modKey "59" "workspace, -1")
       (mkBinde "" "67" "exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") 
       (mkBinde "" "68" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")
-      (mkBinde "" "69" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")
+      # FIX: Uncomment this when done playing minecraft
+      # (mkBinde "" "69" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")
       (mkBinde "" "71" "exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle")
       (mkBind "" "74" "exec, ${toggleWlsunset}")
       (mkBinde "" "75" "exec, brightnessctl set 5%-")

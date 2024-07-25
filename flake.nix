@@ -44,6 +44,14 @@
       url = "github:luckasRanarison/tailwind-tools.nvim";
       flake = false;
     };
+    yazi-nvim = {
+      url = "github:mikavilpas/yazi.nvim";
+      flake = false;
+    };
+    msi-perkeyrgb = {
+      url = "github:Askannz/msi-perkeyrgb";
+      flake = false;
+    };
     # tailwindcss-colorizer-cmp = {
     #   url = "github:roobert/tailwindcss-colorizer-cmp.nvim";
     #   flake = false;
@@ -76,6 +84,7 @@
           nixpkgs.overlays = [ 
             inputs.neorg-overlay.overlays.default
             (final: prev: {
+              msi-perkeyrgb = final.callPackage ./packages/msi-perkeyrgb.nix {};
               materia-theme-transparent = prev.callPackage ./packages/materia-theme-transparent.nix {};
               neon-town-sddm = prev.callPackage ./packages/neon-town-sddm.nix {};
               vimPlugins = prev.vimPlugins // {
@@ -102,6 +111,10 @@
                 tailwind-tools = prev.vimUtils.buildVimPlugin {
                   name = "tailwind-tools";
                   src = inputs.tailwind-tools;
+                };
+                yazi-nvim = prev.vimUtils.buildVimPlugin {
+                  name = "yazi-nvim";
+                  src = inputs.yazi-nvim;
                 };
                 # tailwindcss-colorizer-cmp = prev.vimUtils.buildVimPlugin {
                 #   name = "tailwindcss-colorizer-cmp";

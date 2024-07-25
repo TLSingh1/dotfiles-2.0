@@ -38,6 +38,7 @@
       markdown-nvim
       typescript-tools
       tailwind-tools
+      yazi-nvim
       # tailwindcss-colorizer-cmp
       # tw-values
     ];
@@ -734,6 +735,8 @@
           })
       end
       require('ufo').setup()
+
+      require('yazi').setup()
     '';
   };
 
