@@ -54,6 +54,7 @@
     extraFiles = {
       "lua/config/init.lua" = builtins.readFile ./lua/config/init.lua;
       "lua/plugins/init.lua" = builtins.readFile ./lua/plugins/init.lua;
+      "lua/plugins/neorg.lua" = builtins.readFile ./lua/plugins/neorg.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 

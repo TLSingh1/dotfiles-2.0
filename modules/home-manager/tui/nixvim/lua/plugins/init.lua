@@ -1,1 +1,1 @@
-vim.notify("hello from plugins init")
+require("neorg")
