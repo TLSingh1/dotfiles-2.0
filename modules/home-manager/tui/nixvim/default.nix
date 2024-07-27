@@ -60,6 +60,10 @@
       "lua/plugins/lualine.lua" = builtins.readFile ./lua/plugins/lualine.lua;
       "lua/plugins/render-markdown.lua" = builtins.readFile ./lua/plugins/render-markdown.lua;
       "lua/plugins/lsp/init.lua" = builtins.readFile ./lua/plugins/lsp/init.lua;
+      "lua/plugins/typescript-tools.lua" = builtins.readFile ./lua/plugins/typescript-tools.lua;
+      "lua/plugins/tailwind-tools.lua" = builtins.readFile ./lua/plugins/tailwind-tools.lua;
+      "lua/plugins/ufo.lua" = builtins.readFile ./lua/plugins/ufo.lua;
+      "lua/plugins/yazi.lua" = builtins.readFile ./lua/plugins/yazi.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 

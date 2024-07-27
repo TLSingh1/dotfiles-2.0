@@ -2,11 +2,19 @@
   programs.nixvim.plugins.noice = {
     enable = true;
     routes = [
-    {
-      view = "mini";
-      filter = { find = "written"; };
-      opts = { skip = true; };
-    }
+      {
+        view = "mini";
+        filter = { find = "written"; };
+        opts = { skip = true; };
+      }
+      {
+        filter = { find = "Failed to attach to nixd"; };
+        opts = { skip = true; };
+      }
+      {
+        filter = { find = "Failed to attach to nil_ls"; };
+        opts = { skip = true; };
+      }
     ];
     views = {
       cmdlinePopup = {
