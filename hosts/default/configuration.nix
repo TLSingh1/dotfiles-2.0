@@ -231,6 +231,12 @@
   # NOTE: RGB control
   services.hardware.openrgb.enable = true;
 
+  # NOTE: ollama
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
+
   # NOTE: bluetooth
   hardware.bluetooth = {
     enable = true;

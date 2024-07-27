@@ -11,7 +11,7 @@ for _, sign in ipairs(signs) do
 end
 
 local config = {
-  virtual_text = true,
+  virtual_text = false,
   virtual_lines = {
     only_current_line = true,
     highlight_whole_line = false,

@@ -89,6 +89,7 @@
     poppler
     neofetch
     youtube-music
+    # ollama-cuda
   ];
 
   home.file = {

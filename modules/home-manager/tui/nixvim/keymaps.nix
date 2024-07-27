@@ -111,13 +111,13 @@
     {
       # action = ":Neotree float reveal <CR>";
       action = "<cmd>lua require('yazi').yazi() <CR>";
-      key = ";";
+      key = ":";
       options = { silent = true; };
       mode = "n";
     }
     {
       action = ":Neotree float reveal <CR>";
-      key = ":";
+      key = ";";
       options = { silent = true; };
       mode = "n";
     }
