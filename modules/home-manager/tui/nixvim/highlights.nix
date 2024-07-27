@@ -1,5 +1,9 @@
 {
   programs.nixvim.highlight = {
+    FloatBorder = {
+      fg = "#222436";
+      bg = "#222436";
+    };
     NeoTreeNormal.bg = "#16181a";
     NeoTreeFloatTitle = {
       fg = "#1e2030";

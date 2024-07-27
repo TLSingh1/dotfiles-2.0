@@ -116,8 +116,14 @@
       mode = "n";
     }
     {
+      action = ":Neotree float reveal <CR>";
+      key = ":";
+      options = { silent = true; };
+      mode = "n";
+    }
+    {
       action = ":Navbuddy <CR>";
-      key = ",";
+      key = "'\'";
       options = { silent = true; };
       mode = "n";
     }

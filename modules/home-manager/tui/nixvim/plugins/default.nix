@@ -12,6 +12,7 @@
     ./image.nix
     ./inc-rename.nix
     ./indent-blankline.nix
+    ./lsp-lines.nix
     ./lsp.nix
     ./lualine.nix
     ./navic.nix
