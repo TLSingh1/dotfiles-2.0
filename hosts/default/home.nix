@@ -88,6 +88,7 @@
     unar
     poppler
     neofetch
+    youtube-music
   ];
 
   home.file = {

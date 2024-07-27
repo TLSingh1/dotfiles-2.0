@@ -612,22 +612,6 @@
         "type": "github"
       }
     },
-    "msi-perkeyrgb": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1572249114,
-        "narHash": "sha256-QG+Kchoy+kbg32EF0psnoowvmEVKnfIOsMcxR569RTg=",
-        "owner": "Askannz",
-        "repo": "msi-perkeyrgb",
-        "rev": "e185a29e864bdda952b336940b047b5f97419d46",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Askannz",
-        "repo": "msi-perkeyrgb",
-        "type": "github"
-      }
-    },
     "neorg": {
       "flake": false,
       "locked": {
@@ -941,7 +925,6 @@
         "hyprpicker": "hyprpicker",
         "incline": "incline",
         "markdown-nvim": "markdown-nvim",
-        "msi-perkeyrgb": "msi-perkeyrgb",
         "neorg-overlay": "neorg-overlay",
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
@@ -1133,11 +1116,11 @@
     "yazi-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1721903069,
-        "narHash": "sha256-rruKzHsdlzyiCpledQr9pjHUMiweNNcLrn3rVZBxTa8=",
+        "lastModified": 1721970087,
+        "narHash": "sha256-m7MXuJePePHVDq4TiRDzoPS/IN8gY8KccfoPQpN+YJw=",
         "owner": "mikavilpas",
         "repo": "yazi.nvim",
-        "rev": "a197e9a8d4bcb506cef25fd7c72fcdd664659522",
+        "rev": "0099e63d8d2024e3566b553a283130bb85f80772",
         "type": "github"
       },
       "original": {

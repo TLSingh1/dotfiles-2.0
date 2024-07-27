@@ -109,14 +109,15 @@
       mode = "n";
     }
     {
-      action = ":Neotree float reveal <CR>";
+      # action = ":Neotree float reveal <CR>";
+      action = "<cmd>lua require('yazi').yazi() <CR>";
       key = ";";
       options = { silent = true; };
       mode = "n";
     }
     {
       action = ":Navbuddy <CR>";
-      key = "<leader><leader>;";
+      key = ",";
       options = { silent = true; };
       mode = "n";
     }

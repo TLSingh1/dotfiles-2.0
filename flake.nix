@@ -48,10 +48,11 @@
       url = "github:mikavilpas/yazi.nvim";
       flake = false;
     };
-    msi-perkeyrgb = {
-      url = "github:Askannz/msi-perkeyrgb";
-      flake = false;
-    };
+
+    # msi-perkeyrgb = {
+    #   url = "github:Askannz/msi-perkeyrgb";
+    #   flake = false;
+    # };
     # tailwindcss-colorizer-cmp = {
     #   url = "github:roobert/tailwindcss-colorizer-cmp.nvim";
     #   flake = false;
@@ -84,7 +85,7 @@
           nixpkgs.overlays = [ 
             inputs.neorg-overlay.overlays.default
             (final: prev: {
-              msi-perkeyrgb = final.callPackage ./packages/msi-perkeyrgb.nix {};
+              # msi-perkeyrgb = final.callPackage ./packages/msi-perkeyrgb.nix {};
               materia-theme-transparent = prev.callPackage ./packages/materia-theme-transparent.nix {};
               neon-town-sddm = prev.callPackage ./packages/neon-town-sddm.nix {};
               vimPlugins = prev.vimPlugins // {

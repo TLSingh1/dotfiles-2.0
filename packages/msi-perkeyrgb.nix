@@ -8,7 +8,7 @@ python3Packages.buildPythonApplication rec {
     owner = "Askannz";
     repo = pname;
     rev = "master";
-    sha256 = lib.fakeSha256; # You may need to update this
+    sha256 = "sha256-QG+Kchoy+kbg32EF0psnoowvmEVKnfIOsMcxR569RTg=";
   };
 
   propagatedBuildInputs = with python3Packages; [ setuptools hidapi ];

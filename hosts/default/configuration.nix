@@ -220,10 +220,16 @@
     kompose
     minikube
     usbutils
-    msi-perkeyrgb
+    i2c-tools
+    # openrgb
+    # hidapi
+    # msi-perkeyrgb
     # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
   ];
+
+  # NOTE: RGB control
+  services.hardware.openrgb.enable = true;
 
   # NOTE: bluetooth
   hardware.bluetooth = {
