@@ -53,10 +53,9 @@
     ];
     extraFiles = {
       "lua/config/init.lua" = builtins.readFile ./lua/config/init.lua;
+      "lua/plugins/init.lua" = builtins.readFile ./lua/plugins/init.lua;
     };
-    extraConfigLua = ''
-      ${builtins.readFile ./lua/init.lua}
-    '';
+    extraConfigLua = builtins.readFile ./lua/init.lua;
 
     # extraConfigLuaPost = builtins.readFile ./lua/init.lua;
     # extraConfigLuaPost = ''
