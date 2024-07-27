@@ -1,9 +1,9 @@
 -- NOTE: none-ls diagnostics i think
 local signs = {
   { name = "DiagnosticSignError", text = "" },
-  { name = "DiagnosticSignWarn", text = "" },
-  { name = "DiagnosticSignHint", text = "" },
-  { name = "DiagnosticSignInfo", text = "" },
+  { name = "DiagnosticSignWarn",  text = "" },
+  { name = "DiagnosticSignHint",  text = "" },
+  { name = "DiagnosticSignInfo",  text = "" },
 }
 
 for _, sign in ipairs(signs) do
@@ -184,5 +184,6 @@ function statuscolumn()
 
   return table.concat(components, "")
 end
+
 -- Set the statuscolumn option
 vim.opt.statuscolumn = [[%!v:lua.statuscolumn()]]

@@ -58,6 +58,8 @@
       "lua/plugins/colorful-winsep.lua" = builtins.readFile ./lua/plugins/colorful-winsep.lua;
       "lua/plugins/web-devicons.lua" = builtins.readFile ./lua/plugins/web-devicons.lua;
       "lua/plugins/lualine.lua" = builtins.readFile ./lua/plugins/lualine.lua;
+      "lua/plugins/render-markdown.lua" = builtins.readFile ./lua/plugins/render-markdown.lua;
+      "lua/plugins/lsp/init.lua" = builtins.readFile ./lua/plugins/lsp/init.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 

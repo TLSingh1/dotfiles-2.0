@@ -86,12 +86,12 @@ end
 local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
--- ins_left({
---   function()
---     return require("battery").get_status_line()
---   end,
---   color = { fg = "#1affff", bg = "#000000" },
--- })
+ins_left({
+  function()
+    return require("battery").get_status_line()
+  end,
+  color = { fg = "#1affff", bg = "#000000" },
+})
 ins_left({
   function()
     local mode = vim.fn.mode()
