@@ -56,6 +56,8 @@
       "lua/plugins/init.lua" = builtins.readFile ./lua/plugins/init.lua;
       "lua/plugins/neorg.lua" = builtins.readFile ./lua/plugins/neorg.lua;
       "lua/plugins/colorful-winsep.lua" = builtins.readFile ./lua/plugins/colorful-winsep.lua;
+      "lua/plugins/web-devicons.lua" = builtins.readFile ./lua/plugins/web-devicons.lua;
+      "lua/plugins/lualine.lua" = builtins.readFile ./lua/plugins/lualine.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 

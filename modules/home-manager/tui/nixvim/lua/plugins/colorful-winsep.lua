@@ -1,3 +1,5 @@
+vim.notify("hellloo colorful-winsep")
+
 require("colorful-winsep").setup({
 	-- highlight for Window separator
 	hi = {
