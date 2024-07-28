@@ -5,6 +5,7 @@
     ./better-escape.nix
     ./bufferline.nix
     ./cmp.nix
+    ./codeium.nix
     ./comment.nix
     ./dashboard.nix
     ./gitsigns.nix
