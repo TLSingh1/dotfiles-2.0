@@ -45,6 +45,7 @@
       foldlevel = 99;
       foldenable = true;
       foldlevelstart = 99;
+      # fillchars = "[[eob: ]]";
       # fillchars = "[[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]";
       # winbar = "";
     };

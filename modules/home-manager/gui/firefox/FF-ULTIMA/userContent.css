@@ -39,10 +39,6 @@
     /*--in-content-table-header-background: rgba(0, 221, 225, 0.3) !important;*/
 
   }
-
-  /* th { */
-  /*   background-color: red !important; */
-  /* } */
 }
 
 @-moz-document url-prefix(about:config) {
@@ -620,5 +616,18 @@
   code {
     background-color: rgba(34, 21, 81, 0.6) !important;
   }
+}
 
+/***********************************************************/
+/*
+/* NOTE: Youtube-music
+/*
+/***********************************************************/
+
+@-moz-document domain("music.youtube.com") {
+  :root {
+    --ytmusic-general-background-c: transparent !important;
+    --ytmusic-nav-bar: transparent !important;
+    --ytmusic-background: none !important;
+  }
 }
