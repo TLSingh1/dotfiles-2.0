@@ -74,7 +74,6 @@
     mangal
     postman
     tt
-    obsidian
     okta-aws-cli
     catppuccin-cursors.mochaMaroon
     python3Packages.pylatexenc

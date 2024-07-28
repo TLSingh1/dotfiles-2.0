@@ -1,8 +1,9 @@
 {
   programs.nixvim.plugins.obsidian = {
-    enable = true;
+    enable = false;
     settings = {
       picker.name = "telescope.nvim";
+      # ui.enable = false;
       completion.nvim_cmp = true;
       workspaces = [
         { 

@@ -20,7 +20,6 @@
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix
-    ./obsidian.nix
     ./project.nix
     ./rainbow-delimiters.nix
     ./telescope.nix

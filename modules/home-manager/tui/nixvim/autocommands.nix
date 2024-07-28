@@ -15,22 +15,22 @@
         '';
       };
     }
-    {
-      event = [
-        "FileType"
-        "BufEnter"
-      ];
-      pattern = "*.md";
-      callback = {
-        __raw = ''
-          function()
-            vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = "#1e1e2f" }) 
-            vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = "#1e1e2f" }) 
-            vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "#1e1e2f" }) 
-          end
-        '';
-      };
-    }
+    # {
+    #   event = [
+    #     "FileType"
+    #     "BufEnter"
+    #   ];
+    #   pattern = "*.md";
+    #   callback = {
+    #     __raw = ''
+    #       function()
+    #         vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = "#1e1e2f" }) 
+    #         vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = "#1e1e2f" }) 
+    #         vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "#1e1e2f" }) 
+    #       end
+    #     '';
+    #   };
+    # }
     
     # {
     #   event = [
