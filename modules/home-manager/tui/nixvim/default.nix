@@ -42,7 +42,7 @@
       tailwind-tools
       yazi-nvim
       gen-nvim
-      # incline
+      incline
       # tailwindcss-colorizer-cmp
       # tw-values
     ];
@@ -70,6 +70,7 @@
       "lua/plugins/ufo.lua" = builtins.readFile ./lua/plugins/ufo.lua;
       "lua/plugins/yazi.lua" = builtins.readFile ./lua/plugins/yazi.lua;
       "lua/plugins/gen.lua" = builtins.readFile ./lua/plugins/gen.lua;
+      "lua/plugins/incline.lua" = builtins.readFile ./lua/plugins/incline.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 
