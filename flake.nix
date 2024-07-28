@@ -48,6 +48,10 @@
       url = "github:mikavilpas/yazi.nvim";
       flake = false;
     };
+    gen-nvim = {
+      url = "github:David-Kunz/gen.nvim";
+      flake = false;
+    };
 
     # msi-perkeyrgb = {
     #   url = "github:Askannz/msi-perkeyrgb";
@@ -116,6 +120,10 @@
                 yazi-nvim = prev.vimUtils.buildVimPlugin {
                   name = "yazi-nvim";
                   src = inputs.yazi-nvim;
+                };
+                gen-nvim = prev.vimUtils.buildVimPlugin {
+                  name = "gen-nvim";
+                  src = inputs.gen-nvim;
                 };
                 # tailwindcss-colorizer-cmp = prev.vimUtils.buildVimPlugin {
                 #   name = "tailwindcss-colorizer-cmp";

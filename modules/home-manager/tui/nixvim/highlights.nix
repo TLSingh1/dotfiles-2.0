@@ -1,17 +1,17 @@
 {
   programs.nixvim.highlight = {
     FloatBorder = {
-      fg = "#222436";
-      bg = "#222436";
+      fg = "#1e1e2f";
+      bg = "#1e1e2f";
     };
-    NeoTreeNormal.bg = "#16181a";
+    NeoTreeNormal.bg = "#1e1e2f";
     NeoTreeFloatTitle = {
       fg = "#1e2030";
       bg = "#1e2030";
     };
     NeoTreeFloatBorder = {
-      fg = "#1e2030";
-      bg = "#1e2030";
+      fg = "#1e1e2f";
+      bg = "#1e1e2f";
     };
     BufferLineFill = {
       bg = "#000000";
@@ -30,8 +30,8 @@
       bg = "#000000";
     };
     NavbuddyFloatBorder = {
-      fg = "#1e2030";
-      bg = "#1e2030";
+      fg = "#1e1e2f";
+      bg = "#1e1e2f";
     };
     # WinBar = {
     #   fg = "#1affff";

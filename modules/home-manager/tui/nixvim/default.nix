@@ -12,11 +12,14 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
+    colorschemes.catppuccin = {
+      enable = true;
+    };
     colorschemes.onedark = {
       enable = false;
     };
     colorschemes.tokyonight = {
-      enable = true;
+      enable = false;
     };
     colorschemes.cyberdream = {
       enable = false;
@@ -39,6 +42,7 @@
       typescript-tools
       tailwind-tools
       yazi-nvim
+      gen-nvim
       # tailwindcss-colorizer-cmp
       # tw-values
     ];
@@ -65,11 +69,39 @@
       "lua/plugins/tailwind-tools.lua" = builtins.readFile ./lua/plugins/tailwind-tools.lua;
       "lua/plugins/ufo.lua" = builtins.readFile ./lua/plugins/ufo.lua;
       "lua/plugins/yazi.lua" = builtins.readFile ./lua/plugins/yazi.lua;
+      "lua/plugins/gen.lua" = builtins.readFile ./lua/plugins/gen.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 
     extraConfigLuaPost = ''
-      vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#222436", fg = "#222436" })
+      vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#1e1e2f", fg = "#1e1e2f" })
+      vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { bg = "#1e1e2f", fg = "#1e1e2f" })
+      vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#313245", bg = "#000000" })
+
+      local highlight = {
+        "RainbowRed",
+        "RainbowYellow",
+        "RainbowBlue",
+        "RainbowOrange",
+        "RainbowGreen",
+        "RainbowViolet",
+        "RainbowCyan",
+      }
+      local hooks = require "ibl.hooks"
+      hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#F38BA9" })
+        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#F9E2B0" })
+        vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#89B4FB" })
+        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#FAB388" })
+        vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#A6E3A2" })
+        vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#CBA6F8" })
+        vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+      end)
+      
+      vim.g.rainbow_delimiters = { highlight = highlight }
+      require("ibl").setup { scope = { highlight = highlight } }
+      
+      hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
     '';
   };
 }

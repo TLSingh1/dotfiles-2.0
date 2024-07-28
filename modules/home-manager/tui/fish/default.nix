@@ -11,6 +11,7 @@
       oac = "okta-aws-cli";
       oacw = "okta-aws-cli web";
       k = "kubectl";
+      ol = "ollama";
     };
     functions = {
       yy = ''

@@ -100,7 +100,7 @@ in
       (mkBinde "" "67" "exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") 
       (mkBinde "" "68" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")
       # FIX: Uncomment this when done playing minecraft
-      # (mkBinde "" "69" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")
+      (mkBinde "" "69" "exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")
       (mkBinde "" "71" "exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle")
       (mkBind "" "74" "exec, ${toggleWlsunset}")
       (mkBinde "" "75" "exec, brightnessctl set 5%-")
