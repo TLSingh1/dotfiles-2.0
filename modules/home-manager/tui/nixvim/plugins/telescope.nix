@@ -4,6 +4,7 @@
     highlightTheme = "cyberdream";
     extensions = {
       fzf-native.enable = true;
+      ui-select.enable = true;
     };
     settings = {
       defaults = {

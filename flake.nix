@@ -52,7 +52,6 @@
       url = "github:David-Kunz/gen.nvim";
       flake = false;
     };
-
     # msi-perkeyrgb = {
     #   url = "github:Askannz/msi-perkeyrgb";
     #   flake = false;

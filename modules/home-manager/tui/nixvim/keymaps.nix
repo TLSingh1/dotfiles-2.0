@@ -31,6 +31,12 @@
       mode = "n";
     }
     {
+      action = ":Gen<CR>";
+      key = "<leader>e";
+      options = { silent = true; };
+      mode = ["n" "v"];
+    }
+    {
       action = ":IncRename ";
       key = "<leader>rn";
       options = { silent = true; };

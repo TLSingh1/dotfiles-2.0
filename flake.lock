@@ -276,6 +276,22 @@
         "type": "github"
       }
     },
+    "gen-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722102912,
+        "narHash": "sha256-SeVROOsnEoLzjFplhII/RwRMSJcLlmxToNjSLlMoK2k=",
+        "owner": "David-Kunz",
+        "repo": "gen.nvim",
+        "rev": "07fb74cf1bc533791e2c7cfca7bd3f45a3b597f9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "David-Kunz",
+        "repo": "gen.nvim",
+        "type": "github"
+      }
+    },
     "git-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_5",
@@ -920,6 +936,7 @@
         "ags": "ags",
         "colorful-winsep": "colorful-winsep",
         "firefox-nightly": "firefox-nightly",
+        "gen-nvim": "gen-nvim",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
