@@ -133,7 +133,6 @@
                 #   src = inputs.tw-values;
                 # };
               };
-              # winbar = prev.callPackage ./packages/winbar.nix {};
             })
           ];
         }

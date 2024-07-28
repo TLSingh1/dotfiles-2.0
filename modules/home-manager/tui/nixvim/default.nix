@@ -71,6 +71,7 @@
       "lua/plugins/yazi.lua" = builtins.readFile ./lua/plugins/yazi.lua;
       "lua/plugins/gen.lua" = builtins.readFile ./lua/plugins/gen.lua;
       "lua/plugins/incline.lua" = builtins.readFile ./lua/plugins/incline.lua;
+      "lua/plugins/winbar.lua" = builtins.readFile ./lua/plugins/winbar.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 
@@ -78,6 +79,7 @@
       vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#1e1e2f", fg = "#1e1e2f" })
       vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { bg = "#1e1e2f", fg = "#1e1e2f" })
       vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#313245", bg = "#000000" })
+      vim.api.nvim_set_hl(0, "WinBarNC", { bg = "#000000" })
 
       local highlight = {
         "RainbowRed",
