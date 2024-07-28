@@ -36,13 +36,13 @@
       neorg-telescope
       winbar-nvim
       colorful-winsep
-      # incline
       nvim-web-devicons
       markdown-nvim
       typescript-tools
       tailwind-tools
       yazi-nvim
       gen-nvim
+      # incline
       # tailwindcss-colorizer-cmp
       # tw-values
     ];
