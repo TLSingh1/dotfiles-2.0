@@ -88,7 +88,6 @@
     poppler
     neofetch
     youtube-music
-    # ollama-cuda
   ];
 
   home.file = {
@@ -100,6 +99,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/tui/macchina";
       recursive = true;
     };
+    ".config/nvim/templates/norg" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/tui/nixvim/lua/norg-templates";
+      recursive = true;
+    };
     ".config/BetterDiscord/themes/translucence-plus.css" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/discord/blur-theme.css";
     };
@@ -107,13 +110,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/librewolf/colorful-minimalist";
       recursive = true;
     };
-    # ".librewolf/afnctw1x.default/chrome/userChrome.css" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/librewolf/userChrome.css";
-    # };
-    # ".mozilla/firefox/pus15frm.default/chrome/userChrome.css" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/userChrome.css";
-    # };
-
     ".mozilla/firefox/pus15frm.default/chrome/theme" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/theme";
       recursive = true;
@@ -129,7 +125,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/tui/yazi/tokyo-night.yazi";
       recursive = true;
     };
-
   };
 
   home.sessionVariables = {
