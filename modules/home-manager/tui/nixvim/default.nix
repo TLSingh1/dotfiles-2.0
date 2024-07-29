@@ -50,7 +50,8 @@
       tailwind-tools
       yazi-nvim
       gen-nvim
-      incline
+      neorg-templates
+      # incline
       # tailwindcss-colorizer-cmp
       # tw-values
     ];
@@ -83,6 +84,7 @@
       "lua/plugins/winbar.lua" = builtins.readFile ./lua/plugins/winbar.lua;
       "lua/plugins/indent-blankline.lua" = builtins.readFile ./lua/plugins/indent-blankline.lua;
       "lua/plugins/telescope.lua" = builtins.readFile ./lua/plugins/telescope.lua;
+      "lua/neorg-templates/journal.norg" = builtins.readFile ./lua/neorg-templates/journal.norg;
     };
 
     extraConfigLua = builtins.readFile ./lua/init.lua;

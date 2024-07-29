@@ -52,6 +52,10 @@
       url = "github:David-Kunz/gen.nvim";
       flake = false;
     };
+    neorg-templates = {
+      url = "github:pysan3/neorg-templates";
+      flake = false;
+    };
     # msi-perkeyrgb = {
     #   url = "github:Askannz/msi-perkeyrgb";
     #   flake = false;
@@ -123,6 +127,10 @@
                 gen-nvim = prev.vimUtils.buildVimPlugin {
                   name = "gen-nvim";
                   src = inputs.gen-nvim;
+                };
+                neorg-templates = prev.vimUtils.buildVimPlugin {
+                  name = "neorg-templates";
+                  src = inputs.neorg-templates;
                 };
                 # tailwindcss-colorizer-cmp = prev.vimUtils.buildVimPlugin {
                 #   name = "tailwindcss-colorizer-cmp";
