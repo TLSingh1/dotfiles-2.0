@@ -27,7 +27,7 @@
     ];
     persistBufferSort = true;
     separatorStyle = "thin";
-    showBufferCloseIcons = true;
+    showBufferCloseIcons = false;
     showBufferIcons = true;
     showCloseIcon = true;
     showTabIndicators = true;

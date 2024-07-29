@@ -7,7 +7,7 @@
       on_open = ''
         function()
           vim.opt.winhighlight = "Normal:ActiveWindow"
-          vim.api.nvim_command('highlight FloatBorder guifg=#1e1e2f guibg=#1e1e2f')
+          vim.api.nvim_command('highlight FloatBorder guifg=#011826 guibg=#011826')
         end
       '';
       shell = "fish";

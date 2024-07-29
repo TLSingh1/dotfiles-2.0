@@ -37,6 +37,7 @@
       commandPalette = false;
       lspDocBorder = false;
       inc_rename = true;
+      bottom_search = true;
     };
   };
 }

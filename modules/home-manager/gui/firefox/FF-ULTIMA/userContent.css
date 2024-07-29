@@ -101,6 +101,18 @@
     border: 1px solid rgba(160, 160, 171, 0.3) !important;
   }
 
+  ytd-playlist-panel-renderer {
+    --yt-lightsource-section2-color: transparent !important;
+  }
+
+  div.header.style-scope.ytd-playlist-panel-renderer {
+    background: transparent !important;
+  }
+
+  .playlist-items.ytd-playlist-panel-renderer {
+    background-color: transparent !important;
+  }
+
   #items.ytd-mini-guide-renderer {
     gap: 2rem !important;
   }
@@ -173,8 +185,6 @@
   #sfooter {
     display: none !important;
   }
-
-
 
   #gb,
   .CvDJxb,
