@@ -82,27 +82,10 @@
       "lua/plugins/incline.lua" = builtins.readFile ./lua/plugins/incline.lua;
       "lua/plugins/winbar.lua" = builtins.readFile ./lua/plugins/winbar.lua;
       "lua/plugins/indent-blankline.lua" = builtins.readFile ./lua/plugins/indent-blankline.lua;
+      "lua/plugins/telescope.lua" = builtins.readFile ./lua/plugins/telescope.lua;
     };
+
     extraConfigLua = builtins.readFile ./lua/init.lua;
-
-    extraConfigLuaPost = ''
-      ${builtins.readFile ./lua/config/extra_highlights.lua}
-
-
-      require("telescope").setup {
-        extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown {
-              -- Set the width (0-1 for percentage, >1 for absolute column count)
-              width = 0.6,
-              -- Set the height (0-1 for percentage, >1 for absolute row count)
-              height = 0.6,
-              -- You can add other layout_config options here as well
-            }
-          }
-        }
-      }
-      require("telescope").load_extension("ui-select")
-    '';
+    extraConfigLuaPost = builtins.readFile ./lua/config/extra_highlights.lua;
   };
 }
