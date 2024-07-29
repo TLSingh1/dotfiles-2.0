@@ -81,54 +81,13 @@
       "lua/plugins/gen.lua" = builtins.readFile ./lua/plugins/gen.lua;
       "lua/plugins/incline.lua" = builtins.readFile ./lua/plugins/incline.lua;
       "lua/plugins/winbar.lua" = builtins.readFile ./lua/plugins/winbar.lua;
+      "lua/plugins/indent-blankline.lua" = builtins.readFile ./lua/plugins/indent-blankline.lua;
     };
     extraConfigLua = builtins.readFile ./lua/init.lua;
 
     extraConfigLuaPost = ''
       ${builtins.readFile ./lua/config/extra_highlights.lua}
 
-      vim.api.nvim_set_hl(0, "FloatBorder", { bg = "#011826", fg = "#011826" })
-      -- vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { bg = "#011826", fg = "#011826" })
-      -- vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "#011826" })
-      -- vim.api.nvim_set_hl(0, "NeoTreeFloatTitle", { bg = "#011826", fg = "#011826" })
-      vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#011826", bg = "#000000" })
-      vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#0B2534" })
-      vim.api.nvim_set_hl(0, "TreesitterContextBottom", { bg = "#0B2534" })
-      vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { bg = "#0B2534" })
-      vim.api.nvim_set_hl(0, "CursorLine", { bg = "#0B2534" })
-      vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = "#000000" })
-      vim.api.nvim_set_hl(0, "NoiceCmdlineIconSearch", { fg = "#F9E2B0", bg = "#000000" })
-      vim.api.nvim_set_hl(0, "NoiceCmdline", { bg = "#000000" })
-      vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "#0B2534" })
-      vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = "#0B2534", bg = "#0B2534" })
-      vim.api.nvim_set_hl(0, "TelescopePromptTitle", { fg = "#0B2534", bg = "#0B2534" })
-      vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#1affff", bg = "#0B2534" })
-
-      local highlight = {
-        "RainbowRed",
-        "RainbowYellow",
-        "RainbowBlue",
-        "RainbowOrange",
-        "RainbowGreen",
-        "RainbowViolet",
-        "RainbowCyan",
-      }
-
-      local hooks = require "ibl.hooks"
-      hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#F38BA9" })
-        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#F9E2B0" })
-        vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#89B4FB" })
-        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#FAB388" })
-        vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#A6E3A2" })
-        vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#CBA6F8" })
-        vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
-      end)
-      
-      vim.g.rainbow_delimiters = { highlight = highlight }
-      require("ibl").setup { scope = { highlight = highlight } }
-      
-      hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 
       require("telescope").setup {
         extensions = {
