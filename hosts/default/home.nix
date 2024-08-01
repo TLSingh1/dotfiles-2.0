@@ -88,6 +88,8 @@
     poppler
     neofetch
     youtube-music
+    libxkbcommon
+    libressl
   ];
 
   home.file = {

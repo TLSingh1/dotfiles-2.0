@@ -69,6 +69,7 @@
       "lua/config/init.lua" = builtins.readFile ./lua/config/init.lua;
       "lua/plugins/init.lua" = builtins.readFile ./lua/plugins/init.lua;
       "lua/config/extra_highlights.lua" = builtins.readFile ./lua/config/extra_highlights.lua;
+      "lua/config/auto_commands.lua" = builtins.readFile ./lua/config/auto_commands.lua;
       "lua/plugins/neorg.lua" = builtins.readFile ./lua/plugins/neorg.lua;
       "lua/plugins/colorful-winsep.lua" = builtins.readFile ./lua/plugins/colorful-winsep.lua;
       "lua/plugins/web-devicons.lua" = builtins.readFile ./lua/plugins/web-devicons.lua;
@@ -87,6 +88,5 @@
     };
 
     extraConfigLua = builtins.readFile ./lua/init.lua;
-    extraConfigLuaPost = builtins.readFile ./lua/config/extra_highlights.lua;
   };
 }

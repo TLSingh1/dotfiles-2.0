@@ -1,3 +1,6 @@
+require("config.extra_highlights")
+require("config.auto_commands")
+
 -- NOTE: none-ls diagnostics i think
 local signs = {
   { name = "DiagnosticSignError", text = "" },

@@ -8,7 +8,7 @@ updated: {TODAY}
 version: 1.0.0
 @end
 
-* {TITLE_INPUT}
+* {TITLE_INPUT} (Index)
   ___
 
 ** _Indices_
