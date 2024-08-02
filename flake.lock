@@ -34,6 +34,22 @@
         "type": "github"
       }
     },
+    "claude-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722039734,
+        "narHash": "sha256-FDv9qhP/RBjtsn2iHIH93jlZdphZKzoZiuJl1kbgjQs=",
+        "owner": "pasky",
+        "repo": "claude.vim",
+        "rev": "883c1fcad735f5e9916fddea54e7068349cc5d59",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pasky",
+        "repo": "claude.vim",
+        "type": "github"
+      }
+    },
     "colorful-winsep": {
       "flake": false,
       "locked": {
@@ -863,22 +879,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_8": {
-      "locked": {
-        "lastModified": 1720181791,
-        "narHash": "sha256-i4vJL12/AdyuQuviMMd1Hk2tsGt02hDNhA0Zj1m16N8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4284c2b73c8bce4b46a6adf23e16d9e2ec8da4bb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -950,6 +950,7 @@
     "root": {
       "inputs": {
         "ags": "ags",
+        "claude-nvim": "claude-nvim",
         "colorful-winsep": "colorful-winsep",
         "firefox-nightly": "firefox-nightly",
         "gen-nvim": "gen-nvim",
@@ -971,7 +972,9 @@
     },
     "sops-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_8",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {

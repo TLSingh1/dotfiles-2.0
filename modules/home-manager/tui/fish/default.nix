@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.fish = {
     enable = true;
@@ -23,6 +24,17 @@
         rm -f -- "$tmp"
       '';
     };
+    plugins = [
+      {
+        name = "autopair";
+        src = pkgs.fetchFromGitHub {
+          owner = "jorgebucaran";
+          repo = "autopair.fish";
+          rev = "4d1752f";
+          hash = "sha256-qt3t1iKRRNuiLWiVoiAYOu+9E7jsyECyIqZJ/oRIT1A=";
+        };
+      }
+    ];
     interactiveShellInit = ''
       set fish_greeting
       starship init fish | source

@@ -152,7 +152,7 @@
       mode = "n";
     }
     {
-      key = "<C-f>";
+      key = "f";
       action = ":HopWord <CR>";
       options = { silent = true; };
       mode = "n";
@@ -164,7 +164,7 @@
       mode = "n";
     }
     {
-      key = "f";
+      key = "<C-f>";
       action = ":HopChar1 <CR>";
       options = { silent = true; };
       mode = "n";

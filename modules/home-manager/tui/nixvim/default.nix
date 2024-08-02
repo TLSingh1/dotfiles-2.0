@@ -51,6 +51,7 @@
       yazi-nvim
       gen-nvim
       neorg-templates
+      claude-nvim
       # incline
       # tailwindcss-colorizer-cmp
       # tw-values

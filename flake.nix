@@ -13,7 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
     firefox-nightly.url = "github:nix-community/flake-firefox-nightly";
     hyprpicker = {
@@ -54,6 +57,10 @@
     };
     neorg-templates = {
       url = "github:pysan3/neorg-templates";
+      flake = false;
+    };
+    claude-nvim = {
+      url = "github:pasky/claude.vim";
       flake = false;
     };
     # msi-perkeyrgb = {
@@ -132,6 +139,10 @@
                   name = "neorg-templates";
                   src = inputs.neorg-templates;
                 };
+                claude-nvim = prev.vimUtils.buildVimPlugin {
+                  name = "claude-nvim";
+                  src = inputs.claude-nvim;
+                };
                 # tailwindcss-colorizer-cmp = prev.vimUtils.buildVimPlugin {
                 #   name = "tailwindcss-colorizer-cmp";
                 #   src = inputs.tailwindcss-colorizer-cmp;
@@ -143,30 +154,6 @@
               };
             })
           ];
-        }
-        sops-nix.nixosModules.sops
-        {
-          sops = {
-            defaultSopsFile = ./secrets/secrets.yaml;
-            defaultSopsFormat = "yaml";
-            age = {
-              sshKeyPaths = [ "/home/tai/.ssh/id_ed25519" ];
-              keyFile = "/home/tai/.config/sops/age/keys.txt";
-              generateKey = false;
-            };
-            secrets = {
-              git-username = { 
-                owner = "sometestservice";
-              };
-              git-email = { 
-                owner = "sometestservice";
-              };
-              test = { 
-                owner = "sometestservice";
-              };
-            };
-          };
-
         }
       ];
     };

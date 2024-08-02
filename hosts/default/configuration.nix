@@ -4,6 +4,7 @@
     [
       ./hardware-configuration.nix
       ./main-user.nix
+      inputs.sops-nix.nixosModules.sops
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -14,31 +15,46 @@
     "cgroup_enable=memory"
   ];
 
-  # this was a test to get them in sops secrets in nix config
-  # altho this is only from system config and not home-managr
-  systemd.services."sometestservice" = {
-    script = ''
-      echo "
-        This is a test of a secret using sops-nix
-        $(cat ${config.sops.secrets.test.path})
-
-        and here are the git secrets
-        $(cat ${config.sops.secrets.git-username.path})
-        $(cat ${config.sops.secrets.git-email.path})
-        " > /var/lib/sometestservice/testfile
-      '';
-    serviceConfig = {
-      User = "sometestservice";
-      WorkingDirectory = "/var/lib/sometestservice";
+  sops = {
+    defaultSopsFile = ../../secrets/secrets.yaml;
+    defaultSopsFormat = "yaml";
+    age.keyFile = "/home/tai/.config/sops/age/keys.txt";
+    secrets = {
+      example_key = {
+        owner = config.users.users.tai.name;
+      };
+      claude.owner = config.users.users.tai.name;
+      git-username.owner = config.users.users.tai.name;
+      git-email.owner = config.users.users.tai.name;
+      "myservice/my_subdir/my_secret" = { };
     };
   };
-  users.users.sometestservice = {
-    home = "/var/lib/sometestservice";
-    createHome = true;
-    isSystemUser = true;
-    group = "sometestservice";
-  };
-  users.groups.sometestservice = { };
+
+  # this was a test to get them in sops secrets in nix config
+  # altho this is only from system config and not home-managr
+  # systemd.services."sometestservice" = {
+  #   script = ''
+  #     echo "
+  #       This is a test of a secret using sops-nix
+  #       $(cat ${config.sops.secrets.test.path})
+  #
+  #       and here are the git secrets
+  #       $(cat ${config.sops.secrets.git-username.path})
+  #       $(cat ${config.sops.secrets.git-email.path})
+  #       " > /var/lib/sometestservice/testfile
+  #     '';
+  #   serviceConfig = {
+  #     User = "sometestservice";
+  #     WorkingDirectory = "/var/lib/sometestservice";
+  #   };
+  # };
+  # users.users.sometestservice = {
+  #   home = "/var/lib/sometestservice";
+  #   createHome = true;
+  #   isSystemUser = true;
+  #   group = "sometestservice";
+  # };
+  # users.groups.sometestservice = { };
 
   # Secrets
   # sops.defaultSopsFile = ../../secrets/secrets.yaml;

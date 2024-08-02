@@ -90,6 +90,7 @@
     youtube-music
     libxkbcommon
     libressl
+    elinks
   ];
 
   home.file = {
@@ -170,7 +171,6 @@
 
   programs.git = {
     enable = true;  
-    # NOTE: this is where i would like to use secrets
     userName = "TLSingh1";
     userEmail = "tai8910@gmail.com";
   };
