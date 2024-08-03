@@ -27,6 +27,7 @@ require("ibl").setup {
       "dashboard",
       "alpha",
       "starter",
+      "norg",
     },
   },
 }

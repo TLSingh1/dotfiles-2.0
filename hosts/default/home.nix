@@ -175,10 +175,6 @@
     userEmail = "tai8910@gmail.com";
   };
 
-  programs.neovim = {
-    enable = false;
-  };
-
   programs.starship = {
     enable = true;
     enableFishIntegration = true;

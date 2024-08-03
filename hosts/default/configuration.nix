@@ -194,6 +194,7 @@
 
   fonts.packages = with pkgs; [
     nerdfonts
+    maple-mono-NF
   ];
 
   # List packages installed in system profile. To search, run:
