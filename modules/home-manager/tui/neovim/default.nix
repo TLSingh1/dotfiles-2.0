@@ -7,7 +7,13 @@
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
+      plenary-nvim
+      nui-nvim
+      nvim-web-devicons
+      neo-tree-nvim
       toggleterm-nvim
+      barbecue-nvim
+      nvim-navic
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
@@ -26,7 +32,10 @@
         dev = {
           path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
           patterns = {
-            "akinsho"
+            "akinsho",
+            "utilyre",
+            "SmiteshP",
+            "nvim-neo-tree",
           },
         },
         install = {
