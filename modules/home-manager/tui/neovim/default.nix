@@ -1,7 +1,8 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 {
   programs.neovim = {
     enable = true;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     vimAlias = true;
     vimdiffAlias = true;
     withNodeJs = true;
@@ -17,32 +18,7 @@
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
-      
-      require("lazy").setup({
-        spec = {
-          { import = "plugins" },
-        },
-      }, {
-        performance = {
-          reset_packpath = false,
-          rtp = {
-            reset = false,
-          }
-        },
-        dev = {
-          path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
-          patterns = {
-            "nvim-treesitter",
-            "akinsho",
-            "utilyre",
-            "SmiteshP",
-            "nvim-neo-tree",
-          },
-        },
-        install = {
-          missing = false,
-        },
-      })
+      ${builtins.readFile ./lua/plugins/init.lua}
     '';
   };
 

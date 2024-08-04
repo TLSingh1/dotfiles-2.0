@@ -1,15 +1,10 @@
-return {
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      auto_install = false,
-      ensure_installed = {},
-      highlight = {
-        enable = true,
-      },
-    },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-    end,
+require "nvim-treesitter.configs".setup {
+  -- Managed with nixos
+  auto_install = false,
+  highlight = {
+    enable = true
+  },
+  indent = {
+    enable = true
   },
 }
