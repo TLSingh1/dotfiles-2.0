@@ -238,6 +238,7 @@
     minikube
     usbutils
     i2c-tools
+    python3
     # openrgb
     # hidapi
     # msi-perkeyrgb
