@@ -7,6 +7,7 @@
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
+      nvim-treesitter.withAllGrammars
       plenary-nvim
       nui-nvim
       nvim-web-devicons
@@ -32,6 +33,7 @@
         dev = {
           path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
           patterns = {
+            "nvim-treesitter",
             "akinsho",
             "utilyre",
             "SmiteshP",
