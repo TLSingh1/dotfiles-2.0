@@ -10,7 +10,8 @@
       toggleterm-nvim
     ];
     extraLuaConfig = ''
-      vim.g.mapleader = " "
+      ${builtins.readFile ./lua/config/init.lua}
+      
       require("lazy").setup({
         spec = {
           { import = "plugins" },
