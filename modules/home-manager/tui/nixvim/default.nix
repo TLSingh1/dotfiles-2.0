@@ -13,7 +13,7 @@
     viAlias = true;
     vimAlias = true;
     colorschemes.catppuccin = {
-      enable = true;
+      enable = false;
       settings = {
         term_colors = true;
         color_overrides = {

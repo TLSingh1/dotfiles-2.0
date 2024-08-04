@@ -8,10 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     ags.url = "github:Aylur/ags";
     sops-nix = {
       url = "github:Mic92/sops-nix";
@@ -86,7 +86,7 @@
     nixpkgs, 
     home-manager, 
     hyprland, 
-    nixvim, 
+    # nixvim, 
     nixCats,
     ags, 
     sops-nix,
@@ -166,7 +166,7 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [
         hyprland.homeManagerModules.default
-        nixvim.homeManagerModules.nixvim
+        # nixvim.homeManagerModules.nixvim
       ];
       extraSpecialArgs = { inherit inputs; };
     };

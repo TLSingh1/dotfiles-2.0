@@ -5,7 +5,7 @@
     ./fish
     ./kitty
     ./neovim
-    ./nixvim
+    # ./nixvim
     ./ranger
     ./yazi
   ];
