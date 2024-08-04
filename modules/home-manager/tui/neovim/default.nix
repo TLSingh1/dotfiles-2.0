@@ -18,6 +18,17 @@
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
+
+      require("nvim-treesitter.configs").setup({
+      	auto_install = false,
+        ensure_installed = {},
+      	indent = {
+      		enable = true,
+      	},
+      	highlight = {
+      		enable = true,
+      	},
+      })
       
       require("lazy").setup({
         spec = {
