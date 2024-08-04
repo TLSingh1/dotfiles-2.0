@@ -736,6 +736,26 @@
         "type": "github"
       }
     },
+    "nixCats": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1722713369,
+        "narHash": "sha256-k217x7lhuqiOw5EN5Uo5h4HNeO5HeIJoLfV3krWwkbk=",
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "rev": "98228b72484edaecbdaa93a8139a93f2f11bd7b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BirdeeHub",
+        "repo": "nixCats-nvim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1718714799,
@@ -961,6 +981,7 @@
         "markdown-nvim": "markdown-nvim",
         "neorg-overlay": "neorg-overlay",
         "neorg-templates": "neorg-templates",
+        "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_7",
         "nixvim": "nixvim",
         "sops-nix": "sops-nix",
