@@ -5,7 +5,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "tree-sitter-cli";
-  version = "unstable-2024-08-04";
+  version = "0.22.6";
 
   src = fetchCrate {
     inherit pname version;
