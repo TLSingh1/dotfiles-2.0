@@ -18,7 +18,6 @@
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
-
       
       require("lazy").setup({
         spec = {
@@ -45,23 +44,6 @@
           missing = false,
         },
       })
-
-
-      require("nvim-treesitter.configs").setup({
-      	auto_install = false,
-      	indent = {
-      		enable = true,
-      		disable = { "python", "yaml" },
-      	},
-      	highlight = {
-      		enable = true,
-      		disable = { "yaml" }, -- Disable yaml highlighting because Helm sucks :<
-      		additional_vim_regex_highlighting = false,
-      	},
-      })
-
-      vim.notify("hello")
-
     '';
   };
 

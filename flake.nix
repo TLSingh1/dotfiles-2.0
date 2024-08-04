@@ -17,6 +17,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixCats = {
+      url = "github:BirdeeHub/nixCats-nvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
     firefox-nightly.url = "github:nix-community/flake-firefox-nightly";
     hyprpicker = {
@@ -83,6 +87,7 @@
     home-manager, 
     hyprland, 
     nixvim, 
+    nixCats,
     ags, 
     sops-nix,
     hyprpicker,
