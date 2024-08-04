@@ -91,6 +91,7 @@
     libxkbcommon
     libressl
     elinks
+    tree-sitter-cli
   ];
 
   home.file = {

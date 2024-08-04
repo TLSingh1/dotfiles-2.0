@@ -104,6 +104,7 @@
           nixpkgs.overlays = [ 
             inputs.neorg-overlay.overlays.default
             (final: prev: {
+              tree-sitter-cli = final.callPackage ./packages/tree-sitter-cli.nix {};
               # msi-perkeyrgb = final.callPackage ./packages/msi-perkeyrgb.nix {};
               materia-theme-transparent = prev.callPackage ./packages/materia-theme-transparent.nix {};
               neon-town-sddm = prev.callPackage ./packages/neon-town-sddm.nix {};

@@ -7,14 +7,13 @@
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
+      nvim-treesitter
       nvim-treesitter.withAllGrammars
       plenary-nvim
       nui-nvim
       nvim-web-devicons
       neo-tree-nvim
       toggleterm-nvim
-      barbecue-nvim
-      nvim-navic
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
