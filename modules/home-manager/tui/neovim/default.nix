@@ -7,9 +7,16 @@
     vimdiffAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
-      lazy-nvim
+
+      # Coding
       nvim-treesitter
       nvim-treesitter.withAllGrammars
+
+      # Git
+
+      # Project
+
+      # UI
       plenary-nvim
       nui-nvim
       nvim-web-devicons
@@ -17,6 +24,7 @@
       nvim-window-picker
       toggleterm-nvim
       bufferline-nvim
+      telescope-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
