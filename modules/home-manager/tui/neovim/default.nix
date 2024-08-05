@@ -11,6 +11,7 @@
       # Coding
       nvim-treesitter
       nvim-treesitter.withAllGrammars
+      hop-nvim
 
       # Git
 
