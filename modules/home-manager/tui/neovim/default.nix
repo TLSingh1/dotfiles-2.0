@@ -28,6 +28,7 @@
       bufferline-nvim
       telescope-nvim
       catppuccin-nvim
+      dashboard-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
