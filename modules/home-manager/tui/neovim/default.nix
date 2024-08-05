@@ -16,6 +16,7 @@
       neo-tree-nvim
       nvim-window-picker
       toggleterm-nvim
+      bufferline-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}

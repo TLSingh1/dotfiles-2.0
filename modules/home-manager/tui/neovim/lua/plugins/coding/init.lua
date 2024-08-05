@@ -1,1 +1,1 @@
-require("coding.treesitter")
+require("plugins.coding.treesitter")
