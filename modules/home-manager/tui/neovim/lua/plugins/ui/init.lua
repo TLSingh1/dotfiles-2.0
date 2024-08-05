@@ -1,6 +1,7 @@
 require("plugins.ui.bufferline")
 require("plugins.ui.catppuccin")
 require("plugins.ui.neo-tree")
+require("plugins.ui.statuscolumn")
 require("plugins.ui.telescope")
 require("plugins.ui.toggleterm")
 require("plugins.ui.window-picker")
