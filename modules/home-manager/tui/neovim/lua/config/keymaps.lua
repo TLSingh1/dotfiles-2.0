@@ -24,6 +24,9 @@ keymap("n", "<leader>;", ":", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", ";", ":Neotree float reveal <CR>", opts)
+keymap("n", "f", ":HopWord <CR>", opts)
+keymap("n", "F", ":HopChar1 <CR>", opts)
+keymap("v", "f", ":HopLine <CR>", opts)
 
 ---------------- Telescope ----------------------
 keymap(
