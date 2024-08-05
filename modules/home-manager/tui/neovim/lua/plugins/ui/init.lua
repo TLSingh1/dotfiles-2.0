@@ -1,4 +1,5 @@
 require("plugins.ui.bufferline")
+require("plugins.ui.catppuccin")
 require("plugins.ui.neo-tree")
 require("plugins.ui.telescope")
 require("plugins.ui.toggleterm")

@@ -24,4 +24,13 @@ keymap("n", "<leader>;", ":", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", ";", ":Neotree float reveal <CR>", opts)
--- keymap("n", "<A-;>", ":ToggleTerm <CR>", opts)
+
+---------------- Telescope ----------------------
+keymap(
+	"n",
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+	opts
+)
+keymap("n", "<leader>g", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
