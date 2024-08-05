@@ -1,2 +1,2 @@
 require("plugins.ui")
-require("plugins.coding")
+-- require("plugins.coding")
