@@ -14,6 +14,7 @@
       nui-nvim
       nvim-web-devicons
       neo-tree-nvim
+      nvim-window-picker
       toggleterm-nvim
     ];
     extraLuaConfig = ''

@@ -1,3 +1,2 @@
-require("plugins.treesitter")
-require("plugins.toggleterm")
-require("plugins.neo-tree")
+require("plugins.ui")
+require("plugins.coding")
