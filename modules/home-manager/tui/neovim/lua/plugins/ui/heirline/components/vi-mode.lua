@@ -46,7 +46,7 @@ local ViMode = {
       t = "T",
     },
     mode_colors = {
-      n = "#94E2D6",
+      n = "#EBA0AD",
       i = "#f11a9b",
       v = "cyan",
       V = "cyan",
