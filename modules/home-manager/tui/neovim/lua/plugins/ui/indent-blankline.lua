@@ -1,5 +1,3 @@
-require("rainbow-delimiters").setup({})
-
 local highlight = {
   "RainbowRed",
   "RainbowYellow",
