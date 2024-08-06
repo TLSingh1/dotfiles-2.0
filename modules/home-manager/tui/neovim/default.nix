@@ -23,6 +23,7 @@
       cmp-cmdline
       cmp-emoji
       nvim-lspconfig
+      none-ls-nvim
 
       # Git
 
