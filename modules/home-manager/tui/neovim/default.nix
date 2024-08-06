@@ -44,6 +44,7 @@
       dashboard-nvim
       dressing-nvim
       nerdy-nvim
+      indent-blankline-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}

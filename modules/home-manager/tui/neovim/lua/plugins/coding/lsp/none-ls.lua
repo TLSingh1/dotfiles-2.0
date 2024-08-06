@@ -1,4 +1,4 @@
-require("lsp_lines").setup()
+require("lsp_lines").setup({})
 
 local null_ls = require("null-ls")
 
