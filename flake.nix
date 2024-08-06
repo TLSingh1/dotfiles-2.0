@@ -21,6 +21,7 @@
       url = "github:BirdeeHub/nixCats-nvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
     firefox-nightly.url = "github:nix-community/flake-firefox-nightly";
     hyprpicker = {
@@ -67,6 +68,10 @@
       url = "github:pasky/claude.vim";
       flake = false;
     };
+    nerdy-nvim = {
+      url = "github:2KAbhishek/nerdy.nvim";
+      flake = false;
+    };
     # msi-perkeyrgb = {
     #   url = "github:Askannz/msi-perkeyrgb";
     #   flake = false;
@@ -103,6 +108,7 @@
         {
           nixpkgs.overlays = [ 
             inputs.neorg-overlay.overlays.default
+            inputs.neovim-nightly-overlay.overlays.default
             (final: prev: {
               tree-sitter-cli = final.callPackage ./packages/tree-sitter-cli.nix {};
               # msi-perkeyrgb = final.callPackage ./packages/msi-perkeyrgb.nix {};
@@ -148,6 +154,10 @@
                 claude-nvim = prev.vimUtils.buildVimPlugin {
                   name = "claude-nvim";
                   src = inputs.claude-nvim;
+                };
+                nerdy-nvim = prev.vimUtils.buildVimPlugin {
+                  name = "nerdy-nvim";
+                  src = inputs.nerdy-nvim;
                 };
                 # tailwindcss-colorizer-cmp = prev.vimUtils.buildVimPlugin {
                 #   name = "tailwindcss-colorizer-cmp";

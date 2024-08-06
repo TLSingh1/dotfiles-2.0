@@ -1,6 +1,11 @@
+local telescope = require("telescope")
+
+pcall(telescope.load_extension, "fzf")
+pcall(telescope.load_extension, "nerdy")
+
 local actions = require("telescope.actions")
 
-require("telescope").setup({
+telescope.setup({
   defaults = {
     prompt_prefix = "🔭 ",
     selection_caret = "✨ ",
@@ -13,7 +18,7 @@ require("telescope").setup({
         ["<C-k>"] = actions.move_selection_previous,
         ["<S-k>"] = actions.preview_scrolling_up,
         ["<S-j>"] = actions.preview_scrolling_down,
-      };
+      },
       n = {
         ["j"] = actions.move_selection_next,
         ["k"] = actions.move_selection_previous,

@@ -39,6 +39,7 @@
       catppuccin-nvim
       dashboard-nvim
       dressing-nvim
+      nerdy-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
