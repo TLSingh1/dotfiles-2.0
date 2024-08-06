@@ -800,6 +800,22 @@
         "type": "github"
       }
     },
+    "nerdy-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1717173349,
+        "narHash": "sha256-k5ZmhUHGHlFuGWiviEYeHGCbXLZHY61pUnvpZgSJhPs=",
+        "owner": "2KAbhishek",
+        "repo": "nerdy.nvim",
+        "rev": "b467d6609b78d6a5f1e12cbc08fcc1ac87af20f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "2KAbhishek",
+        "repo": "nerdy.nvim",
+        "type": "github"
+      }
+    },
     "nixCats": {
       "inputs": {
         "nixpkgs": [
@@ -1035,6 +1051,7 @@
         "neorg-overlay": "neorg-overlay",
         "neorg-templates": "neorg-templates",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
+        "nerdy-nvim": "nerdy-nvim",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_8",
         "sops-nix": "sops-nix",

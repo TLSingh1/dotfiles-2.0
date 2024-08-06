@@ -22,6 +22,7 @@
       cmp_luasnip
       cmp-cmdline
       cmp-emoji
+      nvim-lspconfig
 
       # Git
 

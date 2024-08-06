@@ -92,6 +92,7 @@
     libressl
     elinks
     tree-sitter-cli
+    lua-language-server
   ];
 
   home.file = {
