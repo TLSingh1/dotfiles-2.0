@@ -46,8 +46,8 @@ local ViMode = {
       t = "T",
     },
     mode_colors = {
-      n = "red",
-      i = "green",
+      n = "#94E2D6",
+      i = "#f11a9b",
       v = "cyan",
       V = "cyan",
       ["\22"] = "cyan",
@@ -58,8 +58,8 @@ local ViMode = {
       R = "orange",
       r = "orange",
       ["!"] = "red",
-      t = "red",
-    }
+      t = "#94E395",
+    },
   },
   -- We can now access the value of mode() that, by now, would have been
   -- computed by `init()` and use it to index our strings dictionary.
@@ -86,3 +86,4 @@ local ViMode = {
     end),
   },
 }
+return ViMode
