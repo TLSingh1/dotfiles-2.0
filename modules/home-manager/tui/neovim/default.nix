@@ -38,6 +38,7 @@
       telescope-nvim
       catppuccin-nvim
       dashboard-nvim
+      dressing-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}

@@ -8,6 +8,36 @@ luasnip.filetype_extend("typescriptreact", {"html"})
 require("luasnip/loaders/from_vscode").load({include = {"html"}})
 require("luasnip/loaders/from_vscode").lazy_load()
 
+--   פּ ﯟ   some other good icons
+local kind_icons = {
+	Text = "",
+	Method = "m",
+	Function = "",
+	Constructor = "",
+	Field = "",
+	Variable = "",
+	Class = "",
+	Interface = "",
+	Module = "",
+	Property = "",
+	Unit = "",
+	Value = "",
+	Enum = "",
+	Keyword = "",
+	Snippet = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
+	EnumMember = "",
+	Constant = "",
+	Struct = "",
+	Event = "",
+	Operator = "",
+	TypeParameter = "",
+}
+-- find more here: https://www.nerdfonts.com/cheat-sheet
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -77,6 +107,7 @@ cmp.setup({
 		{ name = "luasnip", option = { show_autosnippets = true } },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "emoji" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
