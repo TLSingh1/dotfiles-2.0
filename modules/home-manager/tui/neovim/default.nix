@@ -13,6 +13,15 @@
       nvim-treesitter.withAllGrammars
       hop-nvim
       comment-nvim
+      nvim-autopairs
+      luasnip
+      nvim-cmp
+      cmp-nvim-lsp
+      cmp-buffer
+      cmp-path
+      cmp_luasnip
+      cmp-cmdline
+      cmp-emoji
 
       # Git
 
