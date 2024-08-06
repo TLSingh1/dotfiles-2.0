@@ -8,7 +8,7 @@ local actions = require("telescope.actions")
 telescope.setup({
   defaults = {
     prompt_prefix = "🔭 ",
-    selection_caret = "✨ ",
+    selection_caret = "✨",
     path_display = { "smart" },
     sorting_strategy = "ascending",
     mappings = {

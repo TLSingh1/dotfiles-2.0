@@ -45,6 +45,7 @@
       dressing-nvim
       nerdy-nvim
       indent-blankline-nvim
+      rainbow-delimiters-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
