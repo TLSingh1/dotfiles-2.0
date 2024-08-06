@@ -47,6 +47,7 @@
       indent-blankline-nvim
       rainbow-delimiters-nvim
       colorizer-nvim
+      lualine-nvim
 
     ];
     extraLuaConfig = ''
