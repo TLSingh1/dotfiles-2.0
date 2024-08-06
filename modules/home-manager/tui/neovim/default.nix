@@ -24,7 +24,7 @@
       cmp-emoji
       nvim-lspconfig
       none-ls-nvim
-      lsp-format
+      lsp-format-nvim
 
       # Git
 
