@@ -28,6 +28,7 @@
       lsp_lines-nvim
 
       # Git
+      gitsigns-nvim
 
       # Project
 
