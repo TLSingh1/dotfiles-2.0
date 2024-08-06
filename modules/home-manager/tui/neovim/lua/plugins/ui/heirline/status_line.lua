@@ -1,6 +1,5 @@
 local ViMode = require("plugins.ui.heirline.components.vi-mode")
-local FileNameBlock = require("lua.plugins.ui.heirline.components.file")
--- local FC = require("plugins.ui.heirline.components.file")
+local FileNameBlock = require("plugins.ui.heirline.components.file")
 
 local StatusLine = {
   ViMode,

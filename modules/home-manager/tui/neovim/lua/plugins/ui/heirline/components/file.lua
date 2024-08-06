@@ -63,21 +63,19 @@ local FileFlags = {
 -- component
 
 local FileNameModifer = {
+  provider = function()
+    if vim.bo.modified then
+      return " "
+    end
+  end,
   hl = function()
     if vim.bo.modified then
       -- use `force` because we need to override the child's hl foreground
-      return { fg = "cyan", bold = true, force = true }
+      return { fg = "#f11a9b", force = true }
     end
   end,
 }
 
--- let's add the children to our FileNameBlock component
-FileNameBlock = utils.insert(FileNameBlock,
-  FileIcon,
-  utils.insert(FileNameModifer, FileName), -- a new table where FileName is a child of FileNameModifier
-  FileFlags,
-  { provider = '%<' }                      -- this means that the statusline is cut here when there's not enough space
-)
 
 -------------------------------------------------
 
@@ -112,7 +110,7 @@ local FileSize = {
       return fsize .. suffix[1]
     end
     local i = math.floor((math.log(fsize) / math.log(1024)))
-    return string.format("%.2g%s", fsize / math.pow(1024, i), suffix[i + 1])
+    return string.format("  %.2g%s", fsize / math.pow(1024, i), suffix[i + 1])
   end
 }
 
@@ -126,21 +124,9 @@ local FileLastModified = {
 
 FileNameBlock = utils.insert(FileNameBlock,
   FileIcon,
-  utils.insert(FileNameModifer, FileName), -- a new table where FileName is a child of FileNameModifier
-  FileFlags,
-  { provider = '%<' }                      -- this means that the statusline is cut here when there's not enough space
+  FileType,
+  FileSize,
+  FileNameModifer
 )
 
 return FileNameBlock
-
--- return {
---   FileNameBlock = FileNameBlock,
---   FileIcon = FileIcon,
---   FileName = FileName,
---   FileFlags = FileFlags,
---   FileType = FileType,
---   FileEncoding = FileEncoding,
---   FileFormat = FileFormat,
---   FileSize = FileSize,
---   FileLastModified = FileLastModified,
--- }

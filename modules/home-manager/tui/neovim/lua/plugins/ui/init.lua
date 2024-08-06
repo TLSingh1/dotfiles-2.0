@@ -1,3 +1,4 @@
+require("plugins.ui.web-devicons")
 require("plugins.ui.bufferline")
 require("plugins.ui.catppuccin")
 require("plugins.ui.dashboard")
