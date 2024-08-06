@@ -1,6 +1,6 @@
 {
   programs.nixvim.plugins.indent-blankline = {
-    enable = true;
+    enable = false;
     settings = {
       exclude = {
         filetypes = [
@@ -9,12 +9,12 @@
           "alpha"
         ];
       };
-      scope = {
-        enabled = true;
-        show_start = true;
-        show_end = true;
-        show_exact_scope = true;
-      };
+      # scope = {
+      #   enabled = false;
+      #   show_start = true;
+      #   show_end = true;
+      #   show_exact_scope = true;
+      # };
     };
   };
 }

@@ -8,3 +8,4 @@ require("plugins.ui.rainbow-delimiters")
 require("plugins.ui.telescope")
 require("plugins.ui.toggleterm")
 require("plugins.ui.window-picker")
+require("plugins.ui.colorizer") -- recommended to load last

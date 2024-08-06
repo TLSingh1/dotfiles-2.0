@@ -17,10 +17,6 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixCats = {
-      url = "github:BirdeeHub/nixCats-nvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
     firefox-nightly.url = "github:nix-community/flake-firefox-nightly";
@@ -72,18 +68,10 @@
       url = "github:2KAbhishek/nerdy.nvim";
       flake = false;
     };
-    # msi-perkeyrgb = {
-    #   url = "github:Askannz/msi-perkeyrgb";
-    #   flake = false;
-    # };
-    # tailwindcss-colorizer-cmp = {
-    #   url = "github:roobert/tailwindcss-colorizer-cmp.nvim";
-    #   flake = false;
-    # };
-    # tw-values = {
-    #   url = "github:MaximilianLloyd/tw-values.nvim";
-    #   flake = false;
-    # };
+    colorizer-nvim = {
+      url = "github:norcalli/nvim-colorizer.lua";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -92,7 +80,6 @@
     home-manager, 
     hyprland, 
     # nixvim, 
-    nixCats,
     ags, 
     sops-nix,
     hyprpicker,
@@ -159,14 +146,10 @@
                   name = "nerdy-nvim";
                   src = inputs.nerdy-nvim;
                 };
-                # tailwindcss-colorizer-cmp = prev.vimUtils.buildVimPlugin {
-                #   name = "tailwindcss-colorizer-cmp";
-                #   src = inputs.tailwindcss-colorizer-cmp;
-                # };
-                # tw-values = prev.vimUtils.buildVimPlugin {
-                #   name = "tw-values";
-                #   src = inputs.tw-values;
-                # };
+                colorizer-nvim = prev.vimUtils.buildVimPlugin {
+                  name = "colorizer-nvim";
+                  src = inputs.colorizer-nvim;
+                };
               };
             })
           ];

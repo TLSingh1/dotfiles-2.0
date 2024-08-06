@@ -93,6 +93,8 @@
     elinks
     tree-sitter-cli
     lua-language-server
+    nil
+    nixd
   ];
 
   home.file = {
