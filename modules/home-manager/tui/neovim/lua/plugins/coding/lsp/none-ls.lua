@@ -1,4 +1,4 @@
-require("lsp_lines").setup({})
+-- require("lsp_lines").setup({})
 
 local null_ls = require("null-ls")
 
@@ -10,10 +10,10 @@ local signs = {
 }
 
 local diagnostics_config = {
-  virtual_text = false,
+  virtual_text = true,
   virtual_lines = {
     only_current_line = true,
-    highlight_whole_line = true,
+    highlight_whole_line = false,
   },
   signs = {
     text = {

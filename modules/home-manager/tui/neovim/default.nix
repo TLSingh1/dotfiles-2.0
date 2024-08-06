@@ -48,6 +48,7 @@
       rainbow-delimiters-nvim
       colorizer-nvim
       lualine-nvim
+      heirline-nvim
 
     ];
     extraLuaConfig = ''
