@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, inputs, ... }:
 {
   programs.neovim = {
     enable = true;
@@ -24,6 +24,7 @@
       cmp-emoji
       nvim-lspconfig
       none-ls-nvim
+      lsp-format
 
       # Git
 

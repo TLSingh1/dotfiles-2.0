@@ -7,10 +7,6 @@ local signs = {
   { name = "DiagnosticSignInfo", text = "" },
 }
 
-for _, sign in ipairs(signs) do
-  vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-end
-
 local config = {
   virtual_text = false,
   virtual_lines = {
@@ -18,7 +14,12 @@ local config = {
     highlight_whole_line = false,
   },
   signs = {
-    active = signs,
+    text = {
+      [vim.diagnostic.severity.ERROR] = signs[1].text,
+      [vim.diagnostic.severity.WARN] = signs[2].text,
+      [vim.diagnostic.severity.HINT] = signs[3].text,
+      [vim.diagnostic.severity.INFO] = signs[4].text,
+    },
   },
   update_in_insert = false,
   underline = true,
@@ -77,9 +78,4 @@ end)(vim.diagnostic.open_float)
 
 null_ls.setup({
   debug = false,
-  sources = {
-    -- null_ls.builtins.formatting.stylua,
-    -- null_ls.builtins.completion.spell,
-    -- require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
-  },
 })

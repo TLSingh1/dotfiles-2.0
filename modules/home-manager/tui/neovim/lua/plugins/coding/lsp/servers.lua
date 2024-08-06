@@ -1,5 +1,8 @@
 local lspconfig = require("lspconfig")
+local lsp_format = require("lsp-format")
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+lsp_format.setup({})
 
 local servers = {
   "lua_ls",
@@ -30,15 +33,23 @@ local function setup_lua_ls()
     settings = {
       Lua = {}
     },
-    capabilities = lsp_capabilities
+    capabilities = lsp_capabilities,
+    on_attach = lsp_format.on_attach
   }
 end
 
--- Set up servers
+local function on_attach(client, bufnr)
+  lsp_format.on_attach(client, bufnr)
+  -- add other custom on_attach logic here
+end
+
 for _, server in ipairs(servers) do
   if server == "lua_ls" then
     lspconfig[server].setup(setup_lua_ls())
   else
-    lspconfig[server].setup({ capabilities = lsp_capabilities })
+    lspconfig[server].setup({
+      capabilities = lsp_capabilities,
+      on_attach = on_attach
+    })
   end
 end
