@@ -1,4 +1,4 @@
-local StatusLine = require("plugins.ui.heirline.status_line")
+local StatusLine = require("heirline.status_line")
 
 require("heirline").setup({
   statusline = StatusLine,
