@@ -30,7 +30,7 @@ local FileNameModifer = {
   hl = function()
     if vim.bo.modified then
       -- use `force` because we need to override the child's hl foreground
-      return { fg = "#f11a9b", force = true }
+      return { fg = "#EBA0AD", force = true }
     end
   end,
 }
@@ -59,7 +59,6 @@ local FileSize = {
 FileNameBlock = utils.insert(FileNameBlock,
   FileIcon,
   FileType,
-  FileSize,
   FileNameModifer
 )
 
