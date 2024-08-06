@@ -14,7 +14,7 @@ local function setup_lua_ls()
   return {
     on_init = function(client)
       local path = client.workspace_folders[1].name
-      if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+      if vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc') then
         return
       end
 
@@ -40,7 +40,7 @@ end
 
 local function on_attach(client, bufnr)
   lsp_format.on_attach(client, bufnr)
-  -- add other custom on_attach logic here
+  -- add other on_attach logic here
 end
 
 for _, server in ipairs(servers) do

@@ -1,3 +1,5 @@
+require("lsp_lines").setup()
+
 local null_ls = require("null-ls")
 
 local signs = {
@@ -7,11 +9,11 @@ local signs = {
   { name = "DiagnosticSignInfo", text = "" },
 }
 
-local config = {
+local diagnostics_config = {
   virtual_text = false,
   virtual_lines = {
     only_current_line = true,
-    highlight_whole_line = false,
+    highlight_whole_line = true,
   },
   signs = {
     text = {
@@ -34,7 +36,7 @@ local config = {
   },
 }
 
-vim.diagnostic.config(config)
+vim.diagnostic.config(diagnostics_config)
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = "rounded",

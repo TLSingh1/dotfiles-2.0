@@ -25,6 +25,7 @@
       nvim-lspconfig
       none-ls-nvim
       lsp-format-nvim
+      lsp_lines-nvim
 
       # Git
 
