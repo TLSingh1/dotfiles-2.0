@@ -7,6 +7,7 @@ require("plugins.ui.heirline")
 require("plugins.ui.indent-blankline")
 -- require("plugins.ui.lualine")
 require("plugins.ui.neo-tree")
+require("plugins.ui.notify") -- must be before noice b/c notify
 require("plugins.ui.noice")
 require("plugins.ui.rainbow-delimiters")
 require("plugins.ui.telescope")

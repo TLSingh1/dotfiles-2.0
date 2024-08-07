@@ -1,7 +1,5 @@
 vim.g.mapleader = " "
 
-vim.notify = require("notify")
-
 local options = {
   backup = false,
   clipboard = "unnamedplus",
