@@ -13,6 +13,7 @@
       hop-nvim
       comment-nvim
       nvim-autopairs
+      ultimate-autopair-nvim
       luasnip
       nvim-cmp
       cmp-nvim-lsp
@@ -25,6 +26,7 @@
       none-ls-nvim
       lsp-format-nvim
       lsp_lines-nvim
+      nvim-surround
 
       # Git
       gitsigns-nvim
