@@ -91,7 +91,7 @@ local TablineFileNameBlock = {
     end,
     name = "heirline_tabline_buffer_callback",
   },
-  TablineBufnr,
+  -- TablineBufnr,
   FileIcon, -- turns out the version defined in #crash-course-part-ii-filename-and-friends can be reutilized as is here!
   TablineFileName,
   TablineFileFlags,
@@ -128,7 +128,7 @@ local TablineBufferBlock = utils.surround({ "", "" }, function(self)
   else
     return utils.get_highlight("TabLine").bg
   end
-end, { TablineFileNameBlock, TablineCloseButton })
+end, { TablineFileNameBlock })
 
 
 ---------------------------------------------------
@@ -156,11 +156,11 @@ vim.api.nvim_create_autocmd({ "VimEnter", "UIEnter", "BufAdd", "BufDelete" }, {
       end
 
       -- check how many buffers we have and set showtabline accordingly
-      if #buflist_cache > 1 then
-        vim.o.showtabline = 2            -- always
-      elseif vim.o.showtabline ~= 1 then -- don't reset the option if it's already at default value
-        vim.o.showtabline = 1            -- only when #tabpages > 1
-      end
+      -- if #buflist_cache > 1 then
+      --   vim.o.showtabline = 2            -- always
+      -- elseif vim.o.showtabline ~= 1 then -- don't reset the option if it's already at default value
+      --   vim.o.showtabline = 1            -- only when #tabpages > 1
+      -- end
     end)
   end,
 })

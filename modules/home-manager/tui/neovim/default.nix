@@ -49,6 +49,8 @@
       colorizer-nvim
       lualine-nvim
       heirline-nvim
+      nvim-notify
+      noice-nvim
 
     ];
     extraLuaConfig = ''
