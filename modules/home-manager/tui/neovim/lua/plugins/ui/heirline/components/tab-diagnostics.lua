@@ -1,5 +1,4 @@
 local conditions = require("heirline.conditions")
--- local utils = require("heirline.utils")
 
 local TabDiagnostics = {
   condition = function(self)
@@ -14,20 +13,15 @@ local TabDiagnostics = {
   },
 
   init = function(self)
-    local diagnostics = vim.diagnostic.get(self.bufnr)
-    local count = { 0, 0, 0, 0 }
-    for _, diagnostic in ipairs(diagnostics) do
-      count[diagnostic.severity] = count[diagnostic.severity] + 1
-    end
-    self.errors = count[vim.diagnostic.severity.ERROR]
-    self.warnings = count[vim.diagnostic.severity.WARN]
-    self.info = count[vim.diagnostic.severity.INFO]
-    self.hints = count[vim.diagnostic.severity.HINT]
+    self.errors = #vim.diagnostic.get(self.bufnr, { severity = vim.diagnostic.severity.ERROR })
+    self.warnings = #vim.diagnostic.get(self.bufnr, { severity = vim.diagnostic.severity.WARN })
+    self.hints = #vim.diagnostic.get(self.bufnr, { severity = vim.diagnostic.severity.HINT })
+    self.info = #vim.diagnostic.get(self.bufnr, { severity = vim.diagnostic.severity.INFO })
 
-    self.error_icon = " "
-    self.warn_icon = " "
-    self.info_icon = " "
-    self.hint_icon = " "
+    self.error_icon = " "
+    self.warn_icon = " "
+    self.info_icon = " "
+    self.hint_icon = " "
   end,
 
   update = { "DiagnosticChanged", "BufEnter" },
