@@ -31,6 +31,7 @@
       lsp_lines-nvim
       nvim-surround
       better-escape-nvim
+      todo-comments-nvim
 
       # Git
       gitsigns-nvim

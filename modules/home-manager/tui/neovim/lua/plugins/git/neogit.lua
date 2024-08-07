@@ -11,6 +11,7 @@ neogit.setup({
 	mappings = {
 		status = {
 			["l"] = "Toggle",
+			["S"] = "StageAll",
 		},
 	},
 })
