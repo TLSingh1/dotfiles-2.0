@@ -2,37 +2,48 @@ local ViMode = require("plugins.ui.heirline.components.vi-mode")
 local FileNameBlock = require("plugins.ui.heirline.components.file")
 local Diagnostics = require("plugins.ui.heirline.components.diagnostics")
 local Git = require("plugins.ui.heirline.components.git")
+local LineInfo = require("plugins.ui.heirline.components.line-info")
 
 local Align = { provider = "%=" }
 local Space = { provider = " " }
 
-local LineInfo = {
-  provider = function()
-    local line = vim.fn.line('.')
-    local total_lines = vim.fn.line('$')
-    local col = vim.fn.virtcol('.')
-    return string.format("%d/%d:%d", line, total_lines, col)
-  end,
-  hl = { fg = "gray", bold = true },
-}
-
-local StatusLine = {
+local LeftSection = {
+  flexible = 1,
   {
     ViMode,
     Space,
-    FileNameBlock,
+    Space,
     Space,
     Diagnostics,
-    Align
   },
+  { provider = "" }, -- Empty provider as fallback
+}
+
+local MiddleSection = {
+  flexible = 1,
   {
+    Align,
+    Space,
     Git,
-    Align
   },
+  { provider = "" }, -- Empty provider as fallback
+}
+
+local RightSection = {
+  flexible = 1,
   {
-    LineInfo, -- Add the new LineInfo component here
-    Space
-  }
+    Align,
+    FileNameBlock,
+    Space,
+    LineInfo
+  },
+  { provider = "" }, -- Empty provider as fallback
+}
+
+local StatusLine = {
+  LeftSection,
+  MiddleSection,
+  RightSection,
 }
 
 return StatusLine
