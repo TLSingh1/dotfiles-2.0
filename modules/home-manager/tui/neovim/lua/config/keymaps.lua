@@ -27,6 +27,7 @@ keymap("n", ";", ":Neotree float reveal <CR>", opts)
 keymap("n", "f", ":HopWord <CR>", opts)
 keymap("n", "F", ":HopChar1 <CR>", opts)
 keymap("v", "f", ":HopLine <CR>", opts)
+keymap("n", "<leader>n", ":Neogit <CR>", opts)
 
 ------------------- LSP -----------------------
 keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float({ border = 'rounded' })<CR>", opts)
@@ -34,7 +35,6 @@ keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "gN", "<cmd>lua vim.diagnostic.goto_prev({ border = 'rounded' })<CR>", opts)
 keymap("n", "gn", "<cmd>lua vim.diagnostic.goto_next({ border = 'rounded' })<CR>", opts)
-
 
 ---------------- Telescope --------------------
 keymap(

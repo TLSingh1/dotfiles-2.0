@@ -1,7 +1,7 @@
 local lspconfig = require("lspconfig")
 local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local navic = require("navic")
+local navic = require("nvim-navic")
 local navbuddy = require("nvim-navbuddy")
 
 local servers = {

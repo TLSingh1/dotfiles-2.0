@@ -15,6 +15,7 @@ require("heirline").setup({
 					"prompt",
 					"help",
 					"quickfix",
+					"Navbuddy",
 				},
 				filetype = {
 					"^git.*",

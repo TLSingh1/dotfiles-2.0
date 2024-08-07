@@ -1,5 +1,5 @@
 require("neo-tree").setup({
-  popup_border_style = "rounded",
+	popup_border_style = "rounded",
 	add_blank_line_at_top = true,
 	hide_root_node = false,
 	retain_hidden_root_indent = true,
@@ -13,6 +13,10 @@ require("neo-tree").setup({
 			{
 				source = "filesystem",
 				display_name = "𐎾    𐏃    𐏁    𐎠    𐎲 ",
+			},
+			{
+				source = "document_symbols",
+				display_name = "DOCUMENT_symbols",
 			},
 		},
 		content_layout = "center",
@@ -78,10 +82,10 @@ require("neo-tree").setup({
 	window = {
 		position = "float",
 		-- width = 25,
-    -- popup = {
-    --   size = { height = "30", width = "30" },
-    --   position = "50%"
-    -- },
+		-- popup = {
+		--   size = { height = "30", width = "30" },
+		--   position = "50%"
+		-- },
 		mapping_options = {
 			noremap = true,
 			nowait = true,
@@ -167,7 +171,7 @@ require("neo-tree").setup({
 		-- time the current file is changed while the tree is open.
 		group_empty_dirs = false, -- when true, empty folders will be grouped together
 		hijack_netrw_behavior = "open_default", -- yes
-		-- use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
+		use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
 		-- instead of relying on nvim autocmd events.
 		window = {
 			mappings = {
@@ -178,8 +182,8 @@ require("neo-tree").setup({
 				-- ["/"] = "fuzzy_finder_directory",
 				["#"] = "fuzzy_sorter", -- fuzzy sorting using the fzy algorithm
 				-- ["D"] = "fuzzy_sorter_directory",
-				["f"] = function (state)
-          vim.api.nvim_command("HopWord")
+				["f"] = function(state)
+					vim.api.nvim_command("HopWord")
 				end,
 				["<c-x>"] = "clear_filter",
 				["[g"] = "prev_git_modified",
