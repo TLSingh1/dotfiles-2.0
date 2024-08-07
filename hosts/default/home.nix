@@ -95,6 +95,8 @@
     lua-language-server
     nil
     nixd
+    stylua
+    alejandra
   ];
 
   home.file = {

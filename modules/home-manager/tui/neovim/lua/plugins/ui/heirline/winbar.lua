@@ -1,53 +1,80 @@
 local conditions = require("heirline.conditions")
-local utils = require("heirline.utils")
-
--- local Align = { provider = "%=" }
-local Space = { provider = " " }
-
-local FileNameBlock = {
-  -- let's first set up some attributes needed by this component and its children
-  init = function(self)
-    self.filename = vim.api.nvim_buf_get_name(0)
-  end,
-}
-
-local FileType = {
-  provider = function()
-    return string.upper(vim.bo.filetype)
-  end,
-  hl = { fg = utils.get_highlight("Type").fg, bold = true },
-}
-
-local TerminalName = {
-  -- we could add a condition to check that buftype == 'terminal'
-  -- or we could do that later (see #conditional-statuslines below)
-  provider = function()
-    local tname, _ = vim.api.nvim_buf_get_name(0):gsub(".*:", "")
-    return " " .. tname
-  end,
-  hl = { fg = "blue", bold = true },
-}
+local path = require("plenary.path")
+local devicons = require("nvim-web-devicons")
 
 local WinBar = {
   fallthrough = false,
-  { -- A special winbar for terminals
-    condition = function()
-      return conditions.buffer_matches({ buftype = { "terminal" } })
+
+  {
+    -- condition = conditions.is_active,
+    init = function(self)
+      -- Get the full path of the current buffer
+      self.filename = vim.api.nvim_buf_get_name(0)
+
+      -- Find the project root
+      local root = vim.fn.fnamemodify(vim.fn.getcwd(), ':p')
+      local git_dir = vim.fn.finddir('.git', vim.fn.expand('%:p:h') .. ';')
+      if git_dir ~= '' then
+        root = vim.fn.fnamemodify(git_dir, ':h')
+      end
+
+      -- Get relative path from project root
+      self.rel_path = path:new(self.filename):make_relative(root)
+
+      -- Split the path
+      self.parts = vim.split(self.rel_path, path.path.sep)
+
+      -- Get file icon
+      local filename = self.parts[#self.parts]
+      local extension = vim.fn.fnamemodify(filename, ":e")
+      self.icon, self.icon_color = devicons.get_icon_color(filename, extension, { default = true })
     end,
-    utils.surround({ "", "" }, "dark_red", {
-      FileType,
-      Space,
-      TerminalName,
-    }),
+
+    -- Grandparent directory
+    {
+      provider = function(self)
+        if #self.parts > 2 then
+          return self.parts[#self.parts - 2] .. " / "
+        end
+        return ""
+      end,
+      hl = { fg = "gray" },
+    },
+
+    -- Parent directory
+    {
+      provider = function(self)
+        if #self.parts > 1 then
+          return self.parts[#self.parts - 1] .. " / "
+        end
+        return ""
+      end,
+      hl = { fg = "lightgray" },
+    },
+
+    -- File icon
+    {
+      provider = function(self)
+        return self.icon and (self.icon .. " ")
+      end,
+      hl = function(self)
+        return { fg = self.icon_color }
+      end,
+    },
+
+    -- File name
+    {
+      provider = function(self)
+        return self.parts[#self.parts]
+      end,
+      hl = { fg = "white", bold = true },
+    },
   },
-  { -- An inactive winbar for regular files
-    condition = function()
-      return not conditions.is_active()
-    end,
-    utils.surround({ "", "" }, "bright_bg", { hl = { fg = "gray", force = true }, FileNameBlock }),
-  },
-  -- A winbar for regular files
-  utils.surround({ "", "" }, "bright_bg", FileNameBlock),
+
+  -- Fallback if the window is not active
+  -- {
+  --   provider = "",
+  -- },
 }
 
 return WinBar

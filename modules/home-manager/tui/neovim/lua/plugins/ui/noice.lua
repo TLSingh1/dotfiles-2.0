@@ -65,5 +65,9 @@ require("noice").setup({
       view = "mini",
       filter = { find = "fewer", },
     },
+    {
+      view = "mini",
+      filter = { find = "change", },
+    },
   },
 })

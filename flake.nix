@@ -75,14 +75,14 @@
   };
 
   outputs = {
-    self, 
+    # self, 
     nixpkgs, 
     home-manager, 
     hyprland, 
     # nixvim, 
-    ags, 
-    sops-nix,
-    hyprpicker,
+    # ags, 
+    # sops-nix,
+    # hyprpicker,
     # hyprland-plugins,
     ... 
   }@inputs:
