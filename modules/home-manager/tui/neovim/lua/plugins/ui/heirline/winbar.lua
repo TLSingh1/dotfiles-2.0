@@ -1,5 +1,7 @@
 local path = require("plenary.path")
 local devicons = require("nvim-web-devicons")
+local Diagnostics = require("plugins.ui.heirline.components.diagnostics")
+local LineInfo = require("plugins.ui.heirline.components.line-info")
 
 local Align = { provider = "%=" }
 local Space = { provider = " " }
@@ -84,6 +86,13 @@ local WinBar = {
 		{
 			Space,
 			FileNameModifer,
+		},
+		{
+			Align,
+			Space,
+			Diagnostics,
+			Space,
+			LineInfo,
 		},
 	},
 }

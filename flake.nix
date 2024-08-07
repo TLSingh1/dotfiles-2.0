@@ -72,28 +72,31 @@
       url = "github:norcalli/nvim-colorizer.lua";
       flake = false;
     };
+    eldritch-nvim = {
+      url = "github:eldritch-theme/eldritch.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
-    # self, 
-    nixpkgs, 
-    home-manager, 
-    hyprland, 
-    # nixvim, 
-    # ags, 
+    # self,
+    nixpkgs,
+    home-manager,
+    hyprland,
+    # nixvim,
+    # ags,
     # sops-nix,
     # hyprpicker,
     # hyprland-plugins,
-    ... 
-  }@inputs:
-  {
+    ...
+  } @ inputs: {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./hosts/default/configuration.nix
         home-manager.nixosModules.default
         {
-          nixpkgs.overlays = [ 
+          nixpkgs.overlays = [
             inputs.neorg-overlay.overlays.default
             inputs.neovim-nightly-overlay.overlays.default
             (final: prev: {
@@ -101,56 +104,62 @@
               # msi-perkeyrgb = final.callPackage ./packages/msi-perkeyrgb.nix {};
               materia-theme-transparent = prev.callPackage ./packages/materia-theme-transparent.nix {};
               neon-town-sddm = prev.callPackage ./packages/neon-town-sddm.nix {};
-              vimPlugins = prev.vimPlugins // {
-                winbar-nvim = prev.vimUtils.buildVimPlugin {
-                  name = "winbar-nvim";
-                  src = inputs.winbar-nvim;
+              vimPlugins =
+                prev.vimPlugins
+                // {
+                  winbar-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "winbar-nvim";
+                    src = inputs.winbar-nvim;
+                  };
+                  colorful-winsep = prev.vimUtils.buildVimPlugin {
+                    name = "colorful-winsep";
+                    src = inputs.colorful-winsep;
+                  };
+                  incline = prev.vimUtils.buildVimPlugin {
+                    name = "incline";
+                    src = inputs.incline;
+                  };
+                  markdown-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "markdown-nvim";
+                    src = inputs.markdown-nvim;
+                  };
+                  typescript-tools = prev.vimUtils.buildVimPlugin {
+                    name = "typescript-tools";
+                    src = inputs.typescript-tools;
+                  };
+                  tailwind-tools = prev.vimUtils.buildVimPlugin {
+                    name = "tailwind-tools";
+                    src = inputs.tailwind-tools;
+                  };
+                  yazi-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "yazi-nvim";
+                    src = inputs.yazi-nvim;
+                  };
+                  gen-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "gen-nvim";
+                    src = inputs.gen-nvim;
+                  };
+                  neorg-templates = prev.vimUtils.buildVimPlugin {
+                    name = "neorg-templates";
+                    src = inputs.neorg-templates;
+                  };
+                  claude-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "claude-nvim";
+                    src = inputs.claude-nvim;
+                  };
+                  nerdy-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "nerdy-nvim";
+                    src = inputs.nerdy-nvim;
+                  };
+                  colorizer-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "colorizer-nvim";
+                    src = inputs.colorizer-nvim;
+                  };
+                  eldritch-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "eldritch-nvim";
+                    src = inputs.eldritch-nvim;
+                  };
                 };
-                colorful-winsep = prev.vimUtils.buildVimPlugin {
-                  name = "colorful-winsep";
-                  src = inputs.colorful-winsep;
-                };
-                incline = prev.vimUtils.buildVimPlugin {
-                  name = "incline";
-                  src = inputs.incline;
-                };
-                markdown-nvim = prev.vimUtils.buildVimPlugin {
-                  name = "markdown-nvim";
-                  src = inputs.markdown-nvim;
-                };
-                typescript-tools = prev.vimUtils.buildVimPlugin {
-                  name = "typescript-tools";
-                  src = inputs.typescript-tools;
-                };
-                tailwind-tools = prev.vimUtils.buildVimPlugin {
-                  name = "tailwind-tools";
-                  src = inputs.tailwind-tools;
-                };
-                yazi-nvim = prev.vimUtils.buildVimPlugin {
-                  name = "yazi-nvim";
-                  src = inputs.yazi-nvim;
-                };
-                gen-nvim = prev.vimUtils.buildVimPlugin {
-                  name = "gen-nvim";
-                  src = inputs.gen-nvim;
-                };
-                neorg-templates = prev.vimUtils.buildVimPlugin {
-                  name = "neorg-templates";
-                  src = inputs.neorg-templates;
-                };
-                claude-nvim = prev.vimUtils.buildVimPlugin {
-                  name = "claude-nvim";
-                  src = inputs.claude-nvim;
-                };
-                nerdy-nvim = prev.vimUtils.buildVimPlugin {
-                  name = "nerdy-nvim";
-                  src = inputs.nerdy-nvim;
-                };
-                colorizer-nvim = prev.vimUtils.buildVimPlugin {
-                  name = "colorizer-nvim";
-                  src = inputs.colorizer-nvim;
-                };
-              };
             })
           ];
         }
@@ -162,7 +171,7 @@
         hyprland.homeManagerModules.default
         # nixvim.homeManagerModules.nixvim
       ];
-      extraSpecialArgs = { inherit inputs; };
+      extraSpecialArgs = {inherit inputs;};
     };
   };
 }

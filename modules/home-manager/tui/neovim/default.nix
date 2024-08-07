@@ -46,6 +46,7 @@
       bufferline-nvim
       telescope-nvim
       catppuccin-nvim
+      eldritch-nvim
       dashboard-nvim
       dressing-nvim
       nerdy-nvim
