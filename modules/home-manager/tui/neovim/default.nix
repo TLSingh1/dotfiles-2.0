@@ -30,6 +30,7 @@
       conform-nvim
       lsp_lines-nvim
       nvim-surround
+      better-escape-nvim
 
       # Git
       gitsigns-nvim
@@ -46,7 +47,6 @@
       bufferline-nvim
       telescope-nvim
       catppuccin-nvim
-      eldritch-nvim
       dashboard-nvim
       dressing-nvim
       nerdy-nvim

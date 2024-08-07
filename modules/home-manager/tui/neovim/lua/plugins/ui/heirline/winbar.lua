@@ -10,7 +10,7 @@ local FileNameModifer = {
 	provider = function()
 		if vim.bo.modified then
 			-- return " "
-			return "●"
+			return ""
 		end
 	end,
 	hl = function()
