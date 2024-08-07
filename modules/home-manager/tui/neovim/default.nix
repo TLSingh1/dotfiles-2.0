@@ -60,6 +60,8 @@
       heirline-nvim
       nvim-notify
       noice-nvim
+      nvim-navic
+      nvim-navbuddy
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
