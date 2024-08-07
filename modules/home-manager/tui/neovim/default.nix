@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.neovim = {
     enable = true;
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
@@ -7,7 +10,6 @@
     vimdiffAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
-
       # Coding
       nvim-treesitter.withAllGrammars
       hop-nvim
@@ -54,7 +56,6 @@
       heirline-nvim
       nvim-notify
       noice-nvim
-
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
