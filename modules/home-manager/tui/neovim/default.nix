@@ -32,6 +32,7 @@
       nvim-surround
       better-escape-nvim
       todo-comments-nvim
+      smart-splits-nvim
 
       # Git
       gitsigns-nvim

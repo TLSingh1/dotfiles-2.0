@@ -1,3 +1,17 @@
+-- require("neo-tree").setup({
+-- 	sources = { "filesystem", "buffers", "git_status", "document_symbols" },
+-- 	source_selector = {
+-- 		winbar = false,
+-- 		statusline = false,
+-- 		sources = {
+-- 			{ source = "filesystem", display_name = "File" },
+-- 			{ source = "buffers", display_name = "Bufs" },
+-- 			{ source = "git_status", display_name = "Git" },
+-- 			{ source = "document_symbols", display_name = "Symbols" },
+-- 		},
+-- 	},
+-- })
+
 require("neo-tree").setup({
 	popup_border_style = "rounded",
 	add_blank_line_at_top = true,
@@ -7,16 +21,21 @@ require("neo-tree").setup({
 	enable_diagnostics = true,
 	open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
 	sort_case_insensitive = true,
+	sources = { "filesystem", "document_symbols" },
+	document_symbols = {
+		follow_current_file = false,
+	},
 	source_selector = {
 		winbar = true,
+		statusline = false,
 		sources = {
 			{
 				source = "filesystem",
-				display_name = "𐎾    𐏃    𐏁    𐎠    𐎲 ",
+				display_name = " ",
 			},
 			{
 				source = "document_symbols",
-				display_name = "DOCUMENT_symbols",
+				display_name = " ",
 			},
 		},
 		content_layout = "center",

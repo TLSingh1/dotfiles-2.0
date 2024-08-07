@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -13,6 +12,7 @@
       oacw = "okta-aws-cli web";
       k = "kubectl";
       ol = "ollama";
+      cnv = "cd neovim && nv .";
     };
     functions = {
       yy = ''
@@ -45,9 +45,8 @@
     shellInit = "";
   };
 }
-
-
 # set -x BROWSER 'firefox-nightly'
 # set -x XDG_BROWSER 'firefox-nightly'
 # set -x MANGAL_READER_BROWSER 'firefox-nightly'
 # set -x MANGAL_READER_READ_IN_BROWSER 'firefox-nightly'
+
