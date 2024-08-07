@@ -1,7 +1,10 @@
 local conditions = require("heirline.conditions")
+-- local utils = require("heirline.utils")
 
 local TabDiagnostics = {
-  condition = conditions.has_diagnostics,
+  condition = function(self)
+    return conditions.has_diagnostics(self.bufnr)
+  end,
 
   static = {
     error_icon = vim.fn.sign_getdefined("DiagnosticSignError")[1],
@@ -11,10 +14,15 @@ local TabDiagnostics = {
   },
 
   init = function(self)
-    self.errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
-    self.warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
-    self.hints = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
-    self.info = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
+    local diagnostics = vim.diagnostic.get(self.bufnr)
+    local count = { 0, 0, 0, 0 }
+    for _, diagnostic in ipairs(diagnostics) do
+      count[diagnostic.severity] = count[diagnostic.severity] + 1
+    end
+    self.errors = count[vim.diagnostic.severity.ERROR]
+    self.warnings = count[vim.diagnostic.severity.WARN]
+    self.info = count[vim.diagnostic.severity.INFO]
+    self.hints = count[vim.diagnostic.severity.HINT]
 
     self.error_icon = " "
     self.warn_icon = " "

@@ -203,6 +203,7 @@ local TabLine = {
   TabLineOffset,
   BufferLine,
   TabPages,
+  update = { "DiagnosticChanged" },
 }
 
 return TabLine
