@@ -34,6 +34,8 @@
 
       # Git
       gitsigns-nvim
+      diffview-nvim
+      neogit
 
       # Project
 

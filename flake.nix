@@ -72,10 +72,6 @@
       url = "github:norcalli/nvim-colorizer.lua";
       flake = false;
     };
-    eldritch-nvim = {
-      url = "github:eldritch-theme/eldritch.nvim";
-      flake = false;
-    };
   };
 
   outputs = {
@@ -154,10 +150,6 @@
                   colorizer-nvim = prev.vimUtils.buildVimPlugin {
                     name = "colorizer-nvim";
                     src = inputs.colorizer-nvim;
-                  };
-                  eldritch-nvim = prev.vimUtils.buildVimPlugin {
-                    name = "eldritch-nvim";
-                    src = inputs.eldritch-nvim;
                   };
                 };
             })
