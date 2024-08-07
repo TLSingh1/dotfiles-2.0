@@ -1,4 +1,5 @@
 local utils = require("heirline.utils")
+local TabDiagnostics = require("plugins.ui.heirline.components.tab-diagnostics")
 
 local FileIcon = {
   init = function(self)
@@ -12,13 +13,6 @@ local FileIcon = {
   hl = function(self)
     return { fg = self.icon_color }
   end
-}
-
-local TablineBufnr = {
-  provider = function(self)
-    return tostring(self.bufnr) .. ". "
-  end,
-  hl = "Comment",
 }
 
 -- we redefine the filename component, as we probably only want the tail and not the relative path
@@ -95,30 +89,7 @@ local TablineFileNameBlock = {
   FileIcon, -- turns out the version defined in #crash-course-part-ii-filename-and-friends can be reutilized as is here!
   TablineFileName,
   TablineFileFlags,
-}
-
--- a nice "x" button to close the buffer
-local TablineCloseButton = {
-  condition = function(self)
-    return not vim.api.nvim_get_option_value("modified", { buf = self.bufnr })
-  end,
-  { provider = " " },
-  {
-    provider = "",
-    hl = { fg = "gray" },
-    on_click = {
-      callback = function(_, minwid)
-        vim.schedule(function()
-          vim.api.nvim_buf_delete(minwid, { force = false })
-          vim.cmd.redrawtabline()
-        end)
-      end,
-      minwid = function(self)
-        return self.bufnr
-      end,
-      name = "heirline_tabline_close_buffer_callback",
-    },
-  },
+  TabDiagnostics
 }
 
 -- The final touch!
@@ -154,13 +125,6 @@ vim.api.nvim_create_autocmd({ "VimEnter", "UIEnter", "BufAdd", "BufDelete" }, {
       for i = #buffers + 1, #buflist_cache do
         buflist_cache[i] = nil
       end
-
-      -- check how many buffers we have and set showtabline accordingly
-      -- if #buflist_cache > 1 then
-      --   vim.o.showtabline = 2            -- always
-      -- elseif vim.o.showtabline ~= 1 then -- don't reset the option if it's already at default value
-      --   vim.o.showtabline = 1            -- only when #tabpages > 1
-      -- end
     end)
   end,
 })
@@ -176,46 +140,6 @@ local BufferLine = utils.make_buflist(
   -- no cache, as we're handling everything ourselves
   false
 )
-
--- local TablinePicker = {
---   condition = function(self)
---     return self._show_picker
---   end,
---   init = function(self)
---     local bufname = vim.api.nvim_buf_get_name(self.bufnr)
---     bufname = vim.fn.fnamemodify(bufname, ":t")
---     local label = bufname:sub(1, 1)
---     local i = 2
---     while self._picker_labels[label] do
---       if i > #bufname then
---         break
---       end
---       label = bufname:sub(i, i)
---       i = i + 1
---     end
---     self._picker_labels[label] = self.bufnr
---     self.label = label
---   end,
---   provider = function(self)
---     return self.label
---   end,
---   hl = { fg = "red", bold = true },
--- }
-
--- vim.keymap.set("n", "gbp", function()
---   local tabline = require("heirline").tabline
---   local buflist = tabline._buflist[1]
---   buflist._picker_labels = {}
---   buflist._show_picker = true
---   vim.cmd.redrawtabline()
---   local char = vim.fn.getcharstr()
---   local bufnr = buflist._picker_labels[char]
---   if bufnr then
---     vim.api.nvim_win_set_buf(0, bufnr)
---   end
---   buflist._show_picker = false
---   vim.cmd.redrawtabline()
--- end)
 
 local Tabpage = {
   provider = function(self)
