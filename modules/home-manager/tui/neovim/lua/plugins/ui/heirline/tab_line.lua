@@ -42,8 +42,8 @@ local TablineFileFlags = {
 		condition = function(self)
 			return vim.api.nvim_get_option_value("modified", { buf = self.bufnr })
 		end,
-		provider = "[+]",
-		hl = { fg = "green" },
+		provider = " ●",
+		hl = { fg = "#EBA0AD", force = true },
 	},
 	{
 		condition = function(self)
@@ -205,7 +205,6 @@ local TabLineOffset = {
 }
 
 local TabLine = {
-	NixShell,
 	Git,
 	Space,
 	Align,
