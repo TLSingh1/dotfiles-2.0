@@ -1,3 +1,5 @@
+local utils = require("heirline.utils")
+
 local LineInfo = {
 	init = function(self)
 		self.line = vim.fn.line(".")
@@ -25,7 +27,10 @@ local LineInfo = {
 			return tostring(self.line)
 		end,
 	},
-	hl = { fg = "#94e2d6", bold = true },
+	hl = function()
+		return utils.get_highlight("@character.special")
+	end,
+	-- hl = { fg = "#94e2d6", bold = true },
 }
 
 return LineInfo
