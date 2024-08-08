@@ -13,16 +13,6 @@ local Git = {
 
 	hl = { fg = "orange" },
 
-	{ -- git branch name
-		provider = function(self)
-			return " " .. self.status_dict.head
-		end,
-		hl = { bold = true },
-	},
-	{
-		Space,
-		Space,
-	},
 	{
 		provider = function(self)
 			local count = self.status_dict.added or 0
@@ -43,6 +33,14 @@ local Git = {
 			return count > 0 and ("󰝤 " .. count .. " ")
 		end,
 		hl = { fg = "#f9e2b0" },
+	},
+	Space,
+	Space,
+	{ -- git branch name
+		provider = function(self)
+			return "  " .. self.status_dict.head
+		end,
+		hl = { bold = true },
 	},
 }
 

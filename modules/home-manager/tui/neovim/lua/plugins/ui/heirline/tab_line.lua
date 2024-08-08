@@ -1,10 +1,10 @@
 local utils = require("heirline.utils")
 local TabDiagnostics = require("plugins.ui.heirline.components.tab-diagnostics")
 local Git = require("plugins.ui.heirline.components.git")
-local NixShell = require("plugins.ui.heirline.components.nix-shell")
+-- local NixShell = require("plugins.ui.heirline.components.nix-shell")
 
 local Align = { provider = "%=" }
-local Space = { provider = " " }
+-- local Space = { provider = " " }
 
 local FileIcon = {
 	init = function(self)
@@ -205,12 +205,12 @@ local TabLineOffset = {
 }
 
 local TabLine = {
-	Git,
-	Space,
-	Align,
 	TabLineOffset,
 	BufferLine,
 	TabPages,
+	Align,
+	Git,
+	-- Space,
 }
 
 return TabLine

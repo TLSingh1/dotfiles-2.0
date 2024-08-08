@@ -1,1 +1,1 @@
-require("plugins.ai.claude").setup()
+require("plugins.ai.claude")

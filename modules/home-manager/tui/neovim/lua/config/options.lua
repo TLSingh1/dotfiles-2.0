@@ -36,6 +36,8 @@ local options = {
 	laststatus = 3,
 	breakindent = true,
 	linebreak = true,
+	winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow",
+
 	-- statuscolumn = "%!v:lua.require('my-plugins.status-column').myStatuscolumn()",
 }
 

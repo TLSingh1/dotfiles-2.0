@@ -86,11 +86,13 @@ local WinBar = {
 		{
 			Space,
 			FileNameModifer,
+			Space,
+			Space,
+			Diagnostics,
 		},
 		{
 			Align,
 			Space,
-			Diagnostics,
 			Space,
 			LineInfo,
 		},

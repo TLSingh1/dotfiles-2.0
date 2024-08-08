@@ -43,6 +43,7 @@
       neogit
 
       # Project
+      auto-session
 
       # UI
       plenary-nvim
