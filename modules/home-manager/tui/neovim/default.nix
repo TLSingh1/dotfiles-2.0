@@ -44,6 +44,8 @@
 
       # Project
       auto-session
+      neorg
+      neorg-telescope
 
       # UI
       plenary-nvim

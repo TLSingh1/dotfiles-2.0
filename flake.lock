@@ -390,6 +390,22 @@
         "type": "github"
       }
     },
+    "helpview-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723107503,
+        "narHash": "sha256-V681TrMpOKuutUZ3n84W1z/y0iSz2SkarsZmhz5rI7w=",
+        "owner": "OXY2DEV",
+        "repo": "helpview.nvim",
+        "rev": "7c24a92c687c91d3ba34dabbb324deecf062cc46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "OXY2DEV",
+        "repo": "helpview.nvim",
+        "type": "github"
+      }
+    },
     "hercules-ci-effects": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -687,6 +703,22 @@
       "original": {
         "owner": "MeanderingProgrammer",
         "repo": "markdown.nvim",
+        "type": "github"
+      }
+    },
+    "markview-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1723128212,
+        "narHash": "sha256-fva6YvsckAi/IxIyKzLgmKu3BEhSohW/HQphsUxYVgI=",
+        "owner": "OXY2DEV",
+        "repo": "markview.nvim",
+        "rev": "15a49b532f2d79471db2c3ac2ee56e974ffb1dd4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "OXY2DEV",
+        "repo": "markview.nvim",
         "type": "github"
       }
     },
@@ -1040,11 +1072,13 @@
         "colorizer-nvim": "colorizer-nvim",
         "firefox-nightly": "firefox-nightly",
         "gen-nvim": "gen-nvim",
+        "helpview-nvim": "helpview-nvim",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
         "incline": "incline",
         "markdown-nvim": "markdown-nvim",
+        "markview-nvim": "markview-nvim",
         "neorg-overlay": "neorg-overlay",
         "neorg-templates": "neorg-templates",
         "neovim-nightly-overlay": "neovim-nightly-overlay",

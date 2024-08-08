@@ -8,10 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    # nixvim = {
-    #   url = "github:nix-community/nixvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     ags.url = "github:Aylur/ags";
     sops-nix = {
       url = "github:Mic92/sops-nix";
@@ -70,6 +66,14 @@
     };
     colorizer-nvim = {
       url = "github:norcalli/nvim-colorizer.lua";
+      flake = false;
+    };
+    helpview-nvim = {
+      url = "github:OXY2DEV/helpview.nvim";
+      flake = false;
+    };
+    markview-nvim = {
+      url = "github:OXY2DEV/markview.nvim";
       flake = false;
     };
   };
@@ -150,6 +154,14 @@
                   colorizer-nvim = prev.vimUtils.buildVimPlugin {
                     name = "colorizer-nvim";
                     src = inputs.colorizer-nvim;
+                  };
+                  helpview-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "helpview-nvim";
+                    src = inputs.helpview-nvim;
+                  };
+                  markview-nvim = prev.vimUtils.buildVimPlugin {
+                    name = "markview-nvim";
+                    src = inputs.markview-nvim;
                   };
                 };
             })
