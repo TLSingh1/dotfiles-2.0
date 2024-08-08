@@ -10,6 +10,9 @@
     vimdiffAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
+      # AI
+      claude-nvim
+
       # Coding
       nvim-treesitter.withAllGrammars
       hop-nvim

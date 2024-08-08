@@ -36,7 +36,7 @@ local options = {
 	laststatus = 3,
 	breakindent = true,
 	linebreak = true,
-	statuscolumn = "%!v:lua.require('my-plugins.status-column').myStatuscolumn()",
+	-- statuscolumn = "%!v:lua.require('my-plugins.status-column').myStatuscolumn()",
 }
 
 for k, v in pairs(options) do
