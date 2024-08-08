@@ -1,0 +1,5 @@
+-- vim.api.nvim_set_hl(0, "MyHighlight", {
+-- 	-- Check the `nvim_set_hl()` help file to see all the available options
+-- 	fg = "#FFFFFF",
+-- 	bg = "#1E1E2E",
+-- })
