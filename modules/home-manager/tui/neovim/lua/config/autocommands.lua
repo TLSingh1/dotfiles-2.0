@@ -13,10 +13,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 		-- Try to open in a vertical split first
 		vim.cmd("wincmd L")
-		vim.cmd("vertical resize 80") -- Set a reasonable width, adjust as needed
+		vim.cmd("vertical resize 90") -- Set a reasonable width, adjust as needed
 
 		-- Check if the split was successful
-		if vim.api.nvim_win_get_width(win) < 80 then
+		if vim.api.nvim_win_get_width(win) < 90 then
 			-- If the split resulted in a too-narrow window, go full-screen instead
 			vim.api.nvim_win_close(win, false)
 			vim.cmd("enew")

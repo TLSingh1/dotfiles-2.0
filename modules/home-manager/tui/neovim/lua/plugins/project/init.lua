@@ -1,1 +1,1 @@
-require("plugins.project.auto-session")
+-- require("plugins.project.auto-session")

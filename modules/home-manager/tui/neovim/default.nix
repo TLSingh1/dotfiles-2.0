@@ -67,6 +67,8 @@
       noice-nvim
       nvim-navic
       nvim-navbuddy
+      helpview-nvim
+      markview-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
