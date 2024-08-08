@@ -59,10 +59,10 @@ vim.diagnostic.open_float = (function(orig)
 			end
 		end
 		local border_color = ({
-			[vim.diagnostic.severity.HINT] = "DiagnosticInfo",
+			[vim.diagnostic.severity.HINT] = "DiagnosticHint",
 			[vim.diagnostic.severity.INFO] = "DiagnosticInfo",
-			[vim.diagnostic.severity.WARN] = "WarningMsg",
-			[vim.diagnostic.severity.ERROR] = "ErrorMsg",
+			[vim.diagnostic.severity.WARN] = "DiagnosticWarn",
+			[vim.diagnostic.severity.ERROR] = "DiagnosticError",
 		})[max_severity]
 		opts.border = {
 			{ "╭", border_color },
