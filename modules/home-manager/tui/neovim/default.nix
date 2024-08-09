@@ -45,6 +45,7 @@
       # Project
       auto-session
       neorg
+      neorg-templates
       neorg-telescope
 
       # UI
@@ -69,6 +70,7 @@
       noice-nvim
       nvim-navic
       nvim-navbuddy
+      image-nvim
       helpview-nvim
       markview-nvim
     ];
