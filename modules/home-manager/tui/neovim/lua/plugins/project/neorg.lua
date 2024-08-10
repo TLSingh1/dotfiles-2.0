@@ -56,7 +56,7 @@ require("neorg").setup({
 			},
 		},
 		["external.templates"] = {
-			templates_dir = vim.fn.stdpath("config") .. "/lua/norg-templates",
+			templates_dir = "/home/tai/.dotfiles/modules/home-manager/tui/neovim/lua/norg-templates",
 		},
 	},
 })

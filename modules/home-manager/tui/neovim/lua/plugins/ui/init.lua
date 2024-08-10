@@ -1,5 +1,6 @@
 require("plugins.ui.web-devicons")
 require("plugins.ui.catppuccin")
+require("plugins.ui.colorful-winsep")
 require("plugins.ui.dashboard")
 require("plugins.ui.dressing")
 require("plugins.ui.heirline")

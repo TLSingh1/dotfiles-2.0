@@ -73,6 +73,7 @@
       image-nvim
       helpview-nvim
       markview-nvim
+      colorful-winsep
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
