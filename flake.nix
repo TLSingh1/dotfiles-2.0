@@ -20,20 +20,8 @@
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    winbar-nvim = {
-      url = "github:Ramilito/winbar.nvim";
-      flake = false;
-    };
     colorful-winsep = {
       url = "github:nvim-zh/colorful-winsep.nvim";
-      flake = false;
-    };
-    incline = {
-      url = "github:b0o/incline.nvim";
-      flake = false;
-    };
-    markdown-nvim = {
-      url = "github:MeanderingProgrammer/markdown.nvim";
       flake = false;
     };
     typescript-tools = {
@@ -42,10 +30,6 @@
     };
     tailwind-tools = {
       url = "github:luckasRanarison/tailwind-tools.nvim";
-      flake = false;
-    };
-    yazi-nvim = {
-      url = "github:mikavilpas/yazi.nvim";
       flake = false;
     };
     gen-nvim = {
@@ -79,15 +63,10 @@
   };
 
   outputs = {
-    # self,
     nixpkgs,
     home-manager,
     hyprland,
     # nixvim,
-    # ags,
-    # sops-nix,
-    # hyprpicker,
-    # hyprland-plugins,
     ...
   } @ inputs: {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
@@ -95,7 +74,9 @@
       modules = [
         ./hosts/default/configuration.nix
         home-manager.nixosModules.default
-        ./overlays/default.nix
+        {
+          nixpkgs.overlays = import ./overlays/default.nix {inherit inputs;};
+        }
       ];
     };
     homeConfigurations."tai@nixos" = home-manager.lib.homeManagerConfiguration {

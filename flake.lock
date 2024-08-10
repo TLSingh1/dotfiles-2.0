@@ -655,22 +655,6 @@
         "type": "github"
       }
     },
-    "incline": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1715926410,
-        "narHash": "sha256-5DoIvIdAZV7ZgmQO2XmbM3G+nNn4tAumsShoN3rDGrs=",
-        "owner": "b0o",
-        "repo": "incline.nvim",
-        "rev": "16fc9c073e3ea4175b66ad94375df6d73fc114c0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "b0o",
-        "repo": "incline.nvim",
-        "type": "github"
-      }
-    },
     "lib-aggregate": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -687,22 +671,6 @@
       "original": {
         "owner": "nix-community",
         "repo": "lib-aggregate",
-        "type": "github"
-      }
-    },
-    "markdown-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1722765682,
-        "narHash": "sha256-gYkS4mjOXycmdeqUQtXcAROBmPbmWw7O/koyXaC4Ey4=",
-        "owner": "MeanderingProgrammer",
-        "repo": "markdown.nvim",
-        "rev": "9cdfae29259f2c7bef3c9c13d9e09b506020d5ca",
-        "type": "github"
-      },
-      "original": {
-        "owner": "MeanderingProgrammer",
-        "repo": "markdown.nvim",
         "type": "github"
       }
     },
@@ -1076,8 +1044,6 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
-        "incline": "incline",
-        "markdown-nvim": "markdown-nvim",
         "markview-nvim": "markview-nvim",
         "neorg-overlay": "neorg-overlay",
         "neorg-templates": "neorg-templates",
@@ -1086,9 +1052,7 @@
         "nixpkgs": "nixpkgs_8",
         "sops-nix": "sops-nix",
         "tailwind-tools": "tailwind-tools",
-        "typescript-tools": "typescript-tools",
-        "winbar-nvim": "winbar-nvim",
-        "yazi-nvim": "yazi-nvim"
+        "typescript-tools": "typescript-tools"
       }
     },
     "sops-nix": {
@@ -1219,22 +1183,6 @@
         "type": "github"
       }
     },
-    "winbar-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1720795126,
-        "narHash": "sha256-EgcYawdcUN08XPJHaLn+UETsvzte6ovF9IDvwFJ7I5E=",
-        "owner": "Ramilito",
-        "repo": "winbar.nvim",
-        "rev": "e36a308e808e73c373d756f0a3e526aadf7530df",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Ramilito",
-        "repo": "winbar.nvim",
-        "type": "github"
-      }
-    },
     "xdph": {
       "inputs": {
         "hyprland-protocols": "hyprland-protocols",
@@ -1262,22 +1210,6 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
-        "type": "github"
-      }
-    },
-    "yazi-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1722759104,
-        "narHash": "sha256-99GMhOZg9Ubtww/gIVM/9cFJuEXJzSprBopg5qxXzcY=",
-        "owner": "mikavilpas",
-        "repo": "yazi.nvim",
-        "rev": "b2f8d4b43b8b60ea39169a3a7d9d03a6ead9f08d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mikavilpas",
-        "repo": "yazi.nvim",
         "type": "github"
       }
     }
