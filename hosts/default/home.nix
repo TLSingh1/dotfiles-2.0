@@ -101,6 +101,9 @@
     nixd
     stylua
     alejandra
+    typescript
+    nodePackages.svelte-language-server
+    tailwindcss-language-server
   ];
 
   home.file = {

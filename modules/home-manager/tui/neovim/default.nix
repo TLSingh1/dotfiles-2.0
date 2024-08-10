@@ -20,6 +20,7 @@
       nvim-autopairs
       ultimate-autopair-nvim
       luasnip
+      friendly-snippets
       nvim-cmp
       cmp-nvim-lsp
       cmp-buffer
@@ -38,6 +39,7 @@
       smart-splits-nvim
       typescript-tools
       tailwind-tools
+      nvim-ts-autotag
 
       # Git
       gitsigns-nvim

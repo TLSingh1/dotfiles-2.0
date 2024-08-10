@@ -12,7 +12,7 @@ local LineInfo = {
 	{
 		-- Full version
 		provider = function(self)
-			return string.format("%d : %d | %d", self.line, self.total_lines, self.col)
+			return string.format("%d : %d | %d ", self.line, self.total_lines, self.col)
 		end,
 	},
 	{

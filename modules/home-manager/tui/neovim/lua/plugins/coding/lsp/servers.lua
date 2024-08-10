@@ -8,6 +8,8 @@ local servers = {
 	"lua_ls",
 	"nil_ls",
 	"nixd",
+	"svelte",
+	"tailwindcss",
 }
 
 local function on_attach(client, bufnr)

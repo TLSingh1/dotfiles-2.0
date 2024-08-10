@@ -1,21 +1,14 @@
 local conditions = require("heirline.conditions")
 -- local utils = require("heirline.utils")
 
-local TabLine = require("plugins.ui.heirline.tab_line")
+local TabLine = require("plugins.ui.heirline.tab-line")
 local WinBar = require("plugins.ui.heirline.winbar")
-
-local StatusColumn = {
-	{
-		provider = function()
-			return "$"
-		end,
-	},
-}
+local StatusColumn = require("plugins.ui.heirline.status-column")
 
 require("heirline").setup({
 	statusline = TabLine,
 	winbar = WinBar,
-	-- statuscolumn = StatusColumn,
+	statuscolumn = StatusColumn,
 	opts = {
 		disable_winbar_cb = function(args)
 			return conditions.buffer_matches({

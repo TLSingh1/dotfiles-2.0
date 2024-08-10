@@ -1,46 +1,48 @@
 local luasnip = require("luasnip")
 local cmp = require("cmp")
 
-luasnip.filetype_extend("javascript", {"html"})
-luasnip.filetype_extend("javascriptreact", {"html"})
-luasnip.filetype_extend("typescriptreact", {"html"})
-
-require("luasnip/loaders/from_vscode").load({include = {"html"}})
+luasnip.filetype_extend("javascript", { "html" })
+luasnip.filetype_extend("javascriptreact", { "html" })
+luasnip.filetype_extend("typescriptreact", { "html" })
+luasnip.filetype_extend("typescript", { "javascript" })
+require("luasnip/loaders/from_vscode").load({ include = { "html" } })
 require("luasnip/loaders/from_vscode").lazy_load()
+-- require("luasnip.loaders.from_vscode").load({ include = { "html" } })
+-- require("luasnip.loaders.from_vscode").lazy_load()
 
 local kind_icons = {
-  Text = "󰉿 ",
-  Method = "󰆧 ",
-  Function = "󰊕 ",
-  Constructor = " ",
-  Field = "󰜢 ",
-  Variable = "󰀫 ",
-  Class = "󰠱 ",
-  Interface = " ",
-  Module = " ",
-  Property = "󰜢 ",
-  Unit = "󰑭 ",
-  Value = "󰎠 ",
-  Enum = " ",
-  Keyword = "󰌋 ",
-  Snippet = " ",
-  Color = " ",
-  File = "󰈙 ",
-  Reference = "󰈇 ",
-  Folder = "󰉋 ",
-  EnumMember = " ",
-  Constant = "󰏿 ",
-  Struct = "󰙅 ",
-  Event = " ",
-  Operator = "󰆕",
-  TypeParameter = " ",
+	Text = "󰉿 ",
+	Method = "󰆧 ",
+	Function = "󰊕 ",
+	Constructor = " ",
+	Field = "󰜢 ",
+	Variable = "󰀫 ",
+	Class = "󰠱 ",
+	Interface = " ",
+	Module = " ",
+	Property = "󰜢 ",
+	Unit = "󰑭 ",
+	Value = "󰎠 ",
+	Enum = " ",
+	Keyword = "󰌋 ",
+	Snippet = " ",
+	Color = " ",
+	File = "󰈙 ",
+	Reference = "󰈇 ",
+	Folder = "󰉋 ",
+	EnumMember = " ",
+	Constant = "󰏿 ",
+	Struct = "󰙅 ",
+	Event = " ",
+	Operator = "󰆕",
+	TypeParameter = " ",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
 cmp.setup({
 	snippet = {
 		expand = function(args)
-      luasnip.lsp_expand(args.body)
+			luasnip.lsp_expand(args.body)
 		end,
 	},
 	mapping = {
