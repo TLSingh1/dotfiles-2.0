@@ -1,8 +1,8 @@
 require("colorful-winsep").setup({
 	-- highlight for Window separator
 	hi = {
-		bg = "#011826",
-		fg = "#011826",
+		bg = "#000000",
+		fg = "#1E1E2F",
 	},
 	no_exec_files = { "TelescopePrompt", "neo-tree" },
 	-- Symbols for separator lines, the order: horizontal, vertical, top left, top right, bottom left, bottom right.

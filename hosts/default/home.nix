@@ -1,5 +1,9 @@
-{ pkgs, inputs, config, ... }:
 {
+  pkgs,
+  inputs,
+  config,
+  ...
+}: {
   imports = [
     # inputs.nixvim.homeManagerModules.nixvim
     inputs.ags.homeManagerModules.default
@@ -176,7 +180,7 @@
   };
 
   programs.git = {
-    enable = true;  
+    enable = true;
     userName = "TLSingh1";
     userEmail = "tai8910@gmail.com";
   };

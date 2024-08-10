@@ -55,8 +55,8 @@ require("neorg").setup({
 				name = "[Neorg]",
 			},
 		},
-		["external.templates"] = {
-			templates_dir = "/home/tai/.dotfiles/modules/home-manager/tui/neovim/lua/norg-templates",
-		},
+		-- ["external.templates"] = {
+		-- 	templates_dir = "/home/tai/.dotfiles/modules/home-manager/tui/neovim/lua/norg-templates",
+		-- },
 	},
 })

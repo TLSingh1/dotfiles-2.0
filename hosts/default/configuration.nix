@@ -1,15 +1,20 @@
-{ pkgs, inputs, config, ... }:
+# NOTE: I am uninstalling kubernetes for now. There are FIX: warnings for
+# everything kubernetes related that I commented out
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./main-user.nix
-      inputs.sops-nix.nixosModules.sops
-    ];
+  pkgs,
+  inputs,
+  config,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./main-user.nix
+    inputs.sops-nix.nixosModules.sops
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ 
+  boot.kernelParams = [
     "cgroup_enable=cpuset"
     "cgroup_memory=1"
     "cgroup_enable=memory"
@@ -26,7 +31,7 @@
       claude.owner = config.users.users.tai.name;
       git-username.owner = config.users.users.tai.name;
       git-email.owner = config.users.users.tai.name;
-      "myservice/my_subdir/my_secret" = { };
+      "myservice/my_subdir/my_secret" = {};
     };
   };
 
@@ -69,10 +74,9 @@
   #   git-email.owner = config.users.users.tai.name;
   # };
 
-
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  networking.extraHosts = "localhost";
+  # networking.extraHosts = "localhost";    FIX: uncomment this when ready to install kube
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -111,24 +115,18 @@
     };
   };
 
-  services.kubernetes = {
-    kubelet = {
-      enable = true;
-      extraOpts = "--fail-swap-on=false";
-    };
-    masterAddress = "localhost";
-    easyCerts = true;
-    # apiserverAddress = "https://localhost:6443";
-    roles = [ "master" "node" ];
-    addons.dns.enable = true;
-
-    # apiserver.enable = true;
-    # controllerManager.enable = true;
-    # scheduler.enable = true;
-    # addonManager.enable = true;
-    # proxy.enable = true;
-    # flannel.enable = true;
-  };
+  # FIX: uncomment when ready to install kubernetes
+  # services.kubernetes = {
+  #   kubelet = {
+  #     enable = true;
+  #     extraOpts = "--fail-swap-on=false";
+  #   };
+  #   masterAddress = "localhost";
+  #   easyCerts = true;
+  #   # apiserverAddress = "https://localhost:6443";
+  #   roles = ["master" "node"];
+  #   addons.dns.enable = true;
+  # };
 
   services.displayManager.sddm = {
     enable = true;
@@ -162,14 +160,14 @@
   users.users.tai = {
     isNormalUser = true;
     description = "tai";
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "kvm" ];
+    extraGroups = ["networkmanager" "wheel" "docker" "libvirtd" "kvm"];
     # packages = with pkgs; [
     # #  thunderbird
     # ];
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "tai" = import ./home.nix;
     };
@@ -231,11 +229,11 @@
     neon-town-sddm
     sddm-sugar-dark
     libsForQt5.qt5.qtgraphicaleffects
-    kubernetes
-    kubernetes-helm
-    kubectl
-    kompose
-    minikube
+    # kubernetes         FIX: uncomment this when ready to install kube
+    # kubernetes-helm    FIX: uncomment this when ready to install kube
+    # kubectl            FIX: uncomment this when ready to install kube
+    # kompose            FIX: uncomment this when ready to install kube
+    # minikube           FIX: uncomment this when ready to install kube
     usbutils
     i2c-tools
     python3
@@ -290,18 +288,18 @@
   #   enableSSHSupport = true;
   # };
 
+  # FIX: set back to true when ready to install docker
   # Docker
-  virtualisation.docker = {
-    enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-  };
-  hardware.nvidia-container-toolkit.enable = true;
+  # virtualisation.docker = {
+  #   enable = false;
+  #   rootless = {
+  #     enable = true;
+  #     setSocketVariable = true;
+  #   };
+  # };
+  hardware.nvidia-container-toolkit.enable = false; # FIX: set back to true when ready to install docker
 
   # virtualisation.containers.cdi.dynamic.nvidia.enable = true;
-
 
   # List services that you want to enable:
   services.supergfxd.enable = true;
@@ -324,6 +322,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
-
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 }

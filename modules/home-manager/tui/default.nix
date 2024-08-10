@@ -7,6 +7,7 @@
     ./neovim
     # ./nixvim
     ./ranger
+    ./wezterm
     ./yazi
   ];
 }

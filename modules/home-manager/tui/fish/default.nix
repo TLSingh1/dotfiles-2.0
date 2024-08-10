@@ -10,7 +10,7 @@
       swim = "asciiquarium -t -s";
       oac = "okta-aws-cli";
       oacw = "okta-aws-cli web";
-      k = "kubectl";
+      # k = "kubectl";
       ol = "ollama";
       cnv = "cd neovim && nv .";
     };
