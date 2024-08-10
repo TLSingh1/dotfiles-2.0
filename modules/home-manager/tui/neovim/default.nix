@@ -36,6 +36,8 @@
       better-escape-nvim
       todo-comments-nvim
       smart-splits-nvim
+      typescript-tools
+      tailwind-tools
 
       # Git
       gitsigns-nvim
