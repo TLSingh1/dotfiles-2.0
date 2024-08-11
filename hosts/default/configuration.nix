@@ -1,5 +1,5 @@
-# NOTE: I am uninstalling kubernetes for now. There are FIX: warnings for
-# everything kubernetes related that I commented out
+# NOTE: I am uninstalling kubernetes for now
+# FIX: there are fixes where I need to uncomment in future
 {
   pkgs,
   inputs,
@@ -267,7 +267,7 @@
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = true;
-    open = false;
+    open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     prime = {
