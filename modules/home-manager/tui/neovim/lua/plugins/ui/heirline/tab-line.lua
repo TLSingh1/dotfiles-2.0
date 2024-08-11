@@ -21,10 +21,8 @@ local FileIcon = {
 	end,
 }
 
--- we redefine the filename component, as we probably only want the tail and not the relative path
 local TablineFileName = {
 	provider = function(self)
-		-- self.filename will be defined later, just keep looking at the example!
 		local filename = self.filename
 		filename = filename == "" and "[No Name]" or vim.fn.fnamemodify(filename, ":t")
 		return filename
@@ -34,9 +32,6 @@ local TablineFileName = {
 	end,
 }
 
--- this looks exactly like the FileFlags component that we saw in
--- #crash-course-part-ii-filename-and-friends, but we are indexing the bufnr explicitly
--- also, we are adding a nice icon for terminal buffers.
 local TablineFileFlags = {
 	{
 		condition = function(self)
@@ -61,7 +56,6 @@ local TablineFileFlags = {
 	},
 }
 
--- Here the filename block finally comes together
 local TablineFileNameBlock = {
 	init = function(self)
 		self.filename = vim.api.nvim_buf_get_name(self.bufnr)
@@ -69,9 +63,6 @@ local TablineFileNameBlock = {
 	hl = function(self)
 		if self.is_active then
 			return "TabLineSel"
-		-- why not?
-		-- elseif not vim.api.nvim_buf_is_loaded(self.bufnr) then
-		--     return { fg = "gray" }
 		else
 			return "TabLine"
 		end
@@ -91,14 +82,12 @@ local TablineFileNameBlock = {
 		end,
 		name = "heirline_tabline_buffer_callback",
 	},
-	-- TablineBufnr,
-	FileIcon, -- turns out the version defined in #crash-course-part-ii-filename-and-friends can be reutilized as is here!
+	FileIcon,
 	TablineFileName,
 	TablineFileFlags,
 	TabDiagnostics,
 }
 
--- The final touch!
 local TablineBufferBlock = utils.surround({ "", "" }, function(self)
 	if self.is_active then
 		return utils.get_highlight("TabLineSel").bg
@@ -107,19 +96,14 @@ local TablineBufferBlock = utils.surround({ "", "" }, function(self)
 	end
 end, { TablineFileNameBlock })
 
----------------------------------------------------
-
--- this is the default function used to retrieve buffers
 local get_bufs = function()
 	return vim.tbl_filter(function(bufnr)
 		return vim.api.nvim_get_option_value("buflisted", { buf = bufnr })
 	end, vim.api.nvim_list_bufs())
 end
 
--- initialize the buflist cache
 local buflist_cache = {}
 
--- setup an autocmd that updates the buflist_cache every time that buffers are added/removed
 vim.api.nvim_create_autocmd({ "VimEnter", "UIEnter", "BufAdd", "BufDelete" }, {
 	callback = function()
 		vim.schedule(function()
@@ -138,11 +122,9 @@ local BufferLine = utils.make_buflist(
 	TablineBufferBlock,
 	{ provider = " ", hl = { fg = "gray" } },
 	{ provider = " ", hl = { fg = "gray" } },
-	-- out buf_func simply returns the buflist_cache
 	function()
 		return buflist_cache
 	end,
-	-- no cache, as we're handling everything ourselves
 	false
 )
 
@@ -165,7 +147,6 @@ local TabpageClose = {
 }
 
 local TabPages = {
-	-- only show this component if there's 2 or more tabpages
 	condition = function()
 		return #vim.api.nvim_list_tabpages() >= 2
 	end,
@@ -183,8 +164,6 @@ local TabLineOffset = {
 		if vim.bo[bufnr].filetype == "NvimTree" then
 			self.title = "NvimTree"
 			return true
-			-- elseif vim.bo[bufnr].filetype == "TagBar" then
-			--     ...
 		end
 	end,
 
@@ -214,7 +193,6 @@ local TabLine = {
 	hl = {
 		bg = "#000000",
 	},
-	-- Space,
 }
 
 return TabLine
