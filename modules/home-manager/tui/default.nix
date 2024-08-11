@@ -4,8 +4,7 @@
     ./cava
     ./fish
     ./kitty
-    ./neovim
-    # ./nixvim
+    ./nvim
     ./ranger
     ./yazi
   ];

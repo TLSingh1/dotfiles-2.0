@@ -66,7 +66,6 @@
     nixpkgs,
     home-manager,
     hyprland,
-    # nixvim,
     ...
   } @ inputs: {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
@@ -83,7 +82,6 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [
         hyprland.homeManagerModules.default
-        # nixvim.homeManagerModules.nixvim
       ];
       extraSpecialArgs = {inherit inputs;};
     };

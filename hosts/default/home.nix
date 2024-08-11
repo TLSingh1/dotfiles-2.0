@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    # inputs.nixvim.homeManagerModules.nixvim
     inputs.ags.homeManagerModules.default
     ../../modules/home-manager/wm
     ../../modules/home-manager/tui
@@ -115,10 +114,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/tui/macchina";
       recursive = true;
     };
-    # ".config/nvim/templates/norg" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/tui/nixvim/lua/norg-templates";
-    #   recursive = true;
-    # };
     ".config/BetterDiscord/themes/translucence-plus.css" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/discord/blur-theme.css";
     };
