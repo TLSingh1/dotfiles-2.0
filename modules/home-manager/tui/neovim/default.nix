@@ -40,6 +40,7 @@
       typescript-tools
       tailwind-tools
       nvim-ts-autotag
+      nvim-ufo
 
       # Git
       gitsigns-nvim

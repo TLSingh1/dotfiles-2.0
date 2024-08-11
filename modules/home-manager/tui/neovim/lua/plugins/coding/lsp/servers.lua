@@ -4,6 +4,11 @@ local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 local navic = require("nvim-navic")
 local navbuddy = require("nvim-navbuddy")
 
+lsp_capabilities.textDocument.foldingRange = {
+	dynamicRegistration = false,
+	lineFoldingOnly = true,
+}
+
 local servers = {
 	"lua_ls",
 	"nil_ls",
