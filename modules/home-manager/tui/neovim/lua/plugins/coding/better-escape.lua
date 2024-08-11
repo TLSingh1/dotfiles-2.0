@@ -12,5 +12,10 @@ require("better_escape").setup({
 				end,
 			},
 		},
+		v = {
+			j = {
+				k = false,
+			},
+		},
 	},
 })

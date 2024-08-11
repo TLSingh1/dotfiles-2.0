@@ -34,7 +34,7 @@ local WinBar = {
 			self.icon, self.icon_color = devicons.get_icon_color(filename, extension, { default = true })
 		end,
 
-		hl = function(self)
+		hl = function()
 			if conditions.is_active() then
 				return { bg = "#1E1E2F" }
 			else

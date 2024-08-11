@@ -158,7 +158,7 @@ local StatusColumn = {
 	{ provider = " " },
 	Signs,
 	LineNumbers,
-	{ provider = " " },
+	{ provider = "  " },
 	FoldColumn,
 	{ provider = "  " },
 }
