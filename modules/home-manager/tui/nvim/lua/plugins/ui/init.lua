@@ -8,6 +8,7 @@ require("plugins.ui.image")
 require("plugins.ui.indent-blankline")
 require("plugins.ui.markview")
 require("plugins.ui.neo-tree")
+require("plugins.ui.no-neck-pain")
 require("plugins.ui.notify") -- must be before noice b/c notify
 require("plugins.ui.noice")
 require("plugins.ui.rainbow-delimiters")
