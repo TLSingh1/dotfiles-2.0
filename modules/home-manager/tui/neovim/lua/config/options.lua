@@ -37,6 +37,10 @@ local options = {
 	breakindent = true,
 	linebreak = true,
 	winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow",
+	-- foldcolumn = "1",
+	foldlevel = 99, -- Using ufo provider need a large value
+	foldenable = true,
+	foldlevelstart = 99,
 
 	-- statuscolumn = "%!v:lua.require('my-plugins.status-column').myStatuscolumn()",
 }
