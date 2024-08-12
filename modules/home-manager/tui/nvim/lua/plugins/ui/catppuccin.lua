@@ -1,3 +1,16 @@
+_G.status_column_colors = {}
+
+local function interpolate_color(color1, color2, factor)
+	local r1, g1, b1 = tonumber(color1:sub(2, 3), 16), tonumber(color1:sub(4, 5), 16), tonumber(color1:sub(6, 7), 16)
+	local r2, g2, b2 = tonumber(color2:sub(2, 3), 16), tonumber(color2:sub(4, 5), 16), tonumber(color2:sub(6, 7), 16)
+
+	local r = math.floor(r1 + (r2 - r1) * factor)
+	local g = math.floor(g1 + (g2 - g1) * factor)
+	local b = math.floor(b1 + (b2 - b1) * factor)
+
+	return string.format("#%02X%02X%02X", r, g, b)
+end
+
 require("catppuccin").setup({
 	flavour = "mocha", -- latte, frappe, macchiato, mocha
 	background = { -- :h background
@@ -35,7 +48,26 @@ require("catppuccin").setup({
 			base = "#011826",
 		},
 	},
-	custom_highlights = function(colors)
+	custom_highlights = function()
+		local colors = {}
+
+		for i = 0, 9 do
+			colors[i + 1] = interpolate_color("#B4BEFF", "#45475B", i / 9)
+		end
+
+		_G.status_column_colors = colors
+
+		-- setup highlight groups
+		local function setup_highlights()
+			for i, color in ipairs(colors) do
+				vim.api.nvim_set_hl(0, "LineNr_" .. i, { fg = color })
+			end
+			-- set brightest line
+			vim.api.nvim_set_hl(0, "LineNr_Current", { fg = colors[1], bold = true })
+		end
+
+		setup_highlights()
+
 		return {
 			WinSeparator = { fg = "#011826", bg = "#000000" },
 			NeoTreeFloatBorder = { fg = "#011826", bg = "#011826" },
@@ -48,6 +80,11 @@ require("catppuccin").setup({
 			TelescopeSelection = { bg = "#233B48" },
 			TelescopeSelectionCaret = { bg = "#233B48" },
 			TelescopeTitle = { fg = "#0B2534", bg = "#0B2534" },
+			Folded = { bg = "#233B48", style = { "italic", "bold" } },
+			CursorLineNr = { style = { "bold" } },
+			TreesitterContext = { bg = "#0B2534" },
+			TreesitterContextBottom = { bg = "#0B2534" },
+			TreesitterContextLineNumber = { bg = "#0B2534" },
 		}
 	end,
 	default_integrations = true,
