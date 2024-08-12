@@ -42,8 +42,8 @@
       nvim-ts-autotag
       nvim-ts-context-commentstring
       nvim-treesitter-context
-      nvim-ufo
       marks-nvim
+      nvim-ufo
 
       # Git
       gitsigns-nvim

@@ -71,7 +71,10 @@ require("catppuccin").setup({
 		return {
 			WinSeparator = { fg = "#011826", bg = "#000000" },
 			NeoTreeFloatBorder = { fg = "#011826", bg = "#011826" },
-			NeoTreeFloatTitle = { fg = "#011826" },
+			NeoTreeFloatTitle = { fg = "#011826", bg = "#011826" },
+			NeoTreeNormal = { bg = "#011826" },
+			NeoTreeTabActive = { bg = "#0B2534" },
+			NeoTreeTabSeparatorActive = { fg = "#0B2534", bg = "#0B2534" },
 			NoiceCmdLine = { bg = "#000000" },
 			TelescopePromptNormal = { bg = "#0B2534" },
 			TelescopePromptBorder = { fg = "#0B2534", bg = "#0B2534" },
