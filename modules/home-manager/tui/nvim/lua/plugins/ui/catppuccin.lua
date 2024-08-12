@@ -30,13 +30,24 @@ require("catppuccin").setup({
 		operators = {},
 		-- miscs = {}, -- Uncomment to turn off hard-coded styles
 	},
-	color_overrides = {},
+	color_overrides = {
+		all = {
+			base = "#011826",
+		},
+	},
 	custom_highlights = function(colors)
 		return {
-			WinSeparator = { fg = "#1E1E2F", bg = "#000000" },
-			NeoTreeFloatBorder = { fg = "#181826", bg = "#181826" },
-			NeoTreeFloatTitle = { fg = "#181826" },
+			WinSeparator = { fg = "#011826", bg = "#000000" },
+			NeoTreeFloatBorder = { fg = "#011826", bg = "#011826" },
+			NeoTreeFloatTitle = { fg = "#011826" },
 			NoiceCmdLine = { bg = "#000000" },
+			TelescopePromptNormal = { bg = "#0B2534" },
+			TelescopePromptBorder = { fg = "#0B2534", bg = "#0B2534" },
+			TelescopePrompt = { fg = "#0B2534", bg = "#0B2534" },
+			TelescopeBorder = { fg = "#011826", bg = "#011826" },
+			TelescopeSelection = { bg = "#233B48" },
+			TelescopeSelectionCaret = { bg = "#233B48" },
+			TelescopeTitle = { fg = "#0B2534", bg = "#0B2534" },
 		}
 	end,
 	default_integrations = true,

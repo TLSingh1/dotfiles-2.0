@@ -1,21 +1,19 @@
--- NOTE: force help pages to open in vsplit
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "help",
-	callback = function()
-		local buf = vim.api.nvim_get_current_buf()
-		local win = vim.api.nvim_get_current_win()
-
-		vim.cmd("wincmd L")
-		vim.cmd("vertical resize 90")
-
-		if vim.api.nvim_win_get_width(win) < 90 then
-			vim.api.nvim_win_close(win, false)
-			vim.cmd("enew")
-			vim.api.nvim_win_set_buf(0, buf)
-			vim.cmd("only")
+-- autocmd to make help buffers normal buffers
+vim.api.nvim_create_autocmd("BufWinEnter", {
+	pattern = "*",
+	callback = function(event)
+		if vim.bo[event.buf].filetype == "help" then
+			-- Set the buffer as listed
+			vim.bo[event.buf].buflisted = true
+			-- Convert the help window to a normal buffer
+			vim.bo[event.buf].buftype = ""
+			-- Keep it read-only
+			vim.bo[event.buf].modifiable = false
+			vim.bo[event.buf].readonly = true
+			-- Open in a full window
+			vim.cmd.only()
+			-- Optionally, set a buffer-local keymap to quit
+			vim.api.nvim_buf_set_keymap(event.buf, "n", "q", ":q<CR>", { noremap = true, silent = true })
 		end
-
-		vim.api.nvim_set_option_value("buflisted", true, { buf = buf })
-		vim.api.nvim_set_option_value("buftype", "help", { buf = buf })
 	end,
 })

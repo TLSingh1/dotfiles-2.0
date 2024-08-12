@@ -36,7 +36,7 @@ local WinBar = {
 
 		hl = function()
 			if conditions.is_active() then
-				return { bg = "#1E1E2F" }
+				return { bg = "#011826" }
 			else
 				return { bg = "#000000" }
 			end

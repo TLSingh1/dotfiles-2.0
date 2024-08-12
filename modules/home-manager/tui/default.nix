@@ -5,7 +5,6 @@
     ./fish
     ./kitty
     ./nvim
-    ./ranger
     ./yazi
   ];
 }

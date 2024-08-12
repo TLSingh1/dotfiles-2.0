@@ -1,7 +1,7 @@
 require("colorful-winsep").setup({
 	hi = {
-		bg = "#1E1E2F",
-		fg = "#1E1E2F",
+		bg = "#011826",
+		fg = "#011826",
 	},
 	no_exec_files = { "TelescopePrompt", "neo-tree" },
 	symbols = { "━", "┃", "┏", "┓", "┗", "┛" },
