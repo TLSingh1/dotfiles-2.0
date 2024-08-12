@@ -1,19 +1,38 @@
--- autocmd to make help buffers normal buffers
+-- autocmd to make help page normal buffers
 vim.api.nvim_create_autocmd("BufWinEnter", {
 	pattern = "*",
 	callback = function(event)
 		if vim.bo[event.buf].filetype == "help" then
-			-- Set the buffer as listed
 			vim.bo[event.buf].buflisted = true
-			-- Convert the help window to a normal buffer
 			vim.bo[event.buf].buftype = ""
-			-- Keep it read-only
 			vim.bo[event.buf].modifiable = false
 			vim.bo[event.buf].readonly = true
-			-- Open in a full window
 			vim.cmd.only()
-			-- Optionally, set a buffer-local keymap to quit
 			vim.api.nvim_buf_set_keymap(event.buf, "n", "q", ":q<CR>", { noremap = true, silent = true })
 		end
+	end,
+})
+
+local mode_group = vim.api.nvim_create_augroup("MoodyModeGroup", { clear = true })
+
+-- only show cursorline in active window
+vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
+	group = mode_group,
+	callback = function(_)
+		local win = vim.api.nvim_get_current_win()
+		-- vim.wo.cursorline = true
+		vim.api.nvim_set_option_value("cursorline", true, {
+			win = win,
+		})
+	end,
+})
+vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
+	group = mode_group,
+	callback = function(_)
+		local win = vim.api.nvim_get_current_win()
+		-- vim.wo.cursorline = false
+		vim.api.nvim_set_option_value("cursorline", false, {
+			win = win,
+		})
 	end,
 })
