@@ -20,17 +20,16 @@ vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
 	group = mode_group,
 	callback = function(_)
 		local win = vim.api.nvim_get_current_win()
-		-- vim.wo.cursorline = true
 		vim.api.nvim_set_option_value("cursorline", true, {
 			win = win,
 		})
 	end,
 })
+
 vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
 	group = mode_group,
 	callback = function(_)
 		local win = vim.api.nvim_get_current_win()
-		-- vim.wo.cursorline = false
 		vim.api.nvim_set_option_value("cursorline", false, {
 			win = win,
 		})
