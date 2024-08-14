@@ -60,6 +60,10 @@
       url = "github:OXY2DEV/markview.nvim";
       flake = false;
     };
+    resession-nvim = {
+      url = "github:stevearc/resession.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

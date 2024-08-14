@@ -51,10 +51,10 @@
       neogit
 
       # Project
-      auto-session
       neorg
       neorg-templates
       neorg-telescope
+      resession-nvim
 
       # UI
       plenary-nvim

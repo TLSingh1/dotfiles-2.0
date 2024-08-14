@@ -42,5 +42,9 @@
         name = "markview-nvim";
         src = inputs.markview-nvim;
       };
+      resession-nvim = prev.vimUtils.buildVimPlugin {
+        name = "resession-nvim";
+        src = inputs.resession-nvim;
+      };
     };
 }

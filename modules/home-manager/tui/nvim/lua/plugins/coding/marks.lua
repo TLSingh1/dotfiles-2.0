@@ -20,6 +20,7 @@ require("marks").setup({
 	-- disables mark tracking for specific filetypes. default {}
 	excluded_filetypes = {
 		"neo-tree",
+		"neo-tree-popup",
 		"toggleterm",
 	},
 	-- disables mark tracking for specific buftypes. default {}
