@@ -76,7 +76,7 @@ require("catppuccin").setup({
 			NeoTreeTabActive = { bg = "#0B2534" },
 			NeoTreeTabSeparatorActive = { fg = "#0B2534", bg = "#0B2534" },
 			NoiceCmdLine = { bg = "#000000" },
-			TelescopePromptNormal = { bg = "#0B2534" },
+			TelescopePromptNormal = { fg = "#1affff", bg = "#0B2534" },
 			TelescopePromptBorder = { fg = "#0B2534", bg = "#0B2534" },
 			TelescopePrompt = { fg = "#0B2534", bg = "#0B2534" },
 			TelescopeBorder = { fg = "#011826", bg = "#011826" },

@@ -22,6 +22,7 @@ require("marks").setup({
 		"neo-tree",
 		"neo-tree-popup",
 		"toggleterm",
+		"DressingInput",
 	},
 	-- disables mark tracking for specific buftypes. default {}
 	excluded_buftypes = {},

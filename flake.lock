@@ -1032,6 +1032,22 @@
         "type": "github"
       }
     },
+    "resession-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719857809,
+        "narHash": "sha256-Id7rJwxvH81TnBKHAsPuP8nmu7SS6b5PiLoE2UzeRX0=",
+        "owner": "stevearc",
+        "repo": "resession.nvim",
+        "rev": "e087ebeef81df25a12fcc4ec067ca73e2bb54c4a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "repo": "resession.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "ags": "ags",
@@ -1050,6 +1066,7 @@
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs_8",
+        "resession-nvim": "resession-nvim",
         "sops-nix": "sops-nix",
         "tailwind-tools": "tailwind-tools",
         "typescript-tools": "typescript-tools"
