@@ -4,6 +4,7 @@
   pkgs,
   inputs,
   config,
+  options,
   ...
 }: {
   imports = [
@@ -74,8 +75,11 @@
   #   git-email.owner = config.users.users.tai.name;
   # };
 
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+    timeServers = options.networking.timeServers.default;
+  };
   # networking.extraHosts = "localhost";    FIX: uncomment this when ready to install kube
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

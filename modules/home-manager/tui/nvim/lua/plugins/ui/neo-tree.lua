@@ -187,9 +187,6 @@ require("neo-tree").setup({
 				-- ["/"] = "fuzzy_finder_directory",
 				["#"] = "fuzzy_sorter", -- fuzzy sorting using the fzy algorithm
 				-- ["D"] = "fuzzy_sorter_directory",
-				["f"] = function(state)
-					vim.api.nvim_command("HopWord")
-				end,
 				["<c-x>"] = "clear_filter",
 				["[g"] = "prev_git_modified",
 				["]g"] = "next_git_modified",

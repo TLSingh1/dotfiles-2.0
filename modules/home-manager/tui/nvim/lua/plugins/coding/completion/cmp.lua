@@ -34,8 +34,8 @@ local kind_icons = {
 	Constant = "󰏿 ",
 	Struct = "󰙅 ",
 	Event = " ",
-	Operator = "󰆕",
-	TypeParameter = " ",
+	Operator = "󰆕 ",
+	TypeParameter = "𝙏",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
