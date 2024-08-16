@@ -12,10 +12,10 @@
     plugins = with pkgs.vimPlugins; [
       # AI
       claude-nvim
+      copilot-vim
 
       # Coding
       nvim-treesitter.withAllGrammars
-      hop-nvim
       comment-nvim
       nvim-autopairs
       ultimate-autopair-nvim
@@ -63,7 +63,6 @@
       neo-tree-nvim
       nvim-window-picker
       toggleterm-nvim
-      bufferline-nvim
       telescope-nvim
       catppuccin-nvim
       dashboard-nvim
@@ -72,7 +71,6 @@
       indent-blankline-nvim
       rainbow-delimiters-nvim
       colorizer-nvim
-      lualine-nvim
       heirline-nvim
       nvim-notify
       noice-nvim

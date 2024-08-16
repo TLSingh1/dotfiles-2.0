@@ -1,6 +1,8 @@
 -- local Align = { provider = "%=" }
 -- local Space = { provider = " " }
 
+local conditions = require("heirline.conditions")
+
 local function get_signs(buf, lnum)
 	local signs = {}
 	local placed_signs = vim.fn.sign_getplaced(buf, { group = "*", lnum = lnum })[1].signs
@@ -153,6 +155,12 @@ local FoldColumn = {
 local StatusColumn = {
 	init = function(self)
 		self.bufnr = vim.api.nvim_get_current_buf()
+	end,
+
+	condition = function()
+		return not conditions.buffer_matches({
+			filetype = { "Outline" },
+		})
 	end,
 
 	{ provider = " " },

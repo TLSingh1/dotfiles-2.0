@@ -80,6 +80,9 @@
     networkmanager.enable = true;
     timeServers = options.networking.timeServers.default;
   };
+
+  services.automatic-timezoned.enable = true;
+
   # networking.extraHosts = "localhost";    FIX: uncomment this when ready to install kube
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -241,6 +244,7 @@
     usbutils
     i2c-tools
     python3
+    pnpm
     # openrgb
     # hidapi
     # msi-perkeyrgb

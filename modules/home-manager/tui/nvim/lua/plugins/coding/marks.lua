@@ -23,6 +23,10 @@ require("marks").setup({
 		"neo-tree-popup",
 		"toggleterm",
 		"DressingInput",
+		"Outline",
+		"OutlineHelp",
+		"lspinfo",
+		"noice",
 	},
 	-- disables mark tracking for specific buftypes. default {}
 	excluded_buftypes = {},

@@ -13,6 +13,9 @@
       # k = "kubectl";
       ol = "ollama";
       cnv = "cd neovim && nv .";
+      nn = "npm";
+      pp = "pnpm";
+      bb = "bun";
     };
     functions = {
       yy = ''
