@@ -82,6 +82,7 @@
       colorful-winsep
       no-neck-pain-nvim
       outline-nvim
+      cinnamon-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
