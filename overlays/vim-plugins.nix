@@ -46,9 +46,5 @@
         name = "resession-nvim";
         src = inputs.resession-nvim;
       };
-      time-tracker-nvim = prev.vimUtils.buildVimPlugin {
-        name = "time-tracker-nvim";
-        src = inputs.time-tracker-nvim;
-      };
     };
 }

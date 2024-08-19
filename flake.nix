@@ -64,10 +64,6 @@
       url = "github:stevearc/resession.nvim";
       flake = false;
     };
-    time-tracker-nvim = {
-      url = "github:3rd/time-tracker.nvim";
-      flake = false;
-    };
   };
 
   outputs = {
