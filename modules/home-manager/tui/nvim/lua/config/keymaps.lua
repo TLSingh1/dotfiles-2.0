@@ -12,6 +12,7 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<leader>w", ":w <CR>", opts)
 keymap("n", "<leader>q", ":q <CR>", opts)
 keymap("n", "<leader><leader>q", ":qa <CR>", opts)
+keymap("n", "<leader>Y", ":%y <CR>", opts)
 keymap("x", "p", "p:let @+=@0<CR>", opts)
 keymap("n", "<c-n>", ":bdelete <cr>", opts)
 keymap("n", "<leader>;", ":", opts)
@@ -22,6 +23,36 @@ keymap("n", ";", ":Neotree float reveal <CR>", opts)
 keymap("n", "<leader>n", ":Neogit <CR>", opts)
 keymap("n", "<leader><leader>n", ":NoNeckPain <CR>", opts)
 keymap("n", "<leader><leader>t", ":TailwindConcealToggle <CR>", opts)
+keymap("n", "dm", "", {
+	noremap = true,
+	silent = true,
+	desc = "Delete mark",
+	callback = function()
+		local mark = vim.fn.nr2char(vim.fn.getchar())
+		vim.cmd("delmarks " .. mark)
+		print("Deleted mark: " .. mark)
+	end,
+})
+keymap("n", "M", "", {
+	noremap = true,
+	silent = true,
+	desc = "Set mark",
+	callback = function()
+		local char = vim.fn.nr2char(vim.fn.getchar())
+		vim.cmd("normal! m" .. char)
+		print("Mark set: " .. char)
+	end,
+})
+
+keymap("n", "m", "", {
+	noremap = true,
+	silent = true,
+	desc = "Jump to mark",
+	callback = function()
+		local char = vim.fn.nr2char(vim.fn.getchar())
+		vim.cmd("normal! `" .. char)
+	end,
+})
 
 ------------------- Navigation ----------------
 keymap("n", "<leader>h", "<C-w>h", opts)

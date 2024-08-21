@@ -103,6 +103,7 @@
     typescript
     nodePackages.svelte-language-server
     tailwindcss-language-server
+    vscode-langservers-extracted
   ];
 
   home.file = {

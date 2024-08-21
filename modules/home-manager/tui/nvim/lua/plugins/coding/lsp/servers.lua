@@ -15,6 +15,9 @@ local servers = {
 	"nixd",
 	"svelte",
 	"tailwindcss",
+	"cssls",
+	"html",
+	"jsonls",
 }
 
 local function on_attach(client, bufnr)

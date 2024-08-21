@@ -1,0 +1,1 @@
+require("neominimap").setup({})

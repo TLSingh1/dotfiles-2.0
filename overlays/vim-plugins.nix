@@ -46,5 +46,9 @@
         name = "resession-nvim";
         src = inputs.resession-nvim;
       };
+      neominimap-nvim = prev.vimUtils.buildVimPlugin {
+        name = "neominimap-nvim";
+        src = inputs.neominimap-nvim;
+      };
     };
 }
