@@ -52,6 +52,22 @@
         "type": "github"
       }
     },
+    "avante-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724223422,
+        "narHash": "sha256-G2NRXR5cI32/aNZf4XbQEQobQmzrDSb10i2qOoYRlDg=",
+        "owner": "yetone",
+        "repo": "avante.nvim",
+        "rev": "b995e4aa7bdde57fa9bcaadf49a75b792996fc5d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yetone",
+        "repo": "avante.nvim",
+        "type": "github"
+      }
+    },
     "cachix": {
       "locked": {
         "lastModified": 1635350005,
@@ -1051,6 +1067,7 @@
     "root": {
       "inputs": {
         "ags": "ags",
+        "avante-nvim": "avante-nvim",
         "claude-nvim": "claude-nvim",
         "colorful-winsep": "colorful-winsep",
         "colorizer-nvim": "colorizer-nvim",

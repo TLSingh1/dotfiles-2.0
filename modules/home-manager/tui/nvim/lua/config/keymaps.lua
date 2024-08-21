@@ -88,3 +88,7 @@ keymap(
 )
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
+
+------------- Random Plugins -----------------
+-- keymap("n", "<leader>m", ":Neominimap winToggle <CR>", opts)
+-- keymap("n", "<leader>M", ":Neominimap toggleFocus <CR>", opts)

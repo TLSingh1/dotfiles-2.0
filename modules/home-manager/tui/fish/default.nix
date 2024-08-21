@@ -44,6 +44,7 @@
       zoxide init --cmd cd fish | source
       macchina
       set -x MANPAGER 'nvim +Man!'
+      set -gx ANTHROPIC_API_KEY (cat /run/secrets/claude)
     '';
     shellInit = "";
   };

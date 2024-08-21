@@ -36,5 +36,3 @@ vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
 		})
 	end,
 })
-
--- resession: save on quit

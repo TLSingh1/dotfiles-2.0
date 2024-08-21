@@ -13,6 +13,7 @@
       # AI
       claude-nvim
       copilot-vim
+      avante-nvim
 
       # Coding
       nvim-treesitter.withAllGrammars
@@ -82,7 +83,7 @@
       colorful-winsep
       no-neck-pain-nvim
       outline-nvim
-      neominimap-nvim
+      # neominimap-nvim
     ];
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}

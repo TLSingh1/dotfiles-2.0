@@ -64,8 +64,8 @@
       url = "github:stevearc/resession.nvim";
       flake = false;
     };
-    neominimap-nvim = {
-      url = "github:lsrothy/neominimap.nvim";
+    avante-nvim = {
+      url = "github:yetone/avante.nvim";
       flake = false;
     };
   };
