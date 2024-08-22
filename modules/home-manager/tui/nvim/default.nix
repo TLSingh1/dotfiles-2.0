@@ -13,6 +13,7 @@
     plugins = with pkgs.vimPlugins; [
       # Lazy
       lazy-nvim
+      which-key-nvim
 
       # AI
       # claude-nvim
@@ -90,19 +91,23 @@
       # outline-nvim
     ];
     extraLuaConfig = ''
-      vim.g.mapleader = " " -- Need to set leader before lazy for correct keybindings
+      vim.g.mapleader = " "
       require("lazy").setup({
+        spec = {
+          { import = "plugins" },
+        },
+      }, {
         performance = {
           reset_packpath = false,
           rtp = {
-              reset = false,
-            }
-          },
+            reset = false,
+          }
+        },
         dev = {
-          path = "${pkgs.vimUtils.packDir config.home-manager.users.USERNAME.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
+          path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
+          patterns = {""},
         },
         install = {
-          -- Safeguard in case we forget to install a plugin with Nix
           missing = false,
         },
       })
@@ -113,8 +118,8 @@
     # '';
   };
 
-  # xdg.configFile."nvim/lua" = {
-  #   recursive = true;
-  #   source = ./lua;
-  # };
+  xdg.configFile."nvim/lua" = {
+    recursive = true;
+    source = ./lua;
+  };
 }
