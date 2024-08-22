@@ -21,7 +21,7 @@
       # avante-nvim
 
       # Coding
-      # nvim-treesitter.withAllGrammars
+      nvim-treesitter.withAllGrammars
       # comment-nvim
       # nvim-autopairs
       # ultimate-autopair-nvim
