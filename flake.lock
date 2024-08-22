@@ -1007,6 +1007,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_9": {
+      "locked": {
+        "lastModified": 1723991338,
+        "narHash": "sha256-Grh5PF0+gootJfOJFenTTxDTYPidA3V28dqJ/WV7iis=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "8a3354191c0d7144db9756a74755672387b702ba",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "norg": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -1048,6 +1064,22 @@
         "type": "github"
       }
     },
+    "nuicomponents-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715445364,
+        "narHash": "sha256-knJC3zhNy7H7NpQ7olBAqJzSk/b3uWXBFE+6XCqY840=",
+        "owner": "grapp-dev",
+        "repo": "nui-components.nvim",
+        "rev": "caecfe2089e5ffbe99c2b0e0468da91990263a90",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grapp-dev",
+        "repo": "nui-components.nvim",
+        "type": "github"
+      }
+    },
     "resession-nvim": {
       "flake": false,
       "locked": {
@@ -1083,10 +1115,12 @@
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs_8",
+        "nuicomponents-nvim": "nuicomponents-nvim",
         "resession-nvim": "resession-nvim",
         "sops-nix": "sops-nix",
         "tailwind-tools": "tailwind-tools",
-        "typescript-tools": "typescript-tools"
+        "typescript-tools": "typescript-tools",
+        "zen-browser": "zen-browser"
       }
     },
     "sops-nix": {
@@ -1244,6 +1278,24 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_9"
+      },
+      "locked": {
+        "lastModified": 1724273760,
+        "narHash": "sha256-K119BzKF44+EVS3d1WLWzDIcTnUbKUvmi16nzjRaeHM=",
+        "owner": "MarceColl",
+        "repo": "zen-browser-flake",
+        "rev": "c8e1230f17e1e130d33d77be7d87087c76089d32",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MarceColl",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

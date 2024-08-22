@@ -69,6 +69,7 @@ require("catppuccin").setup({
 		setup_highlights()
 
 		return {
+			FloatBorder = { fg = "#011826", bg = "#011826" },
 			WinSeparator = { fg = "#011826", bg = "#000000" },
 			NeoTreeFloatBorder = { fg = "#011826", bg = "#011826" },
 			NeoTreeFloatTitle = { fg = "#011826", bg = "#011826" },

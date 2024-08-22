@@ -46,6 +46,10 @@
         name = "resession-nvim";
         src = inputs.resession-nvim;
       };
+      nuicomponents-nvim = prev.vimUtils.buildVimPlugin {
+        name = "nuicomponents-nvim";
+        src = inputs.nuicomponents-nvim;
+      };
       avante-nvim = prev.vimUtils.buildVimPlugin {
         name = "avante-nvim";
         src = inputs.avante-nvim;

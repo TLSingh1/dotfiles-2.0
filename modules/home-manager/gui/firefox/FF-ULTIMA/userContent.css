@@ -641,3 +641,24 @@
     --ytmusic-background: none !important;
   }
 }
+
+
+
+/***********************************************************/
+/*
+/* NOTE: Wikipedia
+/*
+/***********************************************************/
+@-moz-document domain("wikipedia.org") {
+  :root {
+    --background-color-base: transparent !important;
+  }
+
+  html.skin-theme-clientpref-night .hatnote:not(.notheme),
+  html.skin-theme-clientpref-night .dablink:not(.notheme),
+  html.skin-theme-clientpref-night .rellink:not(.notheme),
+  html.skin-theme-clientpref-night .infobox:not(.notheme) {
+    background-color: transparent !important;
+    backdrop-filter: blur(10px) !important;
+  }
+}

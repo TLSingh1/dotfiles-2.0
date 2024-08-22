@@ -104,6 +104,7 @@
     nodePackages.svelte-language-server
     tailwindcss-language-server
     vscode-langservers-extracted
+    inputs.zen-browser.packages."${system}".default
   ];
 
   home.file = {
@@ -135,7 +136,9 @@
     ".mozilla/firefox/default/chrome/userContent.css" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/firefox/FF-ULTIMA/userContent.css";
     };
-
+    ".zen/bszeqo1i.Default (alpha)/chrome/userContent.css" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/gui/zen/userContent.css";
+    };
     ".config/yazi/flavors/tokyo-night.yazi" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tai/.dotfiles/modules/home-manager/tui/yazi/tokyo-night.yazi";
       recursive = true;

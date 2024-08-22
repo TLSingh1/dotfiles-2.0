@@ -60,6 +60,7 @@
       # UI
       plenary-nvim
       nui-nvim
+      nuicomponents-nvim
       nvim-web-devicons
       neo-tree-nvim
       nvim-window-picker

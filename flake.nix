@@ -64,10 +64,15 @@
       url = "github:stevearc/resession.nvim";
       flake = false;
     };
+    nuicomponents-nvim = {
+      url = "github:grapp-dev/nui-components.nvim";
+      flake = false;
+    };
     avante-nvim = {
       url = "github:yetone/avante.nvim";
       flake = false;
     };
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = {
@@ -90,6 +95,9 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [
         hyprland.homeManagerModules.default
+        # {
+        #   nixpkgs.overlays = import ./overlays/default.nix {inherit inputs;};
+        # }
       ];
       extraSpecialArgs = {inherit inputs;};
     };
