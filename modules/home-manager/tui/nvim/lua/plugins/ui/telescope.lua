@@ -32,9 +32,8 @@ return {
       },
     })
 
-    -- Load extensions after setup
     pcall(telescope.load_extension, "fzf")
     pcall(telescope.load_extension, "ui-select")
-    -- pcall(telescope.load_extension, "nerdy")  -- Uncomment if you have this extension
+    pcall(telescope.load_extension, "nerdy")
   end,
 }
