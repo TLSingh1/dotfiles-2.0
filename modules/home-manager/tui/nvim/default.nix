@@ -37,7 +37,7 @@
       nvim-lspconfig
       none-ls-nvim
       # lsp-format-nvim
-      # conform-nvim
+      conform-nvim
       lsp_lines-nvim
       # nvim-surround
       # better-escape-nvim
