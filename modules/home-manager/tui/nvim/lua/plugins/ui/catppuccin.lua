@@ -1,6 +1,7 @@
 return { 
   "catppuccin/nvim", 
   name = "catppuccin", 
+  lazy = false,
   priority = 1000,
   config = function()
     require("catppuccin").setup({
@@ -36,9 +37,9 @@ return {
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
       },
       color_overrides = {
-        -- all = {
-        --   base = "#011826",
-        -- },
+        all = {
+          base = "#011826",
+        },
       },
       custom_highlights = function()
         return {

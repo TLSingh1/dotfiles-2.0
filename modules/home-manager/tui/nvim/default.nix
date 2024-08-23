@@ -69,7 +69,7 @@
       nuicomponents-nvim
       nvim-web-devicons
       neo-tree-nvim
-      # nvim-window-picker
+      nvim-window-picker
       toggleterm-nvim
       telescope-nvim
       catppuccin-nvim
