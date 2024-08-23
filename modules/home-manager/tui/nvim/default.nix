@@ -37,7 +37,7 @@
       lsp_lines-nvim
       nvim-surround
       # better-escape-nvim
-      # todo-comments-nvim
+      todo-comments-nvim
       # smart-splits-nvim
       typescript-tools
       # tailwind-tools
