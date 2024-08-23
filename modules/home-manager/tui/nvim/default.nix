@@ -23,7 +23,7 @@
       nvim-treesitter.withAllGrammars
       # comment-nvim
       # nvim-autopairs
-      # ultimate-autopair-nvim
+      ultimate-autopair-nvim
       luasnip
       friendly-snippets
       nvim-cmp

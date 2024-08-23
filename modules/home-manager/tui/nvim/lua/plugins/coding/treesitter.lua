@@ -20,16 +20,6 @@ return {
 				auto_install = false,
 				ignore_install = {},
 			})
-
-			-- -- Force Treesitter to load parsers
-			-- vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-			-- 	callback = function()
-			-- 		local ft = vim.bo.filetype
-			-- 		if ft ~= "" then
-			-- 			pcall(vim.cmd, "TSEnable highlight")
-			-- 		end
-			-- 	end,
-			-- })
 		end,
 	},
 }
