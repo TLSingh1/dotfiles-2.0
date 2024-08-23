@@ -38,7 +38,7 @@
       nvim-surround
       # better-escape-nvim
       todo-comments-nvim
-      # smart-splits-nvim
+      smart-splits-nvim
       typescript-tools
       # tailwind-tools
       nvim-ts-autotag
@@ -49,8 +49,8 @@
 
       # Git
       # gitsigns-nvim
-      # diffview-nvim
-      # neogit
+      diffview-nvim
+      neogit
 
       # Project
       # neorg
