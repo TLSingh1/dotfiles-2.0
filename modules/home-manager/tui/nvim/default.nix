@@ -16,7 +16,7 @@
 
       # AI
       copilot-lua
-      # avante-nvim
+      avante-nvim
 
       # Coding
       nvim-treesitter.withAllGrammars
