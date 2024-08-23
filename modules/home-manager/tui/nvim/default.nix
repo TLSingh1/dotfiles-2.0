@@ -21,7 +21,7 @@
 
       # Coding
       nvim-treesitter.withAllGrammars
-      comment-nvim
+      # comment-nvim
       # nvim-autopairs
       # ultimate-autopair-nvim
       luasnip
@@ -42,7 +42,7 @@
       # better-escape-nvim
       # todo-comments-nvim
       # smart-splits-nvim
-      # typescript-tools
+      typescript-tools
       # tailwind-tools
       # nvim-ts-autotag
       # nvim-ts-context-commentstring
