@@ -21,8 +21,7 @@
 
       # Coding
       nvim-treesitter.withAllGrammars
-      # nvim-treesitter-parsers.svelte
-      # comment-nvim
+      comment-nvim
       # nvim-autopairs
       # ultimate-autopair-nvim
       luasnip
