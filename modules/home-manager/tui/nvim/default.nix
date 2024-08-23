@@ -21,8 +21,6 @@
 
       # Coding
       nvim-treesitter.withAllGrammars
-      # comment-nvim
-      # nvim-autopairs
       ultimate-autopair-nvim
       luasnip
       friendly-snippets
@@ -35,10 +33,9 @@
       cmp-emoji
       nvim-lspconfig
       none-ls-nvim
-      # lsp-format-nvim
       conform-nvim
       lsp_lines-nvim
-      # nvim-surround
+      nvim-surround
       # better-escape-nvim
       # todo-comments-nvim
       # smart-splits-nvim

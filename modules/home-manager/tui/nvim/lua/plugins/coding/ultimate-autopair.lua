@@ -174,6 +174,7 @@ return {
 			{ "<!--", "-->", ft = { "markdown", "html" }, space = true },
 			{ '"""', '"""', newline = true, ft = { "python" } },
 			{ "'''", "'''", newline = true, ft = { "python" } },
+			{ "<", ">", fly = true, dosuround = true, newline = false, space = false },
 		},
 		config_internal_pairs = { -- *ultimate-autopair-pairs-configure-default-pairs*
 			--configure internal pairs
