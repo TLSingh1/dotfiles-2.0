@@ -77,7 +77,7 @@
       # nerdy-nvim
       indent-blankline-nvim
       rainbow-delimiters-nvim
-      # colorizer-nvim
+      colorizer-nvim
       # heirline-nvim
       # nvim-notify
       # noice-nvim
