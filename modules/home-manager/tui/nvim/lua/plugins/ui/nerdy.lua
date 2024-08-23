@@ -5,4 +5,4 @@ return {
     'nvim-telescope/telescope.nvim',
   },
   cmd = 'Nerdy',
-},
+}

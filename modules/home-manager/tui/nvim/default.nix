@@ -79,8 +79,8 @@
       rainbow-delimiters-nvim
       colorizer-nvim
       # heirline-nvim
-      # nvim-notify
-      # noice-nvim
+      nvim-notify
+      noice-nvim
       # nvim-navic
       # nvim-navbuddy
       # image-nvim
