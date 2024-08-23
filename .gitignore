@@ -1,4 +1,2 @@
-./modules/home-manager/wm/hyprland/hyprcursors/*
 ./modules/home-manager/wm/hyprland/hyprcursors/
-./.avante_chat_history/*
-./.avante_chat_history
+.avante_chat_history/

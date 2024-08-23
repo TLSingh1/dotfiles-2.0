@@ -10,12 +10,17 @@
     vimAlias = true;
     vimdiffAlias = true;
     withNodeJs = true;
+    extraLuaPackages = luaPkgs:
+      with luaPkgs; [
+        tiktoken_core
+      ];
     plugins = with pkgs.vimPlugins; [
       # Lazy
       lazy-nvim
 
       # AI
-      copilot-lua
+      # copilot-lua
+      # copilot-vim
       avante-nvim
 
       # Coding
@@ -35,7 +40,7 @@
       conform-nvim
       lsp_lines-nvim
       nvim-surround
-      # better-escape-nvim
+      better-escape-nvim
       todo-comments-nvim
       smart-splits-nvim
       typescript-tools

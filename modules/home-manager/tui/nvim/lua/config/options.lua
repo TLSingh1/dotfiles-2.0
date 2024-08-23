@@ -17,6 +17,7 @@ local options = {
 	smartindent = true,
 	splitbelow = true,
 	splitright = true,
+	splitkeep = "screen",
 	swapfile = false,
 	termguicolors = true,
 	timeoutlen = 1000,
