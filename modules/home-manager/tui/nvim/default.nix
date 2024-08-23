@@ -70,7 +70,7 @@
       # nvim-web-devicons
       # neo-tree-nvim
       # nvim-window-picker
-      # toggleterm-nvim
+      toggleterm-nvim
       # telescope-nvim
       # catppuccin-nvim
       # dashboard-nvim
@@ -92,11 +92,7 @@
       # outline-nvim
     ];
     extraLuaConfig = ''
-      vim.g.mapleader = " "
-
-      vim.g.ts_install_dir = vim.fn.stdpath("data") .. "/treesitter-parsers"
-      vim.fn.mkdir(vim.g.ts_install_dir, "p")
-      vim.opt.runtimepath:append(vim.g.ts_install_dir)
+      ${builtins.readFile ./lua/config/init.lua}
 
       require("lazy").setup({
         spec = {
