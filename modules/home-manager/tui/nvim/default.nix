@@ -64,14 +64,14 @@
       # resession-nvim
 
       # UI
-      # plenary-nvim
-      # nui-nvim
-      # nuicomponents-nvim
-      # nvim-web-devicons
+      plenary-nvim
+      nui-nvim
+      nuicomponents-nvim
+      nvim-web-devicons
       # neo-tree-nvim
       # nvim-window-picker
       toggleterm-nvim
-      # telescope-nvim
+      telescope-nvim
       # catppuccin-nvim
       # dashboard-nvim
       # dressing-nvim
