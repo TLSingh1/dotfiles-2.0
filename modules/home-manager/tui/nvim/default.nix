@@ -97,6 +97,7 @@
       require("lazy").setup({
         spec = {
           { import = "plugins" },
+          { import = "plugins/ui" },
         },
         performance = {
           reset_packpath = false,
@@ -113,11 +114,12 @@
         },
       })
     '';
-    # extraLuaConfig = ''
-    #   ${builtins.readFile ./lua/config/init.lua}
-    #   ${builtins.readFile ./lua/plugins/init.lua}
-    # '';
   };
+
+  # extraLuaConfig = ''
+  #   ${builtins.readFile ./lua/config/init.lua}
+  #   ${builtins.readFile ./lua/plugins/init.lua}
+  # '';
 
   xdg.configFile."nvim/lua" = {
     recursive = true;
