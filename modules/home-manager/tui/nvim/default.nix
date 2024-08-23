@@ -47,7 +47,7 @@
       nvim-ufo
 
       # Git
-      # gitsigns-nvim
+      gitsigns-nvim
       diffview-nvim
       neogit
 
