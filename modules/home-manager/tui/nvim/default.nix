@@ -78,7 +78,7 @@
       indent-blankline-nvim
       rainbow-delimiters-nvim
       colorizer-nvim
-      # heirline-nvim
+      heirline-nvim
       nvim-notify
       noice-nvim
       # nvim-navic
@@ -86,7 +86,7 @@
       # image-nvim
       # helpview-nvim
       # markview-nvim
-      # colorful-winsep
+      colorful-winsep
       no-neck-pain-nvim
       # outline-nvim
     ];

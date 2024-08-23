@@ -1,4 +1,3 @@
 require("config.options")
 require("config.keymaps")
--- require("config.autocommands")
--- require("config.highlights")
+require("config.autocommands")

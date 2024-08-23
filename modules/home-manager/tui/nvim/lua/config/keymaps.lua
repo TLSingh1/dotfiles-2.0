@@ -21,7 +21,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", ";", ":Neotree float reveal <CR>", opts)
 -- keymap("n", "<c-;>", ":Neotree source=document_symbols float reveal <CR>", opts)
 -- keymap("n", "<leader>n", ":Neogit <CR>", opts)
--- keymap("n", "<leader><leader>n", ":NoNeckPain <CR>", opts)
+keymap("n", "<leader><leader>n", ":NoNeckPain <CR>", opts)
 -- keymap("n", "<leader><leader>t", ":TailwindConcealToggle <CR>", opts)
 keymap("n", "dm", "", {
 	noremap = true,
