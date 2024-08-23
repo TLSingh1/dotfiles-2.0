@@ -72,7 +72,7 @@
       # nvim-window-picker
       toggleterm-nvim
       telescope-nvim
-      # catppuccin-nvim
+      catppuccin-nvim
       # dashboard-nvim
       # dressing-nvim
       # nerdy-nvim
