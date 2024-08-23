@@ -45,7 +45,7 @@
       # nvim-ts-context-commentstring
       # nvim-treesitter-context
       # marks-nvim
-      # nvim-ufo
+      nvim-ufo
 
       # Git
       # gitsigns-nvim

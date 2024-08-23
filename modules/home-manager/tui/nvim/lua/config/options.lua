@@ -37,9 +37,9 @@ local options = {
 	breakindent = true,
 	linebreak = true,
 	winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow",
-	-- foldlevel = 99, -- Using ufo provider need a large value
-	-- foldenable = true,
-	-- foldlevelstart = 99,
+	foldlevel = 99, -- Using ufo provider need a large value
+	foldenable = true,
+	foldlevelstart = 99,
 	fillchars = { eob = " " },
 }
 
