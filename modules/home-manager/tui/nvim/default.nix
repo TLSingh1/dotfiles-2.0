@@ -13,7 +13,6 @@
     plugins = with pkgs.vimPlugins; [
       # Lazy
       lazy-nvim
-      which-key-nvim
 
       # AI
       # claude-nvim
@@ -74,7 +73,7 @@
       telescope-nvim
       catppuccin-nvim
       # dashboard-nvim
-      # dressing-nvim
+      dressing-nvim
       # nerdy-nvim
       # indent-blankline-nvim
       # rainbow-delimiters-nvim
