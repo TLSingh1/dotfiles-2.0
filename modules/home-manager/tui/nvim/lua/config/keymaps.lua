@@ -80,13 +80,13 @@ keymap("n", "<leader>s", ":split <CR>", opts)
 -- keymap("n", "gn", "<cmd>lua vim.diagnostic.goto_next({ border = 'rounded' })<CR>", opts)
 
 ---------------- Telescope --------------------
--- keymap(
--- 	"n",
--- 	"<leader>f",
--- 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
--- 	opts
--- )
--- keymap("n", "<leader>g", "<cmd>Telescope live_grep<CR>", opts)
--- keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
+keymap(
+	"n",
+	"<leader>f",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+	opts
+)
+keymap("n", "<leader>g", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
 
 ------------- Random Plugins -----------------
