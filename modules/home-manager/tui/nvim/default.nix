@@ -94,10 +94,13 @@
     extraLuaConfig = ''
       vim.g.mapleader = " "
 
+      vim.g.ts_install_dir = vim.fn.stdpath("data") .. "/treesitter-parsers"
+      vim.fn.mkdir(vim.g.ts_install_dir, "p")
+      vim.opt.runtimepath:append(vim.g.ts_install_dir)
+
       require("lazy").setup({
         spec = {
           { import = "plugins" },
-          { import = "plugins.ui" },
         },
         performance = {
           reset_packpath = false,
