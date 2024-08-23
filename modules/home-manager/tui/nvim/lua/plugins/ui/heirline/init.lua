@@ -1,6 +1,8 @@
 local conditions = require("heirline.conditions")
 
 local StatusLine = require("plugins.ui.heirline.status-line")
+local StatusColumn = require("plugins.ui.heirline.status-column")
+local WinBar = require("plugins.ui.heirline.winbar")
 
 return {
 	"rebelot/heirline.nvim",
@@ -11,8 +13,8 @@ return {
 	config = function()
 		require("heirline").setup({
 			statusline = StatusLine,
-			-- winbar = WinBar,
-			-- statuscolumn = StatusColumn,
+			winbar = WinBar,
+			statuscolumn = StatusColumn,
 			opts = {
 				disable_winbar_cb = function(args)
 					return conditions.buffer_matches({
