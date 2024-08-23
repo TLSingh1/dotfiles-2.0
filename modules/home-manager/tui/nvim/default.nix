@@ -22,6 +22,7 @@
 
       # Coding
       nvim-treesitter.withAllGrammars
+      nvim-treesitter-parsers.svelte
       # comment-nvim
       # nvim-autopairs
       # ultimate-autopair-nvim
@@ -92,6 +93,8 @@
     ];
     extraLuaConfig = ''
       vim.g.mapleader = " "
+
+      -- Lazy setup
       require("lazy").setup({
         spec = {
           { import = "plugins" },
@@ -111,6 +114,7 @@
           missing = false,
         },
       })
+
     '';
     # extraLuaConfig = ''
     #   ${builtins.readFile ./lua/config/init.lua}
