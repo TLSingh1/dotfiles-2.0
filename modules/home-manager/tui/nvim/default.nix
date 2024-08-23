@@ -35,10 +35,10 @@
       cmp-cmdline
       cmp-emoji
       nvim-lspconfig
-      # none-ls-nvim
+      none-ls-nvim
       # lsp-format-nvim
       # conform-nvim
-      # lsp_lines-nvim
+      lsp_lines-nvim
       # nvim-surround
       # better-escape-nvim
       # todo-comments-nvim
