@@ -25,15 +25,15 @@
       # comment-nvim
       # nvim-autopairs
       # ultimate-autopair-nvim
-      # luasnip
-      # friendly-snippets
-      # nvim-cmp
+      luasnip
+      friendly-snippets
+      nvim-cmp
       cmp-nvim-lsp
-      # cmp-buffer
-      # cmp-path
-      # cmp_luasnip
-      # cmp-cmdline
-      # cmp-emoji
+      cmp-buffer
+      cmp-path
+      cmp_luasnip
+      cmp-cmdline
+      cmp-emoji
       nvim-lspconfig
       # none-ls-nvim
       # lsp-format-nvim
