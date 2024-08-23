@@ -43,6 +43,7 @@ return {
       },
       custom_highlights = function()
         return {
+          InactiveWindow = { bg = "#000000" },
           FloatBorder = { fg = "#011826", bg = "#011826" },
           WinSeparator = { fg = "#011826", bg = "#000000" },
           NeoTreeFloatBorder = { fg = "#011826", bg = "#011826" },

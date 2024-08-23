@@ -86,8 +86,8 @@
       # image-nvim
       # helpview-nvim
       # markview-nvim
-      colorful-winsep
-      # no-neck-pain-nvim
+      # colorful-winsep
+      no-neck-pain-nvim
       # outline-nvim
     ];
     extraLuaConfig = ''
