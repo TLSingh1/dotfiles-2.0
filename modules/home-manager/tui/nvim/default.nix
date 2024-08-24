@@ -55,7 +55,7 @@
       neogit
 
       # Project
-      # obsidian-nvim
+      obsidian-nvim
       # neorg
       # neorg-templates
       # neorg-telescope
