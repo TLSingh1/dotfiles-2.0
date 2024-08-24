@@ -105,6 +105,9 @@
     tailwindcss-language-server
     vscode-langservers-extracted
     inputs.zen-browser.packages."${system}".default
+    obsidian
+    nodePackages.prettier
+    prettierd
   ];
 
   home.file = {

@@ -47,7 +47,6 @@
       nvim-ts-autotag
       # nvim-ts-context-commentstring
       # nvim-treesitter-context
-      # marks-nvim
       nvim-ufo
 
       # Git
@@ -56,6 +55,7 @@
       neogit
 
       # Project
+      obsidian-nvim
       # neorg
       # neorg-templates
       # neorg-telescope

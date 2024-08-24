@@ -3,4 +3,5 @@ return {
 	{ import = "plugins.ui" },
 	{ import = "plugins.git" },
 	{ import = "plugins.ai" },
+	{ import = "plugins.project" },
 }
