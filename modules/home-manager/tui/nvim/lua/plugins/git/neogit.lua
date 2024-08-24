@@ -5,6 +5,10 @@ return {
 		"sindrets/diffview.nvim",
 		"nvim-telescope/telescope.nvim",
 	},
+	cmd = "Neogit",
+	keys = function()
+		return {}
+	end,
 	opts = {
 		signs = {
 			item = { "", " " },

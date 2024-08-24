@@ -1,3 +1,5 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 
 local options = {
@@ -5,7 +7,8 @@ local options = {
 	clipboard = "unnamedplus",
 	cmdheight = 1,
 	completeopt = { "menuone", "noselect" },
-	conceallevel = 3,
+	conceallevel = 2,
+	-- conceallevel = 3, TODO: uncomment after
 	fileencoding = "utf-8",
 	hlsearch = false,
 	ignorecase = true,
