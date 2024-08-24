@@ -19,8 +19,7 @@
       lazy-nvim
 
       # AI
-      # copilot-lua
-      # copilot-vim
+      copilot-vim
       avante-nvim
 
       # Coding
