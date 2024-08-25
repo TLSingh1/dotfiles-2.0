@@ -79,11 +79,19 @@ keymap("n", "gN", "<cmd>lua vim.diagnostic.goto_prev({ border = 'rounded' })<CR>
 keymap("n", "gn", "<cmd>lua vim.diagnostic.goto_next({ border = 'rounded' })<CR>", opts)
 
 ---------------- Telescope --------------------
-keymap(
-	"n",
-	"<leader>f",
-	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
-	opts
-)
+local function find_f()
+	require("telescope")
+	local builtin = require("telescope.builtin")
+	local themes = require("telescope.themes")
+	builtin.find_files(themes.get_dropdown({ previewer = false }))
+end
+vim.keymap.set("n", "<leader>f", find_f, opts)
+-- keymap("n", "<leader>f", "<cmd>lua find_f()<CR>", opts)
+-- keymap(
+-- 	"n",
+-- 	"<leader>f",
+-- 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+-- 	opts
+-- )
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)

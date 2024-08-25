@@ -1,7 +1,7 @@
 return {
 	"yetone/avante.nvim",
-	event = "VeryLazy",
-	cmd = { "AvanteAsk" },
+	-- event = "VeryLazy",
+	cmd = "AvanteAsk",
 	build = "make",
 	config = function()
 		require("avante").setup({})
