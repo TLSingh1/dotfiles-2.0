@@ -52,7 +52,7 @@
       # Git
       gitsigns-nvim
       diffview-nvim
-      # neogit
+      neogit
 
       # Project
       obsidian-nvim

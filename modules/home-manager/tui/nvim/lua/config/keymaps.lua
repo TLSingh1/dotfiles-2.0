@@ -87,13 +87,3 @@ keymap(
 )
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
-
-------------- - Disabled Keys ----------------
-keymap("n", "<leader>ghd", "<Nop>", opts)
-keymap("n", "<leader>ghD", "<Nop>", opts)
-keymap("n", "<leader>ghb", "<Nop>", opts)
-keymap("n", "<leader>ghB", "<Nop>", opts)
-keymap("n", "<leader>ghr", "<Nop>", opts)
-keymap("n", "<leader>ghR", "<Nop>", opts)
-keymap("n", "<leader>ghu", "<Nop>", opts)
-keymap("n", "<leader>ghp", "<Nop>", opts)
