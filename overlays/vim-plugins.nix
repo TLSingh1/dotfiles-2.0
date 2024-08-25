@@ -14,10 +14,6 @@
         name = "tailwind-tools";
         src = inputs.tailwind-tools;
       };
-      gen-nvim = prev.vimUtils.buildVimPlugin {
-        name = "gen-nvim";
-        src = inputs.gen-nvim;
-      };
       neorg-templates = prev.vimUtils.buildVimPlugin {
         name = "neorg-templates";
         src = inputs.neorg-templates;

@@ -32,10 +32,6 @@
       url = "github:luckasRanarison/tailwind-tools.nvim";
       flake = false;
     };
-    gen-nvim = {
-      url = "github:David-Kunz/gen.nvim";
-      flake = false;
-    };
     neorg-templates = {
       url = "github:pysan3/neorg-templates";
       flake = false;
