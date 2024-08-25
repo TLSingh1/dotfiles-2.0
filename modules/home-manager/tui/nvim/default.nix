@@ -86,7 +86,7 @@
       # image-nvim
       # helpview-nvim
       # markview-nvim
-      colorful-winsep
+      # colorful-winsep
       no-neck-pain-nvim
       # outline-nvim
     ];
@@ -113,11 +113,6 @@
       })
     '';
   };
-
-  # extraLuaConfig = ''
-  #   ${builtins.readFile ./lua/config/init.lua}
-  #   ${builtins.readFile ./lua/plugins/init.lua}
-  # '';
 
   xdg.configFile."nvim/lua" = {
     recursive = true;

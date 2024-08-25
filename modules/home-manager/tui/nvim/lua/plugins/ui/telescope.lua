@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.8",
-	-- cmd = "Telescope",
+	cmd = "Telescope",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -28,6 +28,16 @@ return {
 					n = {
 						["j"] = actions.move_selection_next,
 						["k"] = actions.move_selection_previous,
+					},
+				},
+			},
+			pickers = {
+				find_files = {
+					theme = "dropdown",
+					previewer = false,
+					layout_config = {
+						width = 0.5,
+						height = 0.2,
 					},
 				},
 			},
