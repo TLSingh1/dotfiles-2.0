@@ -674,22 +674,6 @@
         "type": "github"
       }
     },
-    "markview-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1724645507,
-        "narHash": "sha256-TNQfMn5DnU1qa48fN6TJBeYMd0h8/FJjxPnQUXNnXbw=",
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
-        "rev": "1fd113802e008f09c6bb91d352f770e8b0bd4da4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
-        "type": "github"
-      }
-    },
     "mini-misc": {
       "flake": false,
       "locked": {
@@ -1080,6 +1064,22 @@
         "type": "github"
       }
     },
+    "render-markdown": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724822198,
+        "narHash": "sha256-fJNbvKOYYAXR1qgx53cVRbRjL02Aqfd130rnFlh3d/8=",
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
+        "rev": "862b7df6bfc66a4af08d786ace0c5f1f21d8891f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MeanderingProgrammer",
+        "repo": "render-markdown.nvim",
+        "type": "github"
+      }
+    },
     "resession-nvim": {
       "flake": false,
       "locked": {
@@ -1108,7 +1108,6 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
-        "markview-nvim": "markview-nvim",
         "mini-misc": "mini-misc",
         "neorg-overlay": "neorg-overlay",
         "neorg-templates": "neorg-templates",
@@ -1116,6 +1115,7 @@
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs_8",
         "nuicomponents-nvim": "nuicomponents-nvim",
+        "render-markdown": "render-markdown",
         "resession-nvim": "resession-nvim",
         "sops-nix": "sops-nix",
         "tailwind-tools": "tailwind-tools",
