@@ -156,7 +156,7 @@ local StatusColumn = {
 
 	condition = function()
 		return not conditions.buffer_matches({
-			filetype = { "Outline" },
+			filetype = { "Outline", "NvimTree", "help" },
 		})
 	end,
 

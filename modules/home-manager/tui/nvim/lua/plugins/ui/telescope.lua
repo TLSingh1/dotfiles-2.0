@@ -36,7 +36,7 @@ return {
 					theme = "dropdown",
 					previewer = false,
 					layout_config = {
-						width = 0.5,
+						width = 0.2,
 						height = 0.2,
 					},
 				},

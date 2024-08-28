@@ -18,7 +18,9 @@ keymap("n", "<c-n>", ":bdelete <cr>", opts)
 keymap("n", "<leader>;", ":", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", ";", ":Neotree float reveal <CR>", opts)
+-- keymap("n", ";", ":Neotree float reveal <CR>", opts)
+keymap("n", ";", ":NvimTreeToggle <CR>", opts)
+-- keymap("n", ";", ":NvimTreeToggle <CR>", opts)
 keymap("n", "<leader>n", ":Neogit <CR>", opts)
 keymap("n", "<leader><leader>n", ":NoNeckPain <CR>", opts)
 -- keymap("n", "<leader><leader>t", ":TailwindConcealToggle <CR>", opts)
@@ -93,6 +95,6 @@ keymap("n", "gn", "<cmd>lua vim.diagnostic.goto_next({ border = 'rounded' })<CR>
 -- 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
 -- 	opts
 -- )
-keymap("n", "<leader>f", ":Telescope find_files <CR>", opts)
+keymap("n", "<leader>f", ":Telescope find_files themes=dropwdown <CR>", opts)
 keymap("n", "<leader>g", ":Telescope live_grep <CR>", opts)
 keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
