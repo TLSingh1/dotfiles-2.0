@@ -86,7 +86,7 @@
       # nvim-navbuddy
       # image-nvim
       # helpview-nvim
-      # markview-nvim
+      markview-nvim
       # colorful-winsep
       no-neck-pain-nvim
       render-markdown
@@ -94,35 +94,7 @@
     ];
 
     extraLuaConfig = ''
-      ${builtins.readFile ./lua/config/init.lua}
-
-      require("lazy").setup({
-        spec = {
-          { import = "plugins" },
-        },
-        performance = {
-          reset_packpath = false,
-          rtp = {
-            reset = false,
-          }
-        },
-        dev = {
-          path = "${pkgs.vimUtils.packDir config.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
-          patterns = { "" },
-        },
-        install = {
-          missing = false,
-        },
-      })
-
-      -- Create an autocommand to print "hello" when moving to another buffer
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "VeryLazy",
-        callback = function()
-          -- Load your autocmds here
-          require("config.autocommands")
-        end,
-      })
+      ${builtins.readFile ./lua/core/init.lua}
     '';
   };
 
