@@ -10,7 +10,8 @@ vim.g.maplocalleader = " "
 ---------------- General -----------------------
 keymap("i", "jk", "<ESC>", opts)
 keymap("n", "<leader>w", ":w <CR>", opts)
-keymap("n", "<leader>q", ":q <CR>", opts)
+keymap("n", "<leader>q", ":bdelete <cr>", opts)
+keymap("n", "<leader>Q", ":q <CR>", opts)
 keymap("n", "<leader><leader>q", ":qa <CR>", opts)
 keymap("n", "<leader>Y", ":%y <CR>", opts)
 keymap("x", "p", "p:let @+=@0<CR>", opts)
