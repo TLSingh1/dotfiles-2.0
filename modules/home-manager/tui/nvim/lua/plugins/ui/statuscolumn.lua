@@ -18,8 +18,17 @@ return {
 
 		-- Combine the components
 		local function statusColumn()
+			local current_ft = vim.bo.filetype
+			local ignored_ft = {
+				"NvimTree",
+			}
+
+			if vim.tbl_contains(ignored_ft, current_ft) then
+				return ""
+			end
+
 			return table.concat({
-				"HELLLOO",
+				"HELOO",
 				-- foldColumn(),
 				-- signColumn(),
 				-- numberColumn(),
