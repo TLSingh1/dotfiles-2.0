@@ -19,9 +19,10 @@ return {
 		-- Combine the components
 		local function statusColumn()
 			return table.concat({
-				foldColumn(),
-				signColumn(),
-				numberColumn(),
+				"HELLLOO",
+				-- foldColumn(),
+				-- signColumn(),
+				-- numberColumn(),
 			})
 		end
 
