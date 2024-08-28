@@ -52,10 +52,10 @@
       url = "github:OXY2DEV/helpview.nvim";
       flake = false;
     };
-    markview-nvim = {
-      url = "github:OXY2DEV/markview.nvim";
-      flake = false;
-    };
+    # markview-nvim = {
+    #   url = "github:OXY2DEV/markview.nvim";
+    #   flake = false;
+    # };
     resession-nvim = {
       url = "github:stevearc/resession.nvim";
       flake = false;
@@ -69,6 +69,14 @@
       flake = false;
     };
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+    mini-misc = {
+      url = "github:echasnovski/mini.misc";
+      flake = false;
+    };
+    render-markdown = {
+      url = "github:MeanderingProgrammer/render-markdown.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

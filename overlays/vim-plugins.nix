@@ -34,10 +34,10 @@
         name = "helpview-nvim";
         src = inputs.helpview-nvim;
       };
-      markview-nvim = prev.vimUtils.buildVimPlugin {
-        name = "markview-nvim";
-        src = inputs.markview-nvim;
-      };
+      # markview-nvim = prev.vimUtils.buildVimPlugin {
+      #   name = "markview-nvim";
+      #   src = inputs.markview-nvim;
+      # };
       resession-nvim = prev.vimUtils.buildVimPlugin {
         name = "resession-nvim";
         src = inputs.resession-nvim;
@@ -49,6 +49,14 @@
       avante-nvim = prev.vimUtils.buildVimPlugin {
         name = "avante-nvim";
         src = inputs.avante-nvim;
+      };
+      mini-misc = prev.vimUtils.buildVimPlugin {
+        name = "mini-misc";
+        src = inputs.mini-misc;
+      };
+      render-markdown = prev.vimUtils.buildVimPlugin {
+        name = "render-markdown";
+        src = inputs.render-markdown;
       };
     };
 }

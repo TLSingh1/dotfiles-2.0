@@ -15,8 +15,9 @@
         tiktoken_core
       ];
     plugins = with pkgs.vimPlugins; [
-      # Lazy
+      # Core
       lazy-nvim
+      mini-misc
 
       # AI
       copilot-vim
@@ -88,8 +89,10 @@
       # markview-nvim
       # colorful-winsep
       no-neck-pain-nvim
+      render-markdown
       # outline-nvim
     ];
+
     extraLuaConfig = ''
       ${builtins.readFile ./lua/config/init.lua}
 
@@ -110,6 +113,15 @@
         install = {
           missing = false,
         },
+      })
+
+      -- Create an autocommand to print "hello" when moving to another buffer
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "VeryLazy",
+        callback = function()
+          -- Load your autocmds here
+          require("config.autocommands")
+        end,
       })
     '';
   };

@@ -69,7 +69,7 @@
     mupdf
     mpv
     ripgrep
-    ytermusic
+    # ytermusic
     cbonsai
     pipes
     asciiquarium-transparent

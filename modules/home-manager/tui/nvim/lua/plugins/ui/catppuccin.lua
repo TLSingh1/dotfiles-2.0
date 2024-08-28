@@ -65,6 +65,7 @@ return {
 					TreesitterContextBottom = { bg = "#0B2534" },
 					TreesitterContextLineNumber = { bg = "#0B2534" },
 					NvimTreeNormalFloat = { bg = "#011826" },
+					NvimTreeSignColumn = { bg = "#011826" },
 				}
 			end,
 			default_integrations = true,
