@@ -71,6 +71,10 @@ local WIDTH_RATIO = 0.3
 
 module_manager.use({
   name = "nvim-tree.lua",
+  cmd = "NvimTreeToggle",
+  keys = {
+    { "n", ";", "<cmd>NvimTreeToggle<CR>" },
+  },
   config = function()
     require("nvim-tree").setup({
       on_attach = my_on_attach,
@@ -160,7 +164,4 @@ module_manager.use({
       },
     })
   end,
-  keys = {
-    { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-  },
 })

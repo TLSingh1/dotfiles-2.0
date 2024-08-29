@@ -4,6 +4,11 @@ local module_manager = require("core.module_manager")
 module_manager.use({
   name = "telescope.nvim",
   cmd = "Telescope",
+  keys = {
+    { "n", "<leader>f", "<cmd>Telescope find_files<CR>" },
+    { "n", "<leader>g", "<cmd>Telescope live_grep<CR>" },
+    { "n", "<leader>td", "<cmd>Telescope diagnostics<CR>" },
+  },
   config = function()
     print("Telescope plugin loaded!") -- Debug print
     local telescope = require("telescope")
@@ -37,9 +42,4 @@ module_manager.use({
       },
     })
   end,
-  keys = {
-    { "n", "<leader>f", "<cmd>Telescope find_files<CR>" },
-    { "n", "<leader>g", "<cmd>Telescope live_grep<CR>" },
-    { "n", "<leader>td", "<cmd>Telescope diagnostics<CR>" },
-  },
 })
