@@ -77,6 +77,10 @@
       url = "github:MeanderingProgrammer/render-markdown.nvim";
       flake = false;
     };
+    fast-cmp = {
+      url = "github:yioneko/nvim-cmp/perf";
+      flake = false;
+    };
   };
 
   outputs = {
