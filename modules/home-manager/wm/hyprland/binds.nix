@@ -55,8 +55,9 @@ in
 
       # apps
       # (mkBind superKey "l" "exec, librewolf")
-      (mkBind superKey "l" "exec, firefox-nightly")
-      (mkBind superKey "k" "exec, google-chrome-stable")
+      (mkBind superKey "l" "exec, zen")
+      (mkBind superKey "k" "exec, firefox-nightly")
+      # (mkBind superKey "k" "exec, google-chrome-stable")
 
       (mkBind modKey "l" "movefocus, r")
       (mkBind modKey "h" "movefocus, l")

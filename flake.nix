@@ -52,10 +52,10 @@
       url = "github:OXY2DEV/helpview.nvim";
       flake = false;
     };
-    # markview-nvim = {
-    #   url = "github:OXY2DEV/markview.nvim";
-    #   flake = false;
-    # };
+    markview-nvim = {
+      url = "github:OXY2DEV/markview.nvim";
+      flake = false;
+    };
     resession-nvim = {
       url = "github:stevearc/resession.nvim";
       flake = false;
