@@ -67,6 +67,10 @@ module_manager.use({
         },
         {
           view = "mini",
+          filter = { find = "indented" },
+        },
+        {
+          view = "mini",
           filter = { find = "written" },
           opts = { skip = true },
         },
