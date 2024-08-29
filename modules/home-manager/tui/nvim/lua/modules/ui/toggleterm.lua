@@ -8,7 +8,6 @@ module_manager.use({
     { "n", "<A-;>", "<cmd>ToggleTerm<CR>",},
   },
   config = function()
-    print("ToggleTerm plugin loaded!") -- Debug print
     require("toggleterm").setup({
       open_mapping = "<A-;>",
       direction = "float",

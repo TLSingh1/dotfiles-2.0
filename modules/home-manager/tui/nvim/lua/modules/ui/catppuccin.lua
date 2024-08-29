@@ -30,6 +30,11 @@ module_manager.use({
         types = {},
         operators = {},
       },
+      -- color_overrides = {
+      --   all = {
+      --     base = "#000000",
+      --   },
+      -- },
     })
 
     vim.cmd.colorscheme("catppuccin")

@@ -10,7 +10,6 @@ module_manager.use({
     { "n", "<leader>td", "<cmd>Telescope diagnostics<CR>" },
   },
   config = function()
-    print("Telescope plugin loaded!") -- Debug print
     local telescope = require("telescope")
     local actions = require("telescope.actions")
 

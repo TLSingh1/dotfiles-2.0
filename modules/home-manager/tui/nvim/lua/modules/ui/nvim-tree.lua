@@ -160,11 +160,7 @@ local config = {
 module_manager.use({
   name = "nvim-tree.lua",
   cmd = "NvimTreeToggle",
-  -- keys = {
-  --   { "n", ";", "<cmd>NvimTreeToggle<CR>" },
-  -- },
   config = function()
-    print("NvimTree plugin loaded!") -- Debug print
     require("nvim-tree").setup(config)
   end,
 })

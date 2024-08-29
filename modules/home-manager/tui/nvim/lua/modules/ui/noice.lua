@@ -62,6 +62,10 @@ module_manager.use({
           filter = { event = "msg_showmode" },
         },
         {
+          view = "notify",
+          filter = { find = "recording" },
+        },
+        {
           view = "mini",
           filter = { find = "written" },
           opts = { skip = true },
@@ -94,7 +98,3 @@ module_manager.use({
     })
   end,
 })
-
--- Ensure dependencies are loaded
-module_manager.use({ name = "nui.nvim" })
-module_manager.use({ name = "nvim-notify" })
