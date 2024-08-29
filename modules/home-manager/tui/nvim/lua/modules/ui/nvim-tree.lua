@@ -69,99 +69,104 @@ end
 local HEIGHT_RATIO = 0.5
 local WIDTH_RATIO = 0.3
 
+local config = {
+  on_attach = my_on_attach,
+  disable_netrw = true,
+  hijack_unnamed_buffer_when_opening = true,
+  view = {
+    signcolumn = "yes",
+    float = {
+      enable = true,
+      open_win_config = function()
+        local screen_w = vim.opt.columns:get()
+        local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
+        local window_w = screen_w * WIDTH_RATIO
+        local window_h = screen_h * HEIGHT_RATIO
+        local window_w_int = math.floor(window_w)
+        local window_h_int = math.floor(window_h)
+        local center_x = (screen_w - window_w) / 2
+        local center_y = ((vim.opt.lines:get() - window_h) / 2) - vim.opt.cmdheight:get()
+        return {
+          border = "rounded",
+          relative = "editor",
+          row = center_y,
+          col = center_x,
+          width = window_w_int,
+          height = window_h_int,
+        }
+      end,
+    },
+    width = function()
+      return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
+    end,
+  },
+  renderer = {
+    root_folder_modifier = ":t",
+    add_trailing = false,
+    highlight_git = "all",
+    highlight_diagnostics = "name",
+    highlight_opened_files = "all",
+    highlight_modified = "all",
+    highlight_hidden = "all",
+    highlight_bookmarks = "all",
+    highlight_clipboard = "name",
+    indent_markers = {
+      enable = false,
+      inline_arrows = true,
+    },
+    icons = {
+      -- ... (rest of the icons configuration)
+    },
+  },
+  update_focused_file = {
+    enable = true,
+    update_root = {
+      enable = false,
+      ignore_list = {},
+    },
+    exclude = false,
+  },
+  git = {
+    enable = true,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
+    disable_for_dirs = {},
+    timeout = 400,
+    cygwin_support = false,
+  },
+  diagnostics = {
+    enable = true,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
+    debounce_delay = 50,
+    severity = {
+      min = vim.diagnostic.severity.HINT,
+      max = vim.diagnostic.severity.ERROR,
+    },
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    },
+  },
+  modified = {
+    enable = true,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
+  },
+}
+
 module_manager.use({
   name = "nvim-tree.lua",
   cmd = "NvimTreeToggle",
-  keys = {
-    { "n", ";", "<cmd>NvimTreeToggle<CR>" },
-  },
+  -- keys = {
+  --   { "n", ";", "<cmd>NvimTreeToggle<CR>" },
+  -- },
   config = function()
-    require("nvim-tree").setup({
-      on_attach = my_on_attach,
-      disable_netrw = true,
-      hijack_unnamed_buffer_when_opening = true,
-      view = {
-        signcolumn = "yes",
-        float = {
-          enable = true,
-          open_win_config = function()
-            local screen_w = vim.opt.columns:get()
-            local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
-            local window_w = screen_w * WIDTH_RATIO
-            local window_h = screen_h * HEIGHT_RATIO
-            local window_w_int = math.floor(window_w)
-            local window_h_int = math.floor(window_h)
-            local center_x = (screen_w - window_w) / 2
-            local center_y = ((vim.opt.lines:get() - window_h) / 2) - vim.opt.cmdheight:get()
-            return {
-              border = "rounded",
-              relative = "editor",
-              row = center_y,
-              col = center_x,
-              width = window_w_int,
-              height = window_h_int,
-            }
-          end,
-        },
-        width = function()
-          return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
-        end,
-      },
-      renderer = {
-        root_folder_modifier = ":t",
-        add_trailing = false,
-        highlight_git = "all",
-        highlight_diagnostics = "name",
-        highlight_opened_files = "all",
-        highlight_modified = "all",
-        highlight_hidden = "all",
-        highlight_bookmarks = "all",
-        highlight_clipboard = "name",
-        indent_markers = {
-          enable = false,
-          inline_arrows = true,
-        },
-        icons = {
-          -- ... (rest of the icons configuration)
-        },
-      },
-      update_focused_file = {
-        enable = true,
-        update_root = {
-          enable = false,
-          ignore_list = {},
-        },
-        exclude = false,
-      },
-      git = {
-        enable = true,
-        show_on_dirs = true,
-        show_on_open_dirs = true,
-        disable_for_dirs = {},
-        timeout = 400,
-        cygwin_support = false,
-      },
-      diagnostics = {
-        enable = true,
-        show_on_dirs = true,
-        show_on_open_dirs = true,
-        debounce_delay = 50,
-        severity = {
-          min = vim.diagnostic.severity.HINT,
-          max = vim.diagnostic.severity.ERROR,
-        },
-        icons = {
-          hint = "",
-          info = "",
-          warning = "",
-          error = "",
-        },
-      },
-      modified = {
-        enable = true,
-        show_on_dirs = true,
-        show_on_open_dirs = true,
-      },
-    })
+    print("NvimTree plugin loaded!") -- Debug print
+    require("nvim-tree").setup(config)
   end,
 })
+
+vim.api.nvim_set_keymap("n", ";", ":NvimTreeToggle <CR>", { noremap = true, silent = true })

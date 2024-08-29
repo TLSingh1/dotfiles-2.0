@@ -74,7 +74,7 @@
       dashboard-nvim
       # dressing-nvim
       # nerdy-nvim
-      # indent-blankline-nvim
+      indent-blankline-nvim
       # rainbow-delimiters-nvim
       # colorizer-nvim
       # heirline-nvim
