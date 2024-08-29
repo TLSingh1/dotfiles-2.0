@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
-keymap("", "<Space>", "<Nop>", opts)
+-- keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -96,6 +96,6 @@ keymap("n", "gn", "<cmd>lua vim.diagnostic.goto_next({ border = 'rounded' })<CR>
 -- 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
 -- 	opts
 -- )
-keymap("n", "<leader>f", ":Telescope find_files themes=dropwdown <CR>", opts)
-keymap("n", "<leader>g", ":Telescope live_grep <CR>", opts)
-keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
+-- keymap("n", "<leader>f", ":Telescope find_files themes=dropwdown <CR>", opts)
+-- keymap("n", "<leader>g", ":Telescope live_grep <CR>", opts)
+-- keymap("n", "<leader>td", ":Telescope diagnostics <CR>", opts)
