@@ -1,28 +1,203 @@
--- lua/modules/ui/custom_cmdline.lua
-local module_manager = require("core.module_manager")
-
-local cmd = {}
-
--- Namespace for highlights, extmarks & ui-events
--- cmd.ns = vim.api.nvim_create_namespace("cmd")
--- Buffer holding the cmdline text
--- cmd.buf = vim.api.nvim_create_buf(false, true)
--- We will store the cmdline window here later
--- cmd.win = nil
--- Store cursor info, so that we can unhide it later
--- cmd.cursor = nil
-
--- Table to store all of the provided variables
--- cmd.state = {}
-
--- Wrapper function to update state
--- cmd.update_state = function(state)
---   cmd.state = vim.tbl_extend("force", cmd.state, state)
+-- local module_manager = require("core.module_manager")
+--
+-- local cmd = {};
+--
+-- cmd.ns = vim.api.nvim_create_namespace("cmd");
+-- cmd.buf = vim.api.nvim_create_buf(false, true);
+-- cmd.win = nil;
+-- cmd.cursor = nil;
+-- cmd.state = {};
+--
+-- cmd.update_state = function (state)
+--     cmd.state = vim.tbl_extend("force", cmd.state, state);
 -- end
-
-module_manager.use({
-  name = "custom_cmdline",
-  config = function()
-    vim.print("commandline loaded")
-  end
-})
+--
+-- cmd.open = function ()
+--   -- Cmdline width, height
+--   local w = math.floor(vim.o.columns * 0.6);
+--   local h = 1;
+--
+--   if cmd.win and vim.api.nvim_win_is_valid(cmd.win) then
+--   end
+--
+--   cmd.win = vim.api.nvim_open_win(cmd.buf, false, {
+--     relative = "editor",
+--
+--     -- The borders take 2 extra rows
+--     row = math.floor((vim.o.lines - (h + 2)) / 2),
+--     col = math.floor((vim.o.columns - w) / 2),
+--
+--     width = w, height = h,
+--     -- Very high zindex so it doesn't open under other
+--     -- windows, 250 should be enough
+--     zindex = 250,
+--
+--     border = "rounded"
+--   });
+--
+--   -- Generic options to make the window look clean
+--   vim.wo[cmd.win].number = false;
+--   vim.wo[cmd.win].relativenumber = false;
+--   vim.wo[cmd.win].statuscolumn = "";
+--
+--   vim.wo[cmd.win].wrap = false;
+--   vim.wo[cmd.win].spell = false;
+--   vim.wo[cmd.win].cursorline = false;
+--
+--   vim.wo[cmd.win].sidescrolloff = 10;
+--
+--   -- Optional, for syntax highlighting
+--   vim.bo[cmd.buf].filetype = "vim";
+--
+--   -- Store the value of `guicursor`
+--   if vim.opt.guicursor ~= "" then
+--     cmd.cursor = vim.opt.guicursor;
+--   else
+--     -- This is the default value, since we can't set it to ""
+--     cmd.cursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20";
+--   end
+--
+--   -- First ceate a highlight group named `CursorHidden`.
+--   -- It's value should have "blend = 100" to become hidden.
+--   -- You can also set it's fg & bg to Neovim's background color.
+--   vim.opt.guicursor = "a:CursorHidden";
+-- end
+--
+-- cmd.close = function ()
+--   -- If the cmdline's level is more then 1
+--   -- then it would return to it's previous level
+--   -- when exiting so the cmdline will still be open
+--   if cmd.state.level > 1 then
+--     return;
+--   end
+--
+--   pcall(vim.api.nvim_win_close, cmd.win, true);
+--
+--   cmd.win = nil;
+--   vim.opt.guicursor = cmd.cursor;
+-- end
+--
+-- local function setup()
+--   -- Create necessary highlight groups
+--   vim.api.nvim_set_hl(0, "CursorHidden", { blend = 100 })
+--   vim.api.nvim_set_hl(0, "Cursor", { reverse = true })
+--
+--   -- Set up the UI attach
+--   vim.ui_attach(cmd.ns, { ext_cmdline = true, ext_popupmenu = true }, function(event, ...)
+--     if event == "cmdline_show" then
+--       local content, pos, firstc, prompt, indent, level = ...
+--       cmd.update_state({
+--         content = content,
+--         position = pos,
+--         firstc = firstc,
+--         prompt = prompt,
+--         indent = indent,
+--         level = level
+--       })
+--       cmd.open()
+--       cmd.draw()
+--       vim.api.nvim__redraw({ win = cmd.win, flush = true })
+--     elseif event == "cmdline_hide" then
+--       cmd.close()
+--       vim.api.nvim__redraw({ win = cmd.win, flush = true })
+--     elseif event == "cmdline_pos" then
+--       local pos, level = ...
+--       cmd.update_state({
+--         position = pos,
+--         level = level
+--       })
+--       cmd.draw()
+--       vim.api.nvim__redraw({ win = cmd.win, flush = true })
+--     elseif event == "popupmenu_show" then
+--       local items, selected, row, col, grid = ...
+--       cmd.update_comp_state({
+--         items = items,
+--         selected = selected,
+--         row = row,
+--         col = col,
+--         grid = grid
+--       })
+--       cmd.comp_enable = true
+--       cmd.open_completion()
+--       cmd.draw_completion()
+--     elseif event == "popupmenu_select" then
+--       local selected = ...
+--       cmd.update_comp_state({
+--         selected = selected
+--       })
+--       cmd.draw_completion()
+--       vim.api.nvim__redraw({ win = cmd.comp_win, flush = true })
+--     elseif event == "popupmenu_hide" then
+--       cmd.comp_enable = false
+--       cmd.comp_txt = nil
+--       cmd.close_completion()
+--     end
+--   end)
+-- end
+--
+-- cmd.draw = function ()
+--     -- In case the text isn't available return early
+--   if not cmd.state or not cmd.state.content then
+--     return;
+--   end
+--
+--   -- The text to show
+--   local txt = "";
+--
+--   -- For every part in "content" we add the text of it
+--   -- to the "txt" variable
+--   for _, part in ipairs(cmd.state.content) do
+--     txt = txt .. part[2];
+--   end
+--
+--   -- This shows the text
+--   vim.api.nvim_buf_set_lines(cmd.buf, 0, -1, false, { txt });
+--   -- This puts the cursor where the cursor should be inside
+--   -- the cmdline.
+--   -- This doesn't show the cursor!
+--   vim.api.nvim_win_set_cursor(cmd.win, { 1, cmd.state.position });
+--
+--   -- Now we show a *fake* cursor
+--   if cmd.state.position >= #txt then
+--     -- Cursor is most likely at the end of the text
+--     -- Use a virtual text to show the cursor
+--     vim.api.nvim_buf_set_extmark(
+--       cmd.buf,
+--       cmd.ns,
+--       0,
+--       #txt,
+--       {
+--         virt_text_pos = "inline",
+--         virt_text = { { " ", "Cursor" } }
+--       }
+--     )
+--   else
+--     -- Cursor is inside the text
+--     -- Use a highlight to show it
+--
+--     -- Text before the cursor
+--     -- Without using this we won't be able to correctly show
+--     -- the cursor when a character is *multi-byte*
+--     local before = string.sub(txt, 0, cmd.state.position);
+--
+--     vim.api.nvim_buf_add_highlight(
+--       cmd.buf,
+--       cmd.ns,
+--       "Cursor",
+--       0,
+--       cmd.state.position,
+--       #vim.fn.strcharpart(txt, 0, vim.fn.strchars(before) + 1)
+--       --- Doing "(cmd.state.position - diff) + 1" doesn't
+--       --- work on multi-byte characters(e.g. emojis, nerd font
+--       --- characters)
+--     );
+--   end
+-- end
+--
+-- module_manager.use_custom({
+--   name = "custom_cmdline",
+--   config = function()
+--     setup()
+--     vim.print("Custom commandline module loaded")
+--   end
+-- })

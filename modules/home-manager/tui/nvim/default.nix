@@ -63,7 +63,7 @@
 
       # UI
       plenary-nvim
-      # nui-nvim
+      nui-nvim
       # nuicomponents-nvim
       nvim-web-devicons
       # neo-tree-nvim
@@ -78,9 +78,9 @@
       # rainbow-delimiters-nvim
       # colorizer-nvim
       # heirline-nvim
-      # nvim-notify
+      nvim-notify
       nvim-tree-lua
-      # noice-nvim
+      noice-nvim
       # nvim-navic
       # nvim-navbuddy
       # image-nvim

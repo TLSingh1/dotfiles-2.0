@@ -3,10 +3,16 @@ local M = {}
 
 -- Table to store all plugins
 M.plugins = {}
+M.custom_modules = {}
 
 -- Function to add a plugin
 function M.use(spec)
   table.insert(M.plugins, spec)
+end
+
+-- Function to add a custom module
+function M.use_custom(spec)
+  table.insert(M.custom_modules, spec)
 end
 
 -- Function to determine if a plugin should be lazy loaded
@@ -71,7 +77,23 @@ local function setup_lazy_loading(spec)
   end
 end
 
--- Function to load all plugins
+-- -- Function to load all plugins
+-- function M.load_plugins()
+--   for _, spec in ipairs(M.plugins) do
+--     if should_lazy_load(spec) then
+--       setup_lazy_loading(spec)
+--     else
+--       vim.cmd("packadd " .. spec.name)
+--       if spec.config then
+--         spec.config()
+--       end
+--       if spec.keymaps then
+--         apply_keymaps(spec.keymaps)
+--       end
+--     end
+--   end
+-- end
+-- Function to load all plugins and custom modules
 function M.load_plugins()
   for _, spec in ipairs(M.plugins) do
     if should_lazy_load(spec) then
@@ -84,6 +106,16 @@ function M.load_plugins()
       if spec.keymaps then
         apply_keymaps(spec.keymaps)
       end
+    end
+  end
+
+  -- Load custom modules
+  for _, spec in ipairs(M.custom_modules) do
+    if spec.config then
+      spec.config()
+    end
+    if spec.keymaps then
+      apply_keymaps(spec.keymaps)
     end
   end
 end
