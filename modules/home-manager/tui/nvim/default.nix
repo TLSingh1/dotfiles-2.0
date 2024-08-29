@@ -68,7 +68,7 @@
       nvim-web-devicons
       # neo-tree-nvim
       # nvim-window-picker
-      # toggleterm-nvim
+      toggleterm-nvim
       telescope-nvim
       # catppuccin-nvim
       dashboard-nvim
@@ -93,6 +93,7 @@
     ];
 
     extraLuaConfig = ''
+      vim.g.start_time = vim.loop.hrtime()
       ${builtins.readFile ./lua/core/init.lua}
     '';
   };
