@@ -24,7 +24,7 @@
 
       # Coding
       # nvim-treesitter.withAllGrammars
-      # ultimate-autopair-nvim
+      ultimate-autopair-nvim
       # luasnip
       # friendly-snippets
       # nvim-cmp
@@ -73,7 +73,7 @@
       catppuccin-nvim
       dashboard-nvim
       dressing-nvim
-      # nerdy-nvim
+      nerdy-nvim
       indent-blankline-nvim
       # rainbow-delimiters-nvim
       # colorizer-nvim
