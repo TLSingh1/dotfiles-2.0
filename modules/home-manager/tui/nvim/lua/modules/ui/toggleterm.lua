@@ -3,10 +3,12 @@ local module_manager = require("core.module_manager")
 
 module_manager.use({
   name = "toggleterm.nvim",
+  cmd = "ToggleTerm",
   keys = {
-    { "<A-;>", "<cmd>ToggleTerm<cr>", mode = "n", desc = "Toggle terminal" },
+    { "n", "<A-;>", "<cmd>ToggleTerm<CR>",},
   },
   config = function()
+    print("ToggleTerm plugin loaded!") -- Debug print
     require("toggleterm").setup({
       open_mapping = "<A-;>",
       direction = "float",

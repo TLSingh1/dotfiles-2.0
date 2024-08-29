@@ -79,7 +79,7 @@
       # colorizer-nvim
       # heirline-nvim
       # nvim-notify
-      # nvim-tree-lua
+      nvim-tree-lua
       # noice-nvim
       # nvim-navic
       # nvim-navbuddy
