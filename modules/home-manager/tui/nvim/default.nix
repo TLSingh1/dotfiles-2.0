@@ -71,7 +71,7 @@
       # toggleterm-nvim
       telescope-nvim
       # catppuccin-nvim
-      # dashboard-nvim
+      dashboard-nvim
       # dressing-nvim
       # nerdy-nvim
       # indent-blankline-nvim

@@ -39,9 +39,8 @@ module_manager.use({
   keymaps = {
     n = {
       ["<leader>f"] = "<cmd>Telescope find_files<CR>",
-      -- ["<leader>fg"] = "<cmd>Telescope live_grep<CR>",
-      -- ["<leader>fb"] = "<cmd>Telescope buffers<CR>",
-      -- ["<leader>fh"] = "<cmd>Telescope help_tags<CR>",
+      ["<leader>g"] = "<cmd>Telescope live_grep<CR>",
+      ["<leader>td"] = "<cmd>Telescope diagnostics<CR>",
     },
   },
 })
