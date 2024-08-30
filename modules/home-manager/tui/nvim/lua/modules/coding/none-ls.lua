@@ -8,18 +8,18 @@ module_manager.use({
     local null_ls = require("null-ls")
 
     local signs = {
-      { name = "DiagnosticSignError", text = "" },
-      { name = "DiagnosticSignWarn", text = "" },
-      { name = "DiagnosticSignHint", text = "" },
-      { name = "DiagnosticSignInfo", text = "" },
+      { name = "DiagnosticSignError", text = "" },
+      { name = "DiagnosticSignWarn", text = "" },
+      { name = "DiagnosticSignHint", text = "" },
+      { name = "DiagnosticSignInfo", text = "" },
     }
 
     local diagnostics_config = {
-      virtual_text = false,
-      virtual_lines = {
-        only_current_line = true,
-        highlight_whole_line = false,
-      },
+      virtual_text = true,
+      -- virtual_lines = {
+      --   only_current_line = true,
+      --   highlight_whole_line = false,
+      -- },
       signs = {
         text = {
           [vim.diagnostic.severity.ERROR] = signs[1].text,
@@ -32,10 +32,10 @@ module_manager.use({
       underline = true,
       severity_sort = true,
       float = {
-        focusable = false,
-        style = "minimal",
-        border = "rounded",
-        source = "always",
+        focusable = true,
+        -- style = "minimal",
+        -- border = "rounded",
+        -- source = "always",
         header = "",
         prefix = "",
       },
