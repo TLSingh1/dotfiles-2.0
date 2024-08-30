@@ -11,5 +11,14 @@ module_manager.use({
 	},
 	config = function()
 		require("typescript-tools").setup({})
+
+		-- Force LSP to start for the current buffer if it matches the filetypes
+		local current_ft = vim.bo.filetype
+		if vim.tbl_contains({ "javascript", "javascriptreact", "typescript", "typescriptreact" }, current_ft) then
+			vim.schedule(function()
+				vim.print("typescript tools loaded")
+				vim.cmd("LspStart")
+			end)
+		end
 	end,
 })
