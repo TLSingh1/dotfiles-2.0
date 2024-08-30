@@ -59,7 +59,7 @@
         src = inputs.render-markdown;
       };
       fast-cmp = prev.vimUtils.buildVimPlugin {
-        name = "nvim-cmp";
+        name = "fast-cmp";
         src = inputs.fast-cmp;
       };
     };
