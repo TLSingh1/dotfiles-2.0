@@ -38,7 +38,7 @@
       none-ls-nvim
       conform-nvim
       # lsp_lines-nvim
-      # nvim-surround
+      nvim-surround
       # better-escape-nvim
       # todo-comments-nvim
       # smart-splits-nvim
