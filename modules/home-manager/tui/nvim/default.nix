@@ -36,7 +36,7 @@
       cmp-emoji
       nvim-lspconfig
       none-ls-nvim
-      # conform-nvim
+      conform-nvim
       # lsp_lines-nvim
       # nvim-surround
       # better-escape-nvim

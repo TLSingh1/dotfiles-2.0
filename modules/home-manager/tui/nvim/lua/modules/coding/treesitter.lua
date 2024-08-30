@@ -3,6 +3,7 @@ local module_manager = require("core.module_manager")
 
 module_manager.use({
   name = "nvim-treesitter",
+  event = "VimEnter",
   config = function()
     -- Set custom parser install directory
     local parser_install_dir = vim.fn.stdpath("data") .. "/treesitter-parsers"
