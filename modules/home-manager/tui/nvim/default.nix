@@ -25,16 +25,16 @@
       # Coding
       # nvim-treesitter.withAllGrammars
       ultimate-autopair-nvim
-      # fast-cmp
-      # luasnip
-      # friendly-snippets
-      # cmp-nvim-lsp
-      # cmp-buffer
-      # cmp-path
-      # cmp_luasnip
-      # cmp-cmdline
-      # cmp-emoji
-      # nvim-lspconfig
+      fast-cmp
+      luasnip
+      friendly-snippets
+      cmp-nvim-lsp
+      cmp-buffer
+      cmp-path
+      cmp_luasnip
+      cmp-cmdline
+      cmp-emoji
+      nvim-lspconfig
       # none-ls-nvim
       # conform-nvim
       # lsp_lines-nvim
