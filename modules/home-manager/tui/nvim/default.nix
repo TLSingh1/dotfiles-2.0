@@ -19,7 +19,7 @@
       # mini-misc
 
       # AI
-      # copilot-vim
+      copilot-vim
       # avante-nvim
 
       # Coding
@@ -37,11 +37,10 @@
       nvim-lspconfig
       none-ls-nvim
       conform-nvim
-      # lsp_lines-nvim
       nvim-surround
       # better-escape-nvim
       # todo-comments-nvim
-      # smart-splits-nvim
+      smart-splits-nvim
       typescript-tools
       # tailwind-tools
       # nvim-ts-autotag
