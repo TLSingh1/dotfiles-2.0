@@ -25,9 +25,9 @@
       # Coding
       # nvim-treesitter.withAllGrammars
       ultimate-autopair-nvim
+      # fast-cmp
       # luasnip
       # friendly-snippets
-      # nvim-cmp
       # cmp-nvim-lsp
       # cmp-buffer
       # cmp-path
