@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  config,
   ...
 }: {
   programs.neovim = {
@@ -35,7 +34,7 @@
       cmp-cmdline
       cmp-emoji
       nvim-lspconfig
-      # none-ls-nvim
+      none-ls-nvim
       # conform-nvim
       # lsp_lines-nvim
       # nvim-surround
