@@ -83,9 +83,14 @@ function M.load_plugins()
 		if should_lazy_load(spec) then
 			setup_lazy_loading(spec)
 		else
-			vim.cmd("packadd " .. spec.name)
 			if spec.config then
-				spec.config()
+				local config_ok, config_err = pcall(spec.config)
+				if not config_ok then
+					vim.notify(
+						"Error in config for " .. spec.name .. ": " .. tostring(config_err),
+						vim.log.levels.ERROR
+					)
+				end
 			end
 			if spec.keymaps then
 				apply_keymaps(spec.keymaps)
