@@ -20,7 +20,7 @@
 
       # AI
       copilot-vim
-      # avante-nvim
+      avante-nvim
 
       # Coding
       nvim-treesitter.withAllGrammars
