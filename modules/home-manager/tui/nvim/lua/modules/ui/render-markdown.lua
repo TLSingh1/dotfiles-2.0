@@ -5,6 +5,7 @@ module_manager.use({
 	name = "render-markdown.nvim",
 	ft = "markdown", -- Lazy load on markdown filetype
 	config = function()
+		vim.print("loading render markdown")
 		require("render-markdown").setup({})
 	end,
 })

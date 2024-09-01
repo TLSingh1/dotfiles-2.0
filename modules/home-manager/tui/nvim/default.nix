@@ -14,6 +14,9 @@
       with luaPkgs; [
         tiktoken_core
       ];
+    extraPackages = with pkgs; [
+      luajitPackages.magick
+    ];
     plugins = with pkgs.vimPlugins; [
       # Core
       # mini-misc
@@ -82,7 +85,7 @@
       noice-nvim
       # nvim-navic
       # nvim-navbuddy
-      # image-nvim
+      image-nvim
       # helpview-nvim
       # markview-nvim
       # colorful-winsep

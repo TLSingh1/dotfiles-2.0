@@ -24,7 +24,7 @@
     settings = {
       shell = "fish";
       background = "#000000";
-      background_opacity = "0";
+      background_opacity = "0.7";
       foreground = "#c8d3f5";
       selection_background = "#2d3f76";
       selection_foreground = "#c8d3f5";
@@ -80,13 +80,13 @@
       # Mouse
       open_url_with = "default";
       copy_on_select = "yes";
-      
+
       # Tab bar
       tab_bar_style = "powerline";
       tab_bar_align = "left";
       tab_bar_min_tabs = 2;
       tab_powerline_style = "round";
-      
+
       # Window
       window_padding_width = "10 20 10 20";
     };
