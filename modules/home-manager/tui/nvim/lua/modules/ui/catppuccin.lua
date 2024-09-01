@@ -53,7 +53,7 @@ module_manager.use({
 					TelescopeBorder = { fg = "#011826", bg = "#011826" },
 					TelescopeSelection = { bg = "#233B48" },
 					TelescopeSelectionCaret = { bg = "#233B48" },
-					TelescopeTitle = { bg = "#0B2534" },
+					TelescopeTitle = { fg = "#1affff", bg = "#0B2534" },
 					TelescopeResultsNormal = { bg = "#011826" },
 					TelescopePreviewNormal = { bg = "#011826" },
 					Folded = { bg = "#233B48", style = { "italic", "bold" } },
