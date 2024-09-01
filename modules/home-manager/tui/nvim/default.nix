@@ -87,7 +87,7 @@
       # markview-nvim
       # colorful-winsep
       # no-neck-pain-nvim
-      # render-markdown
+      render-markdown
       # outline-nvim
     ];
 
