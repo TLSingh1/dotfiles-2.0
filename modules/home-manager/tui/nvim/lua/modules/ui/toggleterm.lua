@@ -19,6 +19,9 @@ module_manager.use({
 				Normal = {
 					guibg = "#011826",
 				},
+				NormalFloat = {
+					guibg = "#011826",
+				},
 				FloatBorder = {
 					guifg = "#011826",
 					guibg = "#011826",

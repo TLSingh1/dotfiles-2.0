@@ -37,7 +37,7 @@ module_manager.use({
 			-- },
 			custom_highlights = function()
 				return {
-					ActiveWindow = { bg = "#011826" },
+					ActiveWindow = { bg = "#000000" },
 					InactiveWindow = { bg = "#000000" },
 					FloatBorder = { fg = "#011826", bg = "#011826" },
 					WinSeparator = { fg = "#011826", bg = "#000000" },
