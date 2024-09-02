@@ -6,6 +6,7 @@ local disabled_filetypes = {
 	"NvimTree",
 	"Avante",
 	"AvanteInput",
+	"markdown",
 }
 
 -- Define gradient colors
