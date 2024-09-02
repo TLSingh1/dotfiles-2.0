@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  # config,
   ...
 }: {
   programs.neovim = {

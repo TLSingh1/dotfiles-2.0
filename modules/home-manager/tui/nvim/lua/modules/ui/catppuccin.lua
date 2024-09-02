@@ -58,7 +58,7 @@ module_manager.use({
 					TelescopePreviewNormal = { bg = "#011826" },
 					Folded = { bg = "#233B48", style = { "italic", "bold" } },
 					CursorLine = { bg = "#0B2534" },
-					CursorLineNr = { bg = "#0B2534", style = { "bold" } },
+					CursorLineNr = { fg = "#f2c9ff", bg = "#0B2534", style = { "bold" } },
 					TreesitterContext = { bg = "#0B2534" },
 					TreesitterContextBottom = { bg = "#0B2534" },
 					TreesitterContextLineNumber = { bg = "#0B2534" },

@@ -85,20 +85,19 @@ local function get_mark(bufnr, lnum)
 	end
 end
 
-local function icon(sign, len)
-	sign = sign or {}
-	len = len or 2
-	local text = vim.fn.strcharpart(sign.text or "", 0, len)
-	text = text .. string.rep(" ", len - vim.fn.strchars(text))
+local function icon(sign)
+	if not sign then
+		return " "
+	end
+	local text = vim.fn.strcharpart(sign.text or "", 0, 1)
 	if sign.texthl then
 		if vim.v.lnum == vim.fn.line(".") then
-			-- For the current line, set only the background highlight
-			return string.format("%%#%s#%%X%s %%*", sign.texthl, text)
+			return string.format("%%#StatusColumnCurrentLine#%%#%s#%%X%s%%*", sign.texthl, text)
 		else
-			return string.format("%%#%s#%s %%*", sign.texthl, text)
+			return string.format("%%#%s#%s%%*", sign.texthl, text)
 		end
 	else
-		return text .. " "
+		return text
 	end
 end
 
@@ -134,14 +133,8 @@ local function signs()
 	end
 
 	local mark = get_mark(bufnr, vim.v.lnum)
-	-- prioritize marks, then most severe diagnostic, then git signs
 	local final_sign = mark or diagnostic_sign or git_sign
-
-	if final_sign then
-		return string.format("%-2s", icon(final_sign, 1))
-	else
-		return "  "
-	end
+	return icon(final_sign)
 end
 
 local function folds()
@@ -165,16 +158,15 @@ local function folds()
 		fold_char = "│"
 	end
 
-	return string.format("%-2s", fold_char) -- Left-align with 2 spaces
+	return fold_char
 end
 
 local function numbers()
-	-- check if the current line is a wrapped line
 	if vim.v.virtnum > 0 then
-		return string.rep(" ", 5) -- 5 spaces for consistency with new number format
+		return string.rep(" ", 3)
 	else
 		local num = vim.v.relnum ~= 0 and vim.v.relnum or vim.v.lnum
-		return string.format("%3d  ", num) -- Right-align with 3 spaces, then 2 spaces after
+		return string.format("%3d", num)
 	end
 end
 
@@ -185,11 +177,10 @@ local function border()
 		index = #colors
 	end
 
-	-- Use the special highlight for the current line
 	if vim.v.lnum == vim.fn.line(".") then
-		return "%#StatusBorderCurrent#▏%* "
+		return "%#StatusBorderCurrent#▏ %*"
 	else
-		return string.format("%%#StatusBorder_%d#▏%%* ", index)
+		return string.format("%%#StatusBorder_%d#▏ %%*", index)
 	end
 end
 
@@ -202,8 +193,11 @@ function StatusColumn()
 	return table.concat({
 		"%=",
 		signs(),
+		"  ",
 		folds(),
+		-- "  ",
 		numbers(),
+		"  ",
 		border(),
 	})
 end
