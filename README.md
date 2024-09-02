@@ -143,5 +143,5 @@ for details.
 
 > [!WARNING]
 >
-> I don't know what i'm doing would love feedback/tips/help Also AI made this
+> I don't know what i'm doing would love feedback/tips/help. Also AI made this
 > readme
