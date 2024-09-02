@@ -56,21 +56,19 @@ local function lsp()
 end
 
 local function set_winbar_highlights()
-	-- Get the comment highlight
 	local comment_hl = api.nvim_get_hl(0, { name = "Comment" })
 
 	local highlights = {
-		WinBarComment = { fg = comment_hl.fg, bg = 0 },
-		WinBarPath = { link = "WinBarComment" },
-		WinBarIcon = { bg = 0 },
-		WinBarFilename = { bg = 0, bold = true },
+		WinBarComment = { fg = comment_hl.fg, bg = "#000000" },
+		WinBarPath = { fg = "#1affff", bg = "#ff4444" },
+		WinBarIcon = { bg = "#000000" },
+		WinBarFilename = { bg = "#000000", bold = true },
 	}
 
 	for name, val in pairs(highlights) do
 		api.nvim_set_hl(0, name, val)
 	end
 
-	-- Set winbar-specific diagnostic highlights based on the predefined ones
 	local diagnostic_highlights = {
 		WinBarDiagnosticError = "DiagnosticError",
 		WinBarDiagnosticWarn = "DiagnosticWarn",
@@ -80,7 +78,7 @@ local function set_winbar_highlights()
 
 	for winbar_hl, base_hl in pairs(diagnostic_highlights) do
 		local hl = api.nvim_get_hl(0, { name = base_hl })
-		hl.bg = 0 -- Set background to black (0 is usually black)
+		hl.bg = nil
 		api.nvim_set_hl(0, winbar_hl, {
 			fg = hl.fg,
 			bg = hl.bg,
@@ -92,25 +90,42 @@ local function set_winbar_highlights()
 end
 
 local function build_winbar()
-	local filename = fn.expand("%:t")
-	local file_icon, icon_hl = devicons.get_icon(filename, fn.expand("%:e"), { default = true })
-	local path_components = get_path_components()
+	local ok, result = pcall(function()
+		local buftype = vim.bo.buftype
+		if buftype == "help" or buftype == "nofile" or buftype == "prompt" then
+			return "" -- Return empty string for unsupported buffer types
+		end
 
-	set_winbar_highlights()
+		local filename = fn.expand("%:t")
+		if filename == "" then
+			return "" -- Return empty string for empty filenames
+		end
 
-	-- Create a winbar-specific highlight for the file icon
-	local icon_hl_props = api.nvim_get_hl(0, { name = icon_hl })
-	api.nvim_set_hl(0, "WinBarFileIcon", { fg = icon_hl_props.fg, bg = 0 })
+		local file_icon, icon_hl = devicons.get_icon(filename, fn.expand("%:e"), { default = true })
+		local path_components = get_path_components()
 
-	local winbar = "%#WinBarComment#"
-	for _, component in ipairs(path_components) do
-		winbar = winbar .. component .. "  "
+		set_winbar_highlights()
+
+		local icon_hl_props = api.nvim_get_hl(0, { name = icon_hl })
+		api.nvim_set_hl(0, "WinBarFileIcon", { fg = icon_hl_props.fg, bg = "#000000" })
+
+		local winbar = "%#WinBarComment#"
+		for _, component in ipairs(path_components) do
+			winbar = winbar .. component .. "  "
+		end
+
+		winbar = winbar .. "%#WinBarFileIcon#" .. file_icon .. " %#WinBarFilename#" .. filename
+		winbar = winbar .. lsp()
+
+		return winbar
+	end)
+
+	if not ok then
+		vim.notify("Error in winbar: " .. tostring(result), vim.log.levels.ERROR)
+		return "" -- Return empty string on error
 	end
 
-	winbar = winbar .. "%#WinBarFileIcon#" .. file_icon .. " %#WinBarFilename#" .. filename
-	winbar = winbar .. lsp()
-
-	return winbar
+	return result
 end
 
 module_manager.use_custom({

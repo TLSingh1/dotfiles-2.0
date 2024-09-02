@@ -2,8 +2,7 @@
 local module_manager = require("core.module_manager")
 
 module_manager.use({
-  name = "nerdy.nvim",
-  cmd = "Nerdy",
-  config = function()
-  end,
+	name = "nerdy.nvim",
+	cmd = "Nerdy",
+	config = function() end,
 })

@@ -6,6 +6,7 @@ module_manager.use({
 	ft = {
 		"markdown",
 		"Avante",
+		"AvanteAsk",
 	}, -- Lazy load on markdown filetype
 	config = function()
 		require("render-markdown").setup({})

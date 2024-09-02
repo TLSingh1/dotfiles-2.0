@@ -1,15 +1,36 @@
 -- lua/modules/ui/statuscolumn.lua
-local module_manager = require("core.module_manager")
-
-module_manager.use_custom({
-	name = "custom_statuscolumn",
-	config = function()
-		function StatusColumn()
-			return table.concat({
-				"hello",
-			})
-		end
-
-		vim.o.statuscolumn = "%!v:lua.StatusColumn()"
-	end,
-})
+-- local module_manager = require("core.module_manager")
+-- local conditions = require("heirline.conditions")
+--
+-- module_manager.use_custom({
+-- 	name = "custom_statuscolumn",
+-- 	config = function()
+-- 		local function border()
+-- 			return "│"
+-- 		end
+--
+-- 		local disabled_filetypes = {
+-- 			"NvimTree",
+-- 			-- "help",
+-- 			"Avante",
+-- 			"AvanteInput",
+-- 		}
+--
+-- 		function StatusColumn()
+-- 			local bufnr = vim.api.nvim_get_current_buf()
+--
+-- 			-- Check if the current buffer matches any of the disabled filetypes
+-- 			if conditions.buffer_matches({ filetype = disabled_filetypes }, bufnr) then
+-- 				return "" -- Return an empty string to hide the statuscolumn
+-- 			end
+--
+-- 			-- If the buffer doesn't match any disabled filetype, show the statuscolumn
+-- 			return table.concat({
+-- 				"hello",
+-- 				border(),
+-- 			})
+-- 		end
+--
+-- 		vim.o.statuscolumn = "%!v:lua.StatusColumn()"
+-- 	end,
+-- })
