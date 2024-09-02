@@ -40,9 +40,6 @@ applications, tailored for my specific needs.
 │   ├── home-manager
 │   │   ├── gui
 │   │   ├── tui
-│   │   │   └── nvim
-│   │   │       ├── README.md
-│   │   │       └── ...
 │   │   └── wm
 │   └── nixos
 ├── overlays
