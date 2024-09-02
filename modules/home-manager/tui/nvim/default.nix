@@ -43,7 +43,7 @@
       smart-splits-nvim
       typescript-tools
       # tailwind-tools
-      # nvim-ts-autotag
+      nvim-ts-autotag
       # nvim-ts-context-commentstring
       # nvim-treesitter-context
       nvim-ufo

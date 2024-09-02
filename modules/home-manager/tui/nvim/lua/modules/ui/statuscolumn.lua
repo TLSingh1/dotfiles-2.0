@@ -7,6 +7,7 @@ local disabled_filetypes = {
 	"Avante",
 	"AvanteInput",
 	"markdown",
+	"DressingInput",
 }
 
 -- Define gradient colors
