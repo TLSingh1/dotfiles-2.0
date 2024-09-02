@@ -18,9 +18,6 @@
       luajitPackages.magick
     ];
     plugins = with pkgs.vimPlugins; [
-      # Core
-      # mini-misc
-
       # AI
       copilot-vim
       avante-nvim
