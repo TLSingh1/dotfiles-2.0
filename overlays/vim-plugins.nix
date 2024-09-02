@@ -62,5 +62,9 @@
         name = "fast-cmp";
         src = inputs.fast-cmp;
       };
+      diagram-nvim = prev.vimUtils.buildVimPlugin {
+        name = "diagram-nvim";
+        src = inputs.diagram-nvim;
+      };
     };
 }

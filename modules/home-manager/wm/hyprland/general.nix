@@ -11,15 +11,15 @@
     "col.inactive_border" = "0x00FFFFFF";
     layout = "dwindle";
     resize_on_border = true;
-    monitor = [
-      "eDP-1, 1920x1200, 0x0, 1"
-      "HDMI-A-1, 1920x1080, 1920x0, 1"
-    ];
-
     # monitor = [
-    #   "HDMI-A-1, 1920x1080, 0x0, 1"
-    #   "DP-5, 1920x1080, 1920x0, 1"
-    #   "eDP-1, 1920x1200, 3840x0, 1"
+    #   "eDP-1, 1920x1200, 0x0, 1"
+    #   "HDMI-A-1, 1920x1080, 1920x0, 1"
     # ];
+
+    monitor = [
+      "DP-5, 1920x1080, 0x0, 1"
+      "HDMI-A-1, 1920x1080, 1920x0, 1"
+      "eDP-1, 1920x1200, 3840x0, 1"
+    ];
   };
 }

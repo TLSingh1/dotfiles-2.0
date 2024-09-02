@@ -86,6 +86,7 @@
       # nvim-navic
       # nvim-navbuddy
       image-nvim
+      diagram-nvim
       # helpview-nvim
       # markview-nvim
       # colorful-winsep

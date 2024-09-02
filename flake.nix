@@ -81,6 +81,10 @@
       url = "github:yioneko/nvim-cmp/perf";
       flake = false;
     };
+    diagram-nvim = {
+      url = "github:3rd/diagram.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

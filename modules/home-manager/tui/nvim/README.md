@@ -211,4 +211,5 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 > [!WARNING]
 >
-> I don't know what i'm doing would love feedback/tips/help
+> I don't know what i'm doing would love feedback/tips/help Also AI made this
+> readme
