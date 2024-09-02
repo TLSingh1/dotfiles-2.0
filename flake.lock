@@ -132,6 +132,22 @@
         "type": "github"
       }
     },
+    "diagram-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724992446,
+        "narHash": "sha256-WT6cGIPvBURNtFhC6Kefkwm+GX8jIAW0pzsCzCRcj2k=",
+        "owner": "3rd",
+        "repo": "diagram.nvim",
+        "rev": "d19b9bb2ca162facc242c357c2802b8cfab6b55c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "3rd",
+        "repo": "diagram.nvim",
+        "type": "github"
+      }
+    },
     "fast-cmp": {
       "flake": false,
       "locked": {
@@ -1136,6 +1152,7 @@
         "claude-nvim": "claude-nvim",
         "colorful-winsep": "colorful-winsep",
         "colorizer-nvim": "colorizer-nvim",
+        "diagram-nvim": "diagram-nvim",
         "fast-cmp": "fast-cmp",
         "firefox-nightly": "firefox-nightly",
         "helpview-nvim": "helpview-nvim",

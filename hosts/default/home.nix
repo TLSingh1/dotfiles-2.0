@@ -108,6 +108,7 @@
     obsidian
     nodePackages.prettier
     prettierd
+    mermaid-cli
   ];
 
   home.file = {
