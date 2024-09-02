@@ -4,8 +4,6 @@ Welcome to my NixOS configuration repository! This project uses NixOS with
 Flakes and Home Manager to create a reproducible and customizable system
 configuration.
 
-Here's a [demo](https://www.youtube.com/watch?v=X7IMYLIEqaM)
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -14,6 +12,7 @@ Here's a [demo](https://www.youtube.com/watch?v=X7IMYLIEqaM)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Customization](#customization)
+- [Neovim Configuration](#neovim-configuration)
 - [Architecture](#architecture)
 - [Contributing](#contributing)
 - [License](#license)
@@ -41,6 +40,9 @@ applications, tailored for my specific needs.
 │   ├── home-manager
 │   │   ├── gui
 │   │   ├── tui
+│   │   │   └── nvim
+│   │   │       ├── README.md
+│   │   │       └── ...
 │   │   └── wm
 │   └── nixos
 ├── overlays
@@ -66,7 +68,7 @@ applications, tailored for my specific needs.
 - **Nix Flakes**: Hermetic and reproducible package management
 - **Home Manager**: User environment management
 - **Hyprland**: Tiling Wayland compositor
-- **Neovim**: Customized text editor configuration
+- **Neovim**: Customized text editor configuration with a custom plugin manager
 - **GUI and TUI applications**: Carefully selected and configured
 - **Custom overlays**: For themes, Vim plugins, and tools
 - **Secrets management**: Using `sops-nix`
@@ -94,7 +96,7 @@ To update and switch to the latest configuration:
 sudo nixos-rebuild switch --flake .#default
 ```
 
-To update home-manager configuration (although i dont use this):
+To update home-manager configuration:
 
 ```
 home-manager switch --flake .#tai@nixos
@@ -111,6 +113,22 @@ want to modify:
 - `modules/`: Add or modify module configurations
 - `overlays/`: Customize package overlays
 
+## Neovim Configuration
+
+This setup includes a custom Neovim configuration with a bespoke plugin manager
+called `module_manager`. This manager provides lazy-loading capabilities and
+other advanced features to optimize your Neovim experience.
+
+For detailed information about the Neovim setup, including the `module_manager`,
+please refer to the [Neovim README](./modules/home-manager/tui/nvim/README.md).
+
+Key features of our Neovim setup:
+
+- Custom plugin manager (`module_manager`)
+- Lazy-loading of plugins for improved performance
+- Tailored configuration for various programming languages
+- Integration with NixOS and Home Manager for reproducibility
+
 ## Architecture
 
 Here's a high-level overview of the configuration architecture:
@@ -124,12 +142,13 @@ graph TD
     C --> F[User-specific settings]
     C --> G[GUI applications]
     C --> H[TUI applications]
+    H --> N[Neovim with module_manager]
     C --> I[Window Manager]
     A --> J[Overlays]
     J --> K[Themes]
     J --> L[Vim plugins]
     J --> M[Custom tools]
-    A --> N[Custom packages]
+    A --> O[Custom packages]
 ```
 
 ## Contributing
@@ -140,8 +159,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 for details.
-
-> [!WARNING]
->
-> I don't know what i'm doing would love feedback/tips/help. Also AI made this
-> readme
