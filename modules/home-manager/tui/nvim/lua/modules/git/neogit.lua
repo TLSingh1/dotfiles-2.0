@@ -3,7 +3,6 @@ local module_manager = require("core.module_manager")
 
 module_manager.use({
 	name = "neogit",
-	cmd = "Neogit",
 	config = function()
 		require("neogit").setup({
 			signs = {

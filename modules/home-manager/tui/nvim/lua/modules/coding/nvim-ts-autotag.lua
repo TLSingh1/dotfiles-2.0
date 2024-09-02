@@ -3,7 +3,6 @@ local module_manager = require("core.module_manager")
 
 module_manager.use({
 	name = "nvim-ts-autotag",
-	event = { "BufRead", "BufNewFile" },
 	config = function()
 		require("nvim-ts-autotag").setup({
 			opts = {
