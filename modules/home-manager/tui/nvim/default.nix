@@ -49,9 +49,9 @@
       nvim-ufo
 
       # Git
-      # gitsigns-nvim
-      # diffview-nvim
-      # neogit
+      gitsigns-nvim
+      diffview-nvim
+      neogit
 
       # Project
       # obsidian-nvim
