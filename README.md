@@ -4,6 +4,8 @@ Welcome to my NixOS configuration repository! This project uses NixOS with
 Flakes and Home Manager to create a reproducible and customizable system
 configuration.
 
+Here's a [demo](https://www.youtube.com/watch?v=X7IMYLIEqaM)
+
 ## Table of Contents
 
 - [Overview](#overview)
