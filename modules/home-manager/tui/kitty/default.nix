@@ -24,7 +24,7 @@
     settings = {
       shell = "fish";
       background = "#000000";
-      background_opacity = "0.7";
+      background_opacity = "0";
       foreground = "#c8d3f5";
       selection_background = "#2d3f76";
       selection_foreground = "#c8d3f5";
