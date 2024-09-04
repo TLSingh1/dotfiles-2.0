@@ -6,6 +6,9 @@ configuration.
 
 Here's a [demo](https://www.youtube.com/watch?v=X7IMYLIEqaM)
 
+![image-1](https://cdn.discordapp.com/attachments/1257127902974316565/1280850637265047582/rice-1.png?ex=66d9949c&is=66d8431c&hm=77d2cd9553969d68b3dfca65a7fc12db28c1313dd50bc4a3a5ae6f5b4da41fd9&)
+![image-2](https://cdn.discordapp.com/attachments/1257127902974316565/1280850637738872902/rice-2.png?ex=66d9949d&is=66d8431d&hm=7a127443b50780a8aa3431e70c07fc93fd098ad91512617deffa0684d23ddebb&)
+
 ## Table of Contents
 
 - [Overview](#overview)
