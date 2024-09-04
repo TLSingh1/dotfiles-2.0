@@ -2,11 +2,11 @@
 local module_manager = require("core.module_manager")
 
 module_manager.use({
-	name = "catppuccin-nvim", -- Changed from "catppuccin" to "catppuccin-nvim"
+	name = "catppuccin-nvim",
 	config = function()
 		require("catppuccin").setup({
-			flavour = "mocha", -- latte, frappe, macchiato, mocha
-			background = { -- :h background
+			flavour = "mocha",
+			background = {
 				light = "latte",
 				dark = "mocha",
 			},
@@ -67,6 +67,7 @@ module_manager.use({
 					TreesitterContextLineNumber = { bg = "#0B2534" },
 					NvimTreeNormalFloat = { bg = "#011826" },
 					NvimTreeSignColumn = { bg = "#011826" },
+					HelpviewCode = { bg = "#0B2534" },
 				}
 			end,
 		})
