@@ -41,6 +41,7 @@ module_manager.use({
 					InactiveWindow = { bg = "#000000" },
 					WinBar = { bg = "#011826" },
 					WinBarNC = { bg = "#000000" },
+					StatusLine = { bg = "#000000" },
 					FloatBorder = { fg = "#011826", bg = "#011826" },
 					WinSeparator = { fg = "#011826", bg = "#000000" },
 					NeoTreeFloatBorder = { fg = "#011826", bg = "#011826" },
