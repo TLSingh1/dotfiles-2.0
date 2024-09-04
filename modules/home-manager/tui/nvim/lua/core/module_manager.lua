@@ -1,4 +1,3 @@
--- core/module_manager.lua
 local M = {}
 
 -- Table to store all plugins
