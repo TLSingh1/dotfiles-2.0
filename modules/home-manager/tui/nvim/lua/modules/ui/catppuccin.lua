@@ -68,6 +68,8 @@ module_manager.use({
 					NvimTreeNormalFloat = { bg = "#011826" },
 					NvimTreeSignColumn = { bg = "#011826" },
 					HelpviewCode = { bg = "#0B2534" },
+					RenderMarkdownCode = { bg = "#0B2534" },
+					RenderMarkdown_Inverse_RenderMarkdownCode = { fg = "#0B2534", bg = "#0B2534" },
 				}
 			end,
 		})
