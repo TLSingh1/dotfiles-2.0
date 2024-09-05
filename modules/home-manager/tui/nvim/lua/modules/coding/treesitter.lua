@@ -1,4 +1,3 @@
--- lua/modules/coding/treesitter.lua
 local module_manager = require("core.module_manager")
 
 module_manager.use({
@@ -20,6 +19,20 @@ module_manager.use({
 			sync_install = false,
 			auto_install = false,
 			ignore_install = {},
+			textObjects = {
+				select = {
+					enable = true,
+					lookahead = true,
+					keymaps = {
+						["af"] = "@function.outer",
+						["if"] = "@function.inner",
+						["ac"] = "@class.outer",
+						["ic"] = "@class.inner",
+						["aa"] = "@parameter.outer",
+						["ia"] = "@parameter.inner",
+					},
+				},
+			},
 		})
 	end,
 })
