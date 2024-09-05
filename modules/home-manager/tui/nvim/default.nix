@@ -55,7 +55,7 @@
 
       # Project
       # obsidian-nvim
-      # neorg
+      neorg
       # neorg-templates
       # neorg-telescope
       # resession-nvim
