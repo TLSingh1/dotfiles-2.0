@@ -94,7 +94,6 @@
     ];
 
     extraLuaConfig = ''
-      vim.g.start_time = vim.loop.hrtime()
       ${builtins.readFile ./lua/core/init.lua}
     '';
   };

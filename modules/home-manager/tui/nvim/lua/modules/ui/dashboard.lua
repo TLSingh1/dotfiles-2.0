@@ -8,14 +8,14 @@ module_manager.use({
 		local db = require("dashboard")
 
 		-- Function to get the number of loaded plugins
-		local function get_plugin_count()
-			return #module_manager.plugins
-		end
+		-- local function get_plugin_count()
+		-- 	return #module_manager.plugins
+		-- end
 
 		-- Function to get the startup time in seconds with 2 digits of milliseconds
-		local function get_startup_time()
-			return string.format("%.2f", (vim.g.start_time() - vim.g.start_time) / 1000000000)
-		end
+		-- local function get_startup_time()
+		-- 	return string.format("%.2f", (vim.g.start_time() - vim.g.start_time) / 1000000000)
+		-- end
 
 		db.setup({
 			theme = "doom",
@@ -83,14 +83,14 @@ module_manager.use({
 					{ desc = "" },
 					{ desc = "" },
 				},
-				footer = function()
-					local plugin_count = get_plugin_count()
-					local startup_time = get_startup_time()
-					return {
-						string.format("Neovim loaded %d plugins in %s seconds", plugin_count, startup_time),
-						"Happy coding!",
-					}
-				end,
+				-- footer = function()
+				-- 	local plugin_count = get_plugin_count()
+				-- 	local startup_time = get_startup_time()
+				-- 	return {
+				-- 		string.format("Neovim loaded %d plugins in %s seconds", plugin_count, startup_time),
+				-- 		"Happy coding!",
+				-- 	}
+				-- end,
 			},
 		})
 	end,
