@@ -13,10 +13,11 @@
     extraLuaPackages = luaPkgs:
       with luaPkgs; [
         tiktoken_core
+        magick
       ];
-    extraPackages = with pkgs; [
-      luajitPackages.magick
-    ];
+    # extraPackages = with pkgs; [
+    #   luajitPackages.magick
+    # ];
     plugins = with pkgs.vimPlugins; [
       # AI
       copilot-vim

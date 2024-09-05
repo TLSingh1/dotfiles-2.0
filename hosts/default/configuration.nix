@@ -245,6 +245,7 @@
     i2c-tools
     python3
     pnpm
+    # libstdcxx5
     # openrgb
     # hidapi
     # msi-perkeyrgb

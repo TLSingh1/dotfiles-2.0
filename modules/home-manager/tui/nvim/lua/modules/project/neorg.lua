@@ -62,7 +62,6 @@ module_manager.use({
 						name = "[Neorg]",
 					},
 				},
-				-- ["external.templates"] = {},
 			},
 		})
 	end,

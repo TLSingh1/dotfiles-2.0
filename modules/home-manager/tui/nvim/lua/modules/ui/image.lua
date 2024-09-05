@@ -5,6 +5,11 @@ module_manager.use({
 	name = "image.nvim",
 	ft = { "markdown", "vimwiki", "norg" }, -- Lazy load for markdown, vimwiki, and norg files
 	config = function()
+		local status, magick = pcall(require, "magick")
+		if not status then
+			vim.notify("Failed to load magick: " .. magick, vim.log.levels.ERROR)
+		end
+
 		require("image").setup({
 			backend = "kitty",
 			integrations = {
