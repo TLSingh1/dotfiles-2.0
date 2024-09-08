@@ -1,47 +1,28 @@
-{
-  pkgs,
-  lib,
-  inputs,
-  ...
-}:
-pkgs.vimUtils.buildVimPlugin {
+{pkgs}:
+pkgs.stdenv.mkDerivation {
   pname = "peek-nvim";
-  version = "0.1.0"; # Update this as needed
-  src = inputs.peek-nvim;
+  version = "1.0.0";
 
-  nativeBuildInputs = [pkgs.deno pkgs.makeWrapper];
+  src = pkgs.fetchFromGitHub {
+    owner = "toppair";
+    repo = "peek.nvim";
+    rev = "main";
+    sha256 = "sha256-hGIPxHwTSXTHFJ3JiVATMjEmoFhZ87fWElj1AMPMbQU=";
+  };
 
-  # Prevent Deno from accessing the network during build
-  DENO_NO_UPDATE_CHECK = "1";
-  DENO_DIR = "./.deno_dir";
+  buildInputs = [pkgs.deno];
 
-  preBuildPhases = ["denoCachePhase"];
-
-  denoCachePhase = ''
-    export HOME=$TMPDIR
-    mkdir -p $DENO_DIR
-    deno cache --no-check scripts/build.js
+  rewrite = ''
+    sed -i 's/fetch(/fetchurl(/g' scripts/build.js
+    sed -i 's/https:\/\/deno.land\/x\/emit@0.38.1\/mod.ts/$(fetchurl https:\/\/deno.land\/x\/emit@0.38.1\/mod.ts)/g' scripts/build.js
   '';
 
   buildPhase = ''
-    runHook preBuild
-    deno run --allow-read --allow-write scripts/build.js
-    runHook postBuild
+    deno task --quiet build:fast
   '';
 
   installPhase = ''
-    runHook preInstall
-    mkdir -p $out/public
-    cp -r public/* $out/public/
-    cp -r lua $out/
-    cp -r plugin $out/
-    runHook postInstall
+    mkdir -p $out/share/nvim/site/pack/packer/start/
+    cp -r * $out/share/nvim/site/pack/packer/start/peek-nvim
   '';
-
-  meta = with lib; {
-    description = "Markdown preview plugin for Neovim";
-    homepage = "https://github.com/toppair/peek.nvim";
-    license = licenses.mit;
-    platforms = platforms.all;
-  };
 }

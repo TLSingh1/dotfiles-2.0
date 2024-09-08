@@ -1,9 +1,6 @@
-{
-  inputs,
-  lib,
-  pkgs,
-  ...
-}: final: prev: {
+{inputs, ...}: final: prev: let
+  pkgs = final.pkgs;
+in {
   vimPlugins =
     prev.vimPlugins
     // {
@@ -67,14 +64,12 @@
         name = "fast-cmp";
         src = inputs.fast-cmp;
       };
+
       diagram-nvim = prev.vimUtils.buildVimPlugin {
         name = "diagram-nvim";
         src = inputs.diagram-nvim;
       };
-      peek-nvim = import ../packages/peek-nvim.nix {inherit pkgs lib inputs;};
-      # peek-nvim = prev.vimUtils.buildVimPlugin {
-      #   name = "peek-nvim";
-      #   src = inputs.peek-nvim;
-      # };
+
+      peek-nvim = import ../packages/peek-nvim.nix {inherit pkgs;};
     };
 }

@@ -1,5 +1,8 @@
 # Module Manager for Neovim
 
+![Sample 1](https://cdn.discordapp.com/attachments/1257127902974316565/1282289833955561543/nvim-1.png?ex=66ded0f8&is=66dd7f78&hm=fa1520c307d4d0241f48a4b8651d42c09154a1eb3a69357574adbdd1e6d93fee&)
+![Sample 2](https://cdn.discordapp.com/attachments/1257127902974316565/1282289833535868990/nvim-2.png?ex=66ded0f8&is=66dd7f78&hm=27f47b6909da31ff46956bd3b2ff248991cd7e3c680b4e383227654f6a24880f&)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
