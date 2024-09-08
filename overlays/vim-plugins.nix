@@ -1,4 +1,9 @@
-{inputs, ...}: final: prev: {
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}: final: prev: {
   vimPlugins =
     prev.vimPlugins
     // {
@@ -66,9 +71,10 @@
         name = "diagram-nvim";
         src = inputs.diagram-nvim;
       };
-      peek-nvim = prev.vimUtils.buildVimPlugin {
-        name = "peek-nvim";
-        src = inputs.peek-nvim;
-      };
+      peek-nvim = import ../packages/peek-nvim.nix {inherit pkgs lib inputs;};
+      # peek-nvim = prev.vimUtils.buildVimPlugin {
+      #   name = "peek-nvim";
+      #   src = inputs.peek-nvim;
+      # };
     };
 }
