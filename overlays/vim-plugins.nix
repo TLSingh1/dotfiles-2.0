@@ -66,5 +66,9 @@
         name = "diagram-nvim";
         src = inputs.diagram-nvim;
       };
+      peek-nvim = prev.vimUtils.buildVimPlugin {
+        name = "peek-nvim";
+        src = inputs.peek-nvim;
+      };
     };
 }

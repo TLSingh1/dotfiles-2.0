@@ -9,6 +9,12 @@ module_manager.use({
 		"AvanteAsk",
 	}, -- Lazy load on markdown filetype
 	config = function()
-		require("render-markdown").setup({})
+		require("render-markdown").setup({
+			heading = {
+				border = true,
+				icons = { "", "", "", "", "", "" },
+				-- width = "block",
+			},
+		})
 	end,
 })

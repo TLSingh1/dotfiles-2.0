@@ -85,6 +85,10 @@
       url = "github:3rd/diagram.nvim";
       flake = false;
     };
+    peek-nvim = {
+      url = "github:toppair/peek.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

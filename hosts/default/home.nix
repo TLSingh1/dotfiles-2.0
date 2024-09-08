@@ -109,6 +109,8 @@
     nodePackages.prettier
     prettierd
     mermaid-cli
+    zoom-us
+    deno
   ];
 
   home.file = {
