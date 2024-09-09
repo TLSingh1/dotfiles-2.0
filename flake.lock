@@ -1113,22 +1113,6 @@
         "type": "github"
       }
     },
-    "peek-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1712690022,
-        "narHash": "sha256-hGIPxHwTSXTHFJ3JiVATMjEmoFhZ87fWElj1AMPMbQU=",
-        "owner": "toppair",
-        "repo": "peek.nvim",
-        "rev": "5820d937d5414baea5f586dc2a3d912a74636e5b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "toppair",
-        "repo": "peek.nvim",
-        "type": "github"
-      }
-    },
     "render-markdown": {
       "flake": false,
       "locked": {
@@ -1183,7 +1167,6 @@
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs_8",
         "nuicomponents-nvim": "nuicomponents-nvim",
-        "peek-nvim": "peek-nvim",
         "render-markdown": "render-markdown",
         "resession-nvim": "resession-nvim",
         "sops-nix": "sops-nix",

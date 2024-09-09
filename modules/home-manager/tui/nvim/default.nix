@@ -87,7 +87,6 @@
       # colorful-winsep
       # no-neck-pain-nvim
       render-markdown
-      peek-nvim
       # outline-nvim
     ];
 
