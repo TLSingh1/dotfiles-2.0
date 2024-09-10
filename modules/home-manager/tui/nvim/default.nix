@@ -21,7 +21,7 @@
       avante-nvim
 
       # Coding
-      nvim-treesitter.withAllGrammars
+      # nvim-treesitter.withAllGrammars
       ultimate-autopair-nvim
       fast-cmp
       luasnip
