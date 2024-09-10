@@ -65,6 +65,7 @@
       nvim-web-devicons
       # neo-tree-nvim
       # nvim-window-picker
+      aerial-nvim
       toggleterm-nvim
       telescope-nvim
       catppuccin-nvim
