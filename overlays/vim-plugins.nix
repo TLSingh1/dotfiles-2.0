@@ -2,10 +2,10 @@
   vimPlugins =
     prev.vimPlugins
     // {
-      colorful-winsep = prev.vimUtils.buildVimPlugin {
-        name = "colorful-winsep";
-        src = inputs.colorful-winsep;
-      };
+      # colorful-winsep = prev.vimUtils.buildVimPlugin {
+      #   name = "colorful-winsep";
+      #   src = inputs.colorful-winsep;
+      # };
       typescript-tools = prev.vimUtils.buildVimPlugin {
         name = "typescript-tools";
         src = inputs.typescript-tools;
@@ -18,10 +18,10 @@
         name = "neorg-templates";
         src = inputs.neorg-templates;
       };
-      claude-nvim = prev.vimUtils.buildVimPlugin {
-        name = "claude-nvim";
-        src = inputs.claude-nvim;
-      };
+      # claude-nvim = prev.vimUtils.buildVimPlugin {
+      #   name = "claude-nvim";
+      #   src = inputs.claude-nvim;
+      # };
       nerdy-nvim = prev.vimUtils.buildVimPlugin {
         name = "nerdy-nvim";
         src = inputs.nerdy-nvim;
@@ -38,18 +38,18 @@
       #   name = "markview-nvim";
       #   src = inputs.markview-nvim;
       # };
-      resession-nvim = prev.vimUtils.buildVimPlugin {
-        name = "resession-nvim";
-        src = inputs.resession-nvim;
-      };
+      # resession-nvim = prev.vimUtils.buildVimPlugin {
+      #   name = "resession-nvim";
+      #   src = inputs.resession-nvim;
+      # };
       nuicomponents-nvim = prev.vimUtils.buildVimPlugin {
         name = "nuicomponents-nvim";
         src = inputs.nuicomponents-nvim;
       };
-      avante-nvim = prev.vimUtils.buildVimPlugin {
-        name = "avante-nvim";
-        src = inputs.avante-nvim;
-      };
+      # avante-nvim = prev.vimUtils.buildVimPlugin {
+      #   name = "avante-nvim";
+      #   src = inputs.avante-nvim;
+      # };
       mini-misc = prev.vimUtils.buildVimPlugin {
         name = "mini-misc";
         src = inputs.mini-misc;
@@ -65,6 +65,10 @@
       diagram-nvim = prev.vimUtils.buildVimPlugin {
         name = "diagram-nvim";
         src = inputs.diagram-nvim;
+      };
+      codecompanion-nvim = prev.vimUtils.buildVimPlugin {
+        name = "codecompanion-nvim";
+        src = inputs.codecompanion-nvim;
       };
     };
 }

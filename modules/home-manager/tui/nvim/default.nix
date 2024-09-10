@@ -18,7 +18,8 @@
     plugins = with pkgs.vimPlugins; [
       # AI
       copilot-vim
-      avante-nvim
+      codecompanion-nvim
+      # avante-nvim
 
       # Coding
       nvim-treesitter.withAllGrammars

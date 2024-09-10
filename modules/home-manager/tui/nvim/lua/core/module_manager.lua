@@ -4,20 +4,8 @@ local M = {}
 M.plugins = {}
 M.custom_modules = {}
 
--- function to execute build commands
--- local function execute_build(build_cmd)
--- 	if type(build_cmd) == "string" then
--- 		vim.fn.system(build_cmd)
--- 	elseif type(build_cmd) == "function" then
--- 		build_cmd()
--- 	end
--- end
-
 -- add a plugin
 function M.use(spec)
-	-- if spec.build then
-	-- 	execute_build(spec.build)
-	-- end
 	table.insert(M.plugins, spec)
 end
 

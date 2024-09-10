@@ -20,10 +20,10 @@
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    colorful-winsep = {
-      url = "github:nvim-zh/colorful-winsep.nvim";
-      flake = false;
-    };
+    # colorful-winsep = {
+    #   url = "github:nvim-zh/colorful-winsep.nvim";
+    #   flake = false;
+    # };
     typescript-tools = {
       url = "github:pmizio/typescript-tools.nvim";
       flake = false;
@@ -36,10 +36,10 @@
       url = "github:pysan3/neorg-templates";
       flake = false;
     };
-    claude-nvim = {
-      url = "github:pasky/claude.vim";
-      flake = false;
-    };
+    # claude-nvim = {
+    #   url = "github:pasky/claude.vim";
+    #   flake = false;
+    # };
     nerdy-nvim = {
       url = "github:2KAbhishek/nerdy.nvim";
       flake = false;
@@ -56,18 +56,18 @@
     #   url = "github:OXY2DEV/markview.nvim";
     #   flake = false;
     # };
-    resession-nvim = {
-      url = "github:stevearc/resession.nvim";
-      flake = false;
-    };
+    # resession-nvim = {
+    #   url = "github:stevearc/resession.nvim";
+    #   flake = false;
+    # };
     nuicomponents-nvim = {
       url = "github:grapp-dev/nui-components.nvim";
       flake = false;
     };
-    avante-nvim = {
-      url = "github:yetone/avante.nvim";
-      flake = false;
-    };
+    # avante-nvim = {
+    #   url = "github:yetone/avante.nvim";
+    #   flake = false;
+    # };
     zen-browser.url = "github:MarceColl/zen-browser-flake";
     mini-misc = {
       url = "github:echasnovski/mini.misc";
@@ -83,6 +83,10 @@
     };
     diagram-nvim = {
       url = "github:3rd/diagram.nvim";
+      flake = false;
+    };
+    codecompanion-nvim = {
+      url = "github:olimorris/codecompanion.nvim";
       flake = false;
     };
   };

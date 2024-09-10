@@ -52,22 +52,6 @@
         "type": "github"
       }
     },
-    "avante-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1725787072,
-        "narHash": "sha256-qfpTNoojSnBLCVqdBEsSnGwDgh3Br/iRKKHlZw4UeyY=",
-        "owner": "yetone",
-        "repo": "avante.nvim",
-        "rev": "7532e590d28c6fffe88aa17ba6689c4ec8fec8ba",
-        "type": "github"
-      },
-      "original": {
-        "owner": "yetone",
-        "repo": "avante.nvim",
-        "type": "github"
-      }
-    },
     "cachix": {
       "locked": {
         "lastModified": 1635350005,
@@ -84,35 +68,19 @@
         "type": "github"
       }
     },
-    "claude-nvim": {
+    "codecompanion-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1722039734,
-        "narHash": "sha256-FDv9qhP/RBjtsn2iHIH93jlZdphZKzoZiuJl1kbgjQs=",
-        "owner": "pasky",
-        "repo": "claude.vim",
-        "rev": "883c1fcad735f5e9916fddea54e7068349cc5d59",
+        "lastModified": 1725957526,
+        "narHash": "sha256-w7qwguYOShyLrTKnaYZre7H2V+xMhnu5hegeUmOW/tY=",
+        "owner": "olimorris",
+        "repo": "codecompanion.nvim",
+        "rev": "379c53ff7d1a333d8588fd6f770d6b55e8fe056c",
         "type": "github"
       },
       "original": {
-        "owner": "pasky",
-        "repo": "claude.vim",
-        "type": "github"
-      }
-    },
-    "colorful-winsep": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1724659255,
-        "narHash": "sha256-Ui1myOGCAXqmu4WCQtc9SgxuRsJMuWJcIrCAzORcwhI=",
-        "owner": "nvim-zh",
-        "repo": "colorful-winsep.nvim",
-        "rev": "49ffe1e45c94ce379596eb78ec9f88e69e2e2221",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-zh",
-        "repo": "colorful-winsep.nvim",
+        "owner": "olimorris",
+        "repo": "codecompanion.nvim",
         "type": "github"
       }
     },
@@ -1113,28 +1081,10 @@
         "type": "github"
       }
     },
-    "resession-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1723846880,
-        "narHash": "sha256-S5mN/1yzUjV76YTYB41aaTL1xuGEfTN2LpEsc28RhDM=",
-        "owner": "stevearc",
-        "repo": "resession.nvim",
-        "rev": "c4d92a57b3936a2d6e1c087dbd6b670da2b1b082",
-        "type": "github"
-      },
-      "original": {
-        "owner": "stevearc",
-        "repo": "resession.nvim",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "ags": "ags",
-        "avante-nvim": "avante-nvim",
-        "claude-nvim": "claude-nvim",
-        "colorful-winsep": "colorful-winsep",
+        "codecompanion-nvim": "codecompanion-nvim",
         "colorizer-nvim": "colorizer-nvim",
         "diagram-nvim": "diagram-nvim",
         "fast-cmp": "fast-cmp",
@@ -1151,7 +1101,6 @@
         "nixpkgs": "nixpkgs_8",
         "nuicomponents-nvim": "nuicomponents-nvim",
         "render-markdown": "render-markdown",
-        "resession-nvim": "resession-nvim",
         "sops-nix": "sops-nix",
         "tailwind-tools": "tailwind-tools",
         "typescript-tools": "typescript-tools",
