@@ -21,10 +21,7 @@
       avante-nvim
 
       # Coding
-      # nvim-treesitter.withAllGrammars
-      (nvim-treesitter.withAllGrammars.overrideAttrs (old: {
-        version = "2024-08-04";
-      }))
+      nvim-treesitter.withAllGrammars
       ultimate-autopair-nvim
       fast-cmp
       luasnip

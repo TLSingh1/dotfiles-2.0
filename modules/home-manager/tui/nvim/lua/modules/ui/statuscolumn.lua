@@ -13,10 +13,10 @@ local disabled_filetypes = {
 -- Define gradient colors
 local colors = {
 	"#f2c9ff",
-	"#e5b8f7",
-	"#d8a8ef",
-	"#cc98e7",
-	"#bf88df",
+	-- "#e5b8f7",
+	-- "#d8a8ef",
+	-- "#cc98e7",
+	-- "#bf88df",
 	"#b378d7",
 	"#a668cf",
 	"#9a58c7",
