@@ -51,11 +51,11 @@ module_manager.use({
 						index = "index.norg",
 					},
 				},
-				["core.esupports.metagen"] = {
-					config = {
-						type = "auto",
-					},
-				},
+				-- ["core.esupports.metagen"] = {
+				-- 	config = {
+				-- 		type = "auto",
+				-- 	},
+				-- },
 				["core.completion"] = {
 					config = {
 						engine = "nvim-cmp",
