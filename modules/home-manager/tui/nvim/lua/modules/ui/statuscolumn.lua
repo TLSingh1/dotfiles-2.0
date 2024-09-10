@@ -8,6 +8,7 @@ local disabled_filetypes = {
 	"AvanteInput",
 	"markdown",
 	"DressingInput",
+	"codecompanion",
 }
 
 -- Define gradient colors
