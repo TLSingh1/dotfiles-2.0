@@ -22,6 +22,9 @@
 
       # Coding
       # nvim-treesitter.withAllGrammars
+      (nvim-treesitter.withAllGrammars.overrideAttrs (old: {
+        version = "2024-08-04";
+      }))
       ultimate-autopair-nvim
       fast-cmp
       luasnip
@@ -72,7 +75,7 @@
       dressing-nvim
       nerdy-nvim
       indent-blankline-nvim
-      # rainbow-delimiters-nvim
+      rainbow-delimiters-nvim
       colorizer-nvim
       heirline-nvim
       nvim-notify
@@ -83,20 +86,22 @@
       image-nvim
       diagram-nvim
       helpview-nvim
-      # markview-nvim
-      # colorful-winsep
       # no-neck-pain-nvim
       render-markdown
-      # outline-nvim
     ];
 
-    extraLuaConfig = ''
-      ${builtins.readFile ./lua/core/init.lua}
-    '';
+    extraLuaConfig = builtins.readFile ./lua/core/init.lua;
   };
 
   xdg.configFile."nvim/lua" = {
     recursive = true;
     source = ./lua;
+  };
+
+  home.activation = {
+    linkTreesitterParsers = inputs.home-manager.lib.hm.dag.entryAfter ["writeBoundary"] ''
+      mkdir -p ~/.local/share/nvim/treesitter-parsers
+      ln -sf ${pkgs.vimPlugins.nvim-treesitter.withAllGrammars}/parser/* ~/.local/share/nvim/treesitter-parsers/
+    '';
   };
 }

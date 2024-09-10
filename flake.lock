@@ -707,22 +707,6 @@
         "type": "github"
       }
     },
-    "markview-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1725906768,
-        "narHash": "sha256-UScVUm+38G2BCLC/hbgK0lz73q99JrIizx6l82e9t78=",
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
-        "rev": "45b9f164b4cd82a5cd151c49bc3fd9495df39a96",
-        "type": "github"
-      },
-      "original": {
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
-        "type": "github"
-      }
-    },
     "mini-misc": {
       "flake": false,
       "locked": {
@@ -1159,7 +1143,6 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpicker": "hyprpicker",
-        "markview-nvim": "markview-nvim",
         "mini-misc": "mini-misc",
         "neorg-overlay": "neorg-overlay",
         "neorg-templates": "neorg-templates",
