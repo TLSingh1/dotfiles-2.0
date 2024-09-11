@@ -111,7 +111,8 @@
     mermaid-cli
     zoom-us
     slack
-    tfswitch
+    terraform
+    # tfswitch
     terraform-ls
   ];
 
