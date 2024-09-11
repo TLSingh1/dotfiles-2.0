@@ -110,6 +110,9 @@
     prettierd
     mermaid-cli
     zoom-us
+    slack
+    tfswitch
+    terraform-ls
   ];
 
   home.file = {
