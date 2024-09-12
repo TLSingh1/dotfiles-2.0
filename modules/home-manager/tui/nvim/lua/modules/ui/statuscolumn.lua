@@ -156,11 +156,11 @@ local function folds()
 	elseif foldlevel > foldlevel_before then
 		fold_char = "▽"
 	elseif foldlevel > foldlevel_after then
-		-- fold_char = "╰"
-		fold_char = " "
+		fold_char = "╰"
+		-- fold_char = " "
 	else
-		-- fold_char = "│"
-		fold_char = " "
+		fold_char = "│"
+		-- fold_char = " "
 	end
 
 	return fold_char

@@ -1,2 +1,3 @@
 ./modules/home-manager/wm/hyprland/hyprcursors/
 .avante_chat_history/
+./modules/home-manager/tui/fish/default.nix

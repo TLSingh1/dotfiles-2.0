@@ -6,8 +6,8 @@ configuration.
 
 Here's a [demo](https://www.youtube.com/watch?v=X7IMYLIEqaM)
 
-![image-1](https://cdn.discordapp.com/attachments/1257127902974316565/1280850637265047582/rice-1.png?ex=66d9949c&is=66d8431c&hm=77d2cd9553969d68b3dfca65a7fc12db28c1313dd50bc4a3a5ae6f5b4da41fd9&)
-![image-2](https://cdn.discordapp.com/attachments/1257127902974316565/1280850637738872902/rice-2.png?ex=66d9949d&is=66d8431d&hm=7a127443b50780a8aa3431e70c07fc93fd098ad91512617deffa0684d23ddebb&)
+![image-1](https://media.discordapp.net/attachments/1257127902974316565/1283796803682045972/r-1.png?ex=66e44c71&is=66e2faf1&hm=13e478f3133ee74b1691ec0b801b6ecb2982cc844cc115507c98e649559d5944&=&format=webp&quality=lossless&width=1176&height=661)
+![image-2](https://media.discordapp.net/attachments/1257127902974316565/1283796802939781130/r-2.png?ex=66e44c71&is=66e2faf1&hm=4f86b6f298f5ecbdc47d93ae5e18debea6718ad9859955eb4b46186e34cd3c76&=&format=webp&quality=lossless&width=1173&height=661)
 
 ## Table of Contents
 
