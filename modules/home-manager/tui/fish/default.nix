@@ -26,6 +26,12 @@
         end
         rm -f -- "$tmp"
       '';
+      load_aws_secrets = ''
+        for line in (cat ~/.secrets/okta_awscli.env | grep -v '^#')
+          set item (string split -m 1 '=' $line)
+          set -gx $item[1] $item[2]
+        end
+      '';
     };
     plugins = [
       {
@@ -45,12 +51,8 @@
       macchina
       set -x MANPAGER 'nvim +Man!'
       set -gx ANTHROPIC_API_KEY (cat /run/secrets/claude)
+      load_aws_secrets
     '';
     shellInit = "";
   };
 }
-# set -x BROWSER 'firefox-nightly'
-# set -x XDG_BROWSER 'firefox-nightly'
-# set -x MANGAL_READER_BROWSER 'firefox-nightly'
-# set -x MANGAL_READER_READ_IN_BROWSER 'firefox-nightly'
-
