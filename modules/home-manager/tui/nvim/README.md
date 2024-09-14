@@ -61,6 +61,31 @@ This approach combines the power of Nix for package management with a simple,
 purpose-built system for Neovim configuration, resulting in a clean,
 reproducible, and efficient setup.
 
+### What if I don't want to use Module Manager? Or don't use NixOS?
+
+No problem. Just find the relevant part of the config you would like to use and
+copy the code within the config block.
+
+For example, if you wanted to use my config for `diffview.nvim`, you would find
+the file in my config:
+
+```lua
+local module_manager = require("core.module_manager")
+
+module_manager.use({
+	name = "diffview.nvim",
+	config = function()
+		require("diffview").setup({})
+	end,
+})
+```
+
+And copy the code within the config field:
+
+```lua
+require("diffview").setup({})
+```
+
 ## Features
 
 - **Plugin Management**: Easily configure and load Neovim plugins installed via
