@@ -83,8 +83,6 @@
 
   services.automatic-timezoned.enable = true;
 
-  # networking.extraHosts = "localhost";    FIX: uncomment this when ready to install kube
-
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -122,17 +120,22 @@
     };
   };
 
-  # FIX: uncomment when ready to install kubernetes
+  # networking.extraHosts = "${kubeMasterIP} ${kubeMasterHostname}";
   # services.kubernetes = {
-  #   kubelet = {
-  #     enable = true;
-  #     extraOpts = "--fail-swap-on=false";
-  #   };
-  #   masterAddress = "localhost";
-  #   easyCerts = true;
-  #   # apiserverAddress = "https://localhost:6443";
   #   roles = ["master" "node"];
+  #   masterAddress = kubeMasterHostname;
+  #   apiserverAddress = "https://${kubeMasterHostname}:${toString kubeMasterAPIServerPort}";
+  #   easyCerts = true;
+  #   apiserver = {
+  #     securePort = kubeMasterAPIServerPort;
+  #     advertiseAddress = kubeMasterIP;
+  #   };
+  #
+  #   # use coredns
   #   addons.dns.enable = true;
+  #
+  #   # needed if you use swap
+  #   kubelet.extraOpts = "--fail-swap-on=false";
   # };
 
   services.displayManager.sddm = {
@@ -236,11 +239,6 @@
     neon-town-sddm
     sddm-sugar-dark
     libsForQt5.qt5.qtgraphicaleffects
-    # kubernetes         FIX: uncomment this when ready to install kube
-    # kubernetes-helm    FIX: uncomment this when ready to install kube
-    # kubectl            FIX: uncomment this when ready to install kube
-    # kompose            FIX: uncomment this when ready to install kube
-    # minikube           FIX: uncomment this when ready to install kube
     usbutils
     i2c-tools
     python3
@@ -251,6 +249,9 @@
     # msi-perkeyrgb
     # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
+    dive
+    podman-tui
+    podman-compose
   ];
 
   # NOTE: RGB control
@@ -306,6 +307,15 @@
   #     setSocketVariable = true;
   #   };
   # };
+  virtualisation.containers.enable = true;
+  virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   hardware.nvidia-container-toolkit.enable = false; # FIX: set back to true when ready to install docker
 
   # virtualisation.containers.cdi.dynamic.nvidia.enable = true;

@@ -115,6 +115,7 @@
     # tfswitch
     terraform-ls
     okta-aws-cli
+    broot
   ];
 
   home.file = {
