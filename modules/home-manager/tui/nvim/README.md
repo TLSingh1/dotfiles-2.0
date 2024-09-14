@@ -98,6 +98,11 @@ programs.neovim = {
 require("core.module_manager").setup()
 ```
 
+> [!WARNING]
+>
+> I don't know what i'm doing would love feedback/tips/help Also AI made this
+> readme
+
 ## Usage
 
 To use the Module Manager, create specification files for your plugins in the
@@ -216,12 +221,3 @@ graph TD
 ![Sample 6](https://media.discordapp.net/attachments/1257127902974316565/1284345698090745938/pic-4.png?ex=66e64ba4&is=66e4fa24&hm=eb3c3b47326b4884ba1c96f8132bdb90a21932cce1110b218e0d7cb289ed62fc&=&format=webp&quality=lossless&width=610&height=661)
 ![Sample 7](https://cdn.discordapp.com/attachments/1257127902974316565/1282289833535868990/nvim-2.png?ex=66e61138&is=66e4bfb8&hm=e06a9d8ff23fb21ca91e935a75e437b75dbaa3c44d65c4f2fec2feb6ef272d8f&)
 ![Sample 8](https://media.discordapp.net/attachments/1257127902974316565/1282289833955561543/nvim-1.png?ex=66e61138&is=66e4bfb8&hm=ee35c92035dc992d53dabdf70693c8cc8f8717da3befe2d7a60b9993dd26a59d&=&format=webp&quality=lossless&width=1174&height=661)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-> [!WARNING]
->
-> I don't know what i'm doing would love feedback/tips/help Also AI made this
-> readme
