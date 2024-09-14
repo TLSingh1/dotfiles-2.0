@@ -99,8 +99,9 @@ require("core.module_manager").setup()
 
 > [!WARNING]
 >
-> I don't know what i'm doing would love feedback/tips/help Also AI made this
-> readme
+> would love feedback/tips/help
+>
+> Also AI made this readme
 
 ## Usage
 
