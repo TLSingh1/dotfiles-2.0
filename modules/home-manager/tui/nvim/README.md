@@ -12,7 +12,6 @@
 - [Examples](#examples)
 - [Architecture](#architecture)
 - [Images](#images)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
