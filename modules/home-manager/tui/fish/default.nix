@@ -16,6 +16,7 @@
       nn = "npm";
       pp = "pnpm";
       bb = "bun";
+      tf = "terraform";
     };
     functions = {
       yy = ''
