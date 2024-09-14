@@ -1,14 +1,5 @@
 # Module Manager for Neovim
 
-![Sample 1](https://media.discordapp.net/attachments/1257127902974316565/1284346196349157387/pic-1.png?ex=66e64c1b&is=66e4fa9b&hm=dd8c163f3642c73466e017831de55ce76c215f06aefe84a6cf512d8b4f8737e9&=&format=webp&quality=lossless&width=602&height=661)
-![Sample 2](https://media.discordapp.net/attachments/1257127902974316565/1284345697151483945/pic-2.png?ex=66e64ba4&is=66e4fa24&hm=eef472177970d437ace6a2e12d4cdd58bfc480d42752c678c05090ce47bcb917&=&format=webp&quality=lossless&width=572&height=661)
-![Sample 3](https://media.discordapp.net/attachments/1257127902974316565/1284345697625313311/pic-3.png?ex=66e64ba4&is=66e4fa24&hm=1169ec2ab07d7e68c70ff1708ad15de9f6d8488c46d865550b915cb7c8db0b35&=&format=webp&quality=lossless&width=609&height=661)
-![Sample 4](https://media.discordapp.net/attachments/1257127902974316565/1284345699147714594/pic-6.png?ex=66e64ba4&is=66e4fa24&hm=41c35618535a17bebc488620eea9338781e1e4b988e08fe311b20c8ef0a28704&=&format=webp&quality=lossless&width=609&height=661)
-![Sample 5](https://media.discordapp.net/attachments/1257127902974316565/1284345698581614724/pic-5.png?ex=66e64ba4&is=66e4fa24&hm=8e29560673fbcf283b33033f553d1a04693527f5d93f3b3914970832da65e0c6&=&format=webp&quality=lossless&width=603&height=661)
-![Sample 6](https://media.discordapp.net/attachments/1257127902974316565/1284345698090745938/pic-4.png?ex=66e64ba4&is=66e4fa24&hm=eb3c3b47326b4884ba1c96f8132bdb90a21932cce1110b218e0d7cb289ed62fc&=&format=webp&quality=lossless&width=610&height=661)
-![Sample 7](https://cdn.discordapp.com/attachments/1257127902974316565/1282289833535868990/nvim-2.png?ex=66e61138&is=66e4bfb8&hm=e06a9d8ff23fb21ca91e935a75e437b75dbaa3c44d65c4f2fec2feb6ef272d8f&)
-![Sample 8](https://media.discordapp.net/attachments/1257127902974316565/1282289833955561543/nvim-1.png?ex=66e61138&is=66e4bfb8&hm=ee35c92035dc992d53dabdf70693c8cc8f8717da3befe2d7a60b9993dd26a59d&=&format=webp&quality=lossless&width=1174&height=661)
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -20,6 +11,7 @@
 - [Custom Modules](#custom-modules)
 - [Examples](#examples)
 - [Architecture](#architecture)
+- [Images](#images)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -213,6 +205,17 @@ graph TD
     F -->|Immediate Load| I[On Startup]
     G -->|Load| J[Custom Functionality]
 ```
+
+## Images
+
+![Sample 1](https://media.discordapp.net/attachments/1257127902974316565/1284346196349157387/pic-1.png?ex=66e64c1b&is=66e4fa9b&hm=dd8c163f3642c73466e017831de55ce76c215f06aefe84a6cf512d8b4f8737e9&=&format=webp&quality=lossless&width=602&height=661)
+![Sample 2](https://media.discordapp.net/attachments/1257127902974316565/1284345697151483945/pic-2.png?ex=66e64ba4&is=66e4fa24&hm=eef472177970d437ace6a2e12d4cdd58bfc480d42752c678c05090ce47bcb917&=&format=webp&quality=lossless&width=572&height=661)
+![Sample 3](https://media.discordapp.net/attachments/1257127902974316565/1284345697625313311/pic-3.png?ex=66e64ba4&is=66e4fa24&hm=1169ec2ab07d7e68c70ff1708ad15de9f6d8488c46d865550b915cb7c8db0b35&=&format=webp&quality=lossless&width=609&height=661)
+![Sample 4](https://media.discordapp.net/attachments/1257127902974316565/1284345699147714594/pic-6.png?ex=66e64ba4&is=66e4fa24&hm=41c35618535a17bebc488620eea9338781e1e4b988e08fe311b20c8ef0a28704&=&format=webp&quality=lossless&width=609&height=661)
+![Sample 5](https://media.discordapp.net/attachments/1257127902974316565/1284345698581614724/pic-5.png?ex=66e64ba4&is=66e4fa24&hm=8e29560673fbcf283b33033f553d1a04693527f5d93f3b3914970832da65e0c6&=&format=webp&quality=lossless&width=603&height=661)
+![Sample 6](https://media.discordapp.net/attachments/1257127902974316565/1284345698090745938/pic-4.png?ex=66e64ba4&is=66e4fa24&hm=eb3c3b47326b4884ba1c96f8132bdb90a21932cce1110b218e0d7cb289ed62fc&=&format=webp&quality=lossless&width=610&height=661)
+![Sample 7](https://cdn.discordapp.com/attachments/1257127902974316565/1282289833535868990/nvim-2.png?ex=66e61138&is=66e4bfb8&hm=e06a9d8ff23fb21ca91e935a75e437b75dbaa3c44d65c4f2fec2feb6ef272d8f&)
+![Sample 8](https://media.discordapp.net/attachments/1257127902974316565/1282289833955561543/nvim-1.png?ex=66e61138&is=66e4bfb8&hm=ee35c92035dc992d53dabdf70693c8cc8f8717da3befe2d7a60b9993dd26a59d&=&format=webp&quality=lossless&width=1174&height=661)
 
 ## Contributing
 
