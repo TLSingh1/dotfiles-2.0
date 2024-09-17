@@ -35,7 +35,7 @@ module_manager.use({
 				enabled = false,
 			},
 			exclude = {
-				filetypes = { "dashboard", "norg" },
+				filetypes = { "dashboard", "norg", "markdown" },
 			},
 		})
 	end,
