@@ -117,6 +117,7 @@
     okta-aws-cli
     broot
     awscli2
+    steam
   ];
 
   home.file = {

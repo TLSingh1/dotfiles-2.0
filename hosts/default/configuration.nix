@@ -161,6 +161,7 @@
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -287,6 +288,7 @@
   # NOTE: NVIDIA
   services.xserver.videoDrivers = ["nvidia"];
   hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;

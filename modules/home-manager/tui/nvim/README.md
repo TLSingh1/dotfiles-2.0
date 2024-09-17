@@ -25,15 +25,15 @@ integrated solution for Neovim configuration management in NixOS.
 
 1. **NixOS Integration**: While popular plugin managers like Lazy.nvim offer
    powerful features, they can be complex to integrate seamlessly with NixOS and
-   home-manager. Our Module Manager is designed from the ground up to work
-   harmoniously with the NixOS ecosystem.
+   home-manager. The Module Manager is designed from the ground up to work
+   effortlessly with the NixOS ecosystem.
 
-2. **Simplicity**: We found existing solutions to be overly complex for our
-   needs. Module Manager provides a streamlined approach to plugin management
-   without sacrificing functionality.
+2. **Simplicity**: I found existing solutions to be overly complex for my needs.
+   Module Manager provides a streamlined approach to plugin management without
+   sacrificing functionality.
 
 3. **Nix-Centric Approach**: Instead of relying on a plugin manager to handle
-   installations, we leverage Nix packages to install plugins. Module Manager
+   installations, I leverage Nix packages to install plugins. Module Manager
    focuses solely on configuring and loading these pre-installed plugins.
 
 4. **Reduced Bloat**: By offloading plugin installation to Nix and focusing on
@@ -97,6 +97,10 @@ require("diffview").setup({})
   configuration
 - **NixOS Integration**: Designed to work flawlessly with NixOS and home-manager
 
+> [!WARNING]
+>
+> would love feedback/tips/help
+
 ## Installation
 
 1. Ensure your NixOS configuration includes the necessary Neovim plugins. In
@@ -121,12 +125,6 @@ programs.neovim = {
 ```lua
 require("core.module_manager").setup()
 ```
-
-> [!WARNING]
->
-> would love feedback/tips/help
->
-> Also AI made this readme
 
 ## Usage
 
