@@ -6,3 +6,74 @@ require("core.autocmds")
 -- Load and setup modules
 local ModuleManager = require("core.module_manager")
 ModuleManager.setup()
+
+-- local M = {}
+--
+-- -- Function to detect headings and their levels
+-- local function get_heading_level(line)
+-- 	local level = line:match("^(#+)%s")
+-- 	return level and #level or 0
+-- end
+--
+-- -- Function to calculate indentation based on heading levels
+-- local function calculate_indentation(bufnr)
+-- 	local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+-- 	local indentation = {}
+-- 	local current_level = 0
+--
+-- 	for i, line in ipairs(lines) do
+-- 		local level = get_heading_level(line)
+-- 		if level > 0 then
+-- 			current_level = level
+-- 		end
+-- 		indentation[i] = current_level
+-- 	end
+--
+-- 	return indentation
+-- end
+--
+-- -- Function to apply indentation using extmarks
+-- local function apply_indentation(bufnr)
+-- 	local indentation = calculate_indentation(bufnr)
+-- 	local ns_id = vim.api.nvim_create_namespace("indented_headings")
+--
+-- 	vim.api.nvim_buf_clear_namespace(bufnr, ns_id, 0, -1)
+--
+-- 	for i, level in ipairs(indentation) do
+-- 		if level > 0 then
+-- 			local indent = string.rep("  ", level)
+-- 			vim.api.nvim_buf_set_extmark(bufnr, ns_id, i - 1, 0, {
+-- 				virt_text = { { indent, "Conceal" } },
+-- 				virt_text_pos = "overlay",
+-- 				hl_mode = "combine",
+-- 			})
+-- 		end
+-- 	end
+-- end
+--
+-- -- Function to clear indentation
+-- local function clear_indentation(bufnr)
+-- 	local ns_id = vim.api.nvim_create_namespace("indented_headings")
+-- 	vim.api.nvim_buf_clear_namespace(bufnr, ns_id, 0, -1)
+-- end
+--
+-- -- Set up autocommands
+-- function M.setup()
+-- 	vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+-- 		pattern = "*.md",
+-- 		callback = function(args)
+-- 			if vim.fn.mode() == "n" then
+-- 				apply_indentation(args.buf)
+-- 			end
+-- 		end,
+-- 	})
+--
+-- 	vim.api.nvim_create_autocmd({ "InsertEnter", "BufLeave" }, {
+-- 		pattern = "*.md",
+-- 		callback = function(args)
+-- 			clear_indentation(args.buf)
+-- 		end,
+-- 	})
+-- end
+--
+-- M.setup()

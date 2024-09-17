@@ -120,23 +120,35 @@
     };
   };
 
-  # networking.extraHosts = "${kubeMasterIP} ${kubeMasterHostname}";
-  # services.kubernetes = {
-  #   roles = ["master" "node"];
-  #   masterAddress = kubeMasterHostname;
-  #   apiserverAddress = "https://${kubeMasterHostname}:${toString kubeMasterAPIServerPort}";
-  #   easyCerts = true;
-  #   apiserver = {
-  #     securePort = kubeMasterAPIServerPort;
-  #     advertiseAddress = kubeMasterIP;
-  #   };
-  #
-  #   # use coredns
-  #   addons.dns.enable = true;
-  #
-  #   # needed if you use swap
-  #   kubelet.extraOpts = "--fail-swap-on=false";
-  # };
+  networking.extraHosts = "127.0.0.1 localhost";
+  services.kubernetes = {
+    roles = ["master" "node"];
+    masterAddress = "127.0.0.1";
+    apiserverAddress = "https://127.0.0.1:6443";
+    easyCerts = true;
+
+    apiserver = {
+      enable = true;
+      extraOpts = "--bind-address=127.0.0.1 --advertise-address=127.0.0.1";
+    };
+    controllerManager.enable = true;
+    scheduler.enable = true;
+    proxy.enable = true;
+    kubelet = {
+      enable = true;
+      extraOpts = "--fail-swap-on=false";
+    };
+    addons.dns.enable = true;
+  };
+  systemd.services.kube-apiserver.enable = true;
+  systemd.services.kube-controller-manager.enable = true;
+  systemd.services.kube-scheduler.enable = true;
+  systemd.services.kube-proxy.enable = true;
+  networking.firewall.allowedTCPPorts = [6443];
+  system.activationScripts.kubernetes-certs = ''
+    chmod 644 /var/lib/kubernetes/secrets/*.pem
+    chown root:root /var/lib/kubernetes/secrets/*.pem
+  '';
 
   services.displayManager.sddm = {
     enable = true;
@@ -239,6 +251,11 @@
     neon-town-sddm
     sddm-sugar-dark
     libsForQt5.qt5.qtgraphicaleffects
+    kubernetes
+    # kubernetes-helm    FIX: uncomment this when ready to install kube
+    kubectl
+    kompose
+    # minikube           FIX: uncomment this when ready to install kube
     usbutils
     i2c-tools
     python3
@@ -249,9 +266,6 @@
     # msi-perkeyrgb
     # sddm-astronaut
     # (pkgs.callPackage ../../packages/neon-town-sddm.nix {})
-    dive
-    podman-tui
-    podman-compose
   ];
 
   # NOTE: RGB control
@@ -300,23 +314,14 @@
 
   # FIX: set back to true when ready to install docker
   # Docker
-  # virtualisation.docker = {
-  #   enable = false;
-  #   rootless = {
-  #     enable = true;
-  #     setSocketVariable = true;
-  #   };
-  # };
-  virtualisation.containers.enable = true;
-  virtualisation = {
-    podman = {
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
       enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
+      setSocketVariable = true;
     };
   };
-
-  hardware.nvidia-container-toolkit.enable = false; # FIX: set back to true when ready to install docker
+  hardware.nvidia-container-toolkit.enable = true; # FIX: set back to true when ready to install docker
 
   # virtualisation.containers.cdi.dynamic.nvidia.enable = true;
 

@@ -116,6 +116,7 @@
     terraform-ls
     okta-aws-cli
     broot
+    awscli2
   ];
 
   home.file = {
