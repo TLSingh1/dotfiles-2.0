@@ -16,10 +16,17 @@
     #   "HDMI-A-1, 1920x1080, 1920x0, 1"
     # ];
 
+    # NOTE: Also see workspacerules.nix
+    # MINNESOTA SETUP
+    # monitor = [
+    #   "DP-5, 1920x1080, 0x0, 1"
+    #   "HDMI-A-1, 1920x1080, 1920x0, 1"
+    #   "eDP-1, 1920x1200, 3840x0, 1"
+    # ];
+    # WHITE ROCK SETUP
     monitor = [
-      "DP-5, 1920x1080, 0x0, 1"
+      "eDP-1, 1920x1200, 0x0, 1"
       "HDMI-A-1, 1920x1080, 1920x0, 1"
-      "eDP-1, 1920x1200, 3840x0, 1"
     ];
   };
 }

@@ -118,6 +118,7 @@
     broot
     awscli2
     steam
+    zed-editor
   ];
 
   home.file = {

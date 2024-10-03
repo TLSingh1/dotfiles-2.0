@@ -31,7 +31,11 @@
       url_color = "#4fd6be";
       cursor = "#c8d3f5";
       cursor_text_color = "#222436";
-      modify_font = "underline_position 200%";
+      # modify_font = "underline_position 200%";
+      modify_font = "cell_height 130%";
+      # modify_font = ["cell_height 150%"];
+      # modify_font = "cell_height 200%";
+      # modify_font = "underline_position 200%";
       # modify_font = "underline_position 200% underline_thickness 200%";
       # modify_font = [
       #   "underline_thickness 200%"

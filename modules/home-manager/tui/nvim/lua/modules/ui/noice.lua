@@ -98,6 +98,14 @@ module_manager.use({
 					filter = { find = "Failed to attach to nil_ls" },
 					opts = { skip = true },
 				},
+				{
+					filter = { find = "attempt to call method 'range'" },
+					opts = { skip = true },
+				},
+				{
+					filter = { find = "Error detected while processing InsertLeave Autocommands for" },
+					opts = { skip = true },
+				},
 			},
 		})
 	end,

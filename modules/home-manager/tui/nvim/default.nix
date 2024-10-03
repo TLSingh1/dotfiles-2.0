@@ -88,10 +88,10 @@
       render-markdown
     ];
 
-    # extraLuaConfig = builtins.readFile ./lua/core/init.lua;
-    extraLuaConfig = ''
-      ${builtins.readFile ./lua/core/init.lua}
-    '';
+    extraLuaConfig = builtins.readFile ./lua/core/init.lua;
+    # extraLuaConfig = ''
+    #   ${builtins.readFile ./lua/core/init.lua}
+    # '';
   };
 
   xdg.configFile."nvim/lua" = {

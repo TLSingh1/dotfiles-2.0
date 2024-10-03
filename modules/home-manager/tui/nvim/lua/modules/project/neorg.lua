@@ -39,14 +39,14 @@ module_manager.use({
 				["core.dirman"] = {
 					config = {
 						workspaces = {
-							brain = "~/Brain",
-							fleeting = "~/Brain/100-Fleeting",
-							literature = "~/Brain/200-Literature",
-							professional = "~/Brain/300-Professional",
-							personal = "~/Brain/400-Personal",
-							princeton = "~/Brain/500-Princeton",
-							science = "~/Brain/600-Science",
-							software = "~/Brain/700-Software",
+							brain = "~/Neo-Brain",
+							fleeting = "~/Neo-Brain/100-Fleeting",
+							literature = "~/Neo-Brain/200-Literature",
+							professional = "~/Neo-Brain/300-Professional",
+							personal = "~/Neo-Brain/400-Personal",
+							princeton = "~/Neo-Brain/500-Princeton",
+							science = "~/Neo-Brain/600-Science",
+							software = "~/Neo-Brain/700-Software",
 						},
 						index = "index.norg",
 					},

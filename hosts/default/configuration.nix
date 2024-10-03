@@ -319,8 +319,8 @@
   virtualisation.docker = {
     enable = true;
     rootless = {
-      enable = true;
-      setSocketVariable = true;
+      enable = false;
+      setSocketVariable = false;
     };
   };
   hardware.nvidia-container-toolkit.enable = true; # FIX: set back to true when ready to install docker
