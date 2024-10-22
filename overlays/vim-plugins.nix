@@ -70,5 +70,9 @@
         name = "codecompanion-nvim";
         src = inputs.codecompanion-nvim;
       };
+      neominimap-nvim = prev.vimUtils.buildVimPlugin {
+        name = "neominimap-nvim";
+        src = inputs.neominimap-nvim;
+      };
     };
 }

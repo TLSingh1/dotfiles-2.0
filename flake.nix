@@ -89,6 +89,10 @@
       url = "github:olimorris/codecompanion.nvim";
       flake = false;
     };
+    neominimap-nvim = {
+      url = "github:Isrothy/neominimap.nvim";
+      flake = false;
+    };
   };
 
   outputs = {

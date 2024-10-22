@@ -119,6 +119,7 @@
     awscli2
     steam
     zed-editor
+    pyright
   ];
 
   home.file = {

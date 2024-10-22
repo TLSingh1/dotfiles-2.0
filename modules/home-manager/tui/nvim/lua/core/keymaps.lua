@@ -8,7 +8,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 ---------------- General -----------------------
-keymap("i", "jk", "<ESC>", opts)
+keymap("i", "jk", "<ESC><right>", opts)
 keymap("n", "<leader>w", ":w <CR>", opts)
 keymap("n", "<leader>q", ":bdelete <cr>", opts)
 keymap("n", "<leader>Q", ":q <CR>", opts)

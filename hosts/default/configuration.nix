@@ -1,5 +1,3 @@
-# NOTE: I am uninstalling kubernetes for now
-# FIX: there are fixes where I need to uncomment in future
 {
   pkgs,
   inputs,
@@ -81,7 +79,7 @@
     timeServers = options.networking.timeServers.default;
   };
 
-  services.automatic-timezoned.enable = true;
+  # services.automatic-timezoned.enable = true;
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -127,10 +125,10 @@
     apiserverAddress = "https://127.0.0.1:6443";
     easyCerts = true;
 
-    apiserver = {
-      enable = true;
-      extraOpts = "--bind-address=127.0.0.1 --advertise-address=127.0.0.1";
-    };
+    # apiserver = {
+    #   enable = true;
+    #   extraOpts = "--bind-address=127.0.0.1 --advertise-address=127.0.0.1";
+    # };
     controllerManager.enable = true;
     scheduler.enable = true;
     proxy.enable = true;
@@ -140,7 +138,8 @@
     };
     addons.dns.enable = true;
   };
-  systemd.services.kube-apiserver.enable = true;
+  # NOTE: uncomment this when ready to use kube
+  # systemd.services.kube-apiserver.enable = true;
   systemd.services.kube-controller-manager.enable = true;
   systemd.services.kube-scheduler.enable = true;
   systemd.services.kube-proxy.enable = true;
@@ -150,10 +149,11 @@
     chown root:root /var/lib/kubernetes/secrets/*.pem
   '';
 
+  security.pam.services.sddm.enableGnomeKeyring = true;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "sugar-dark";
+    # theme = "sugar-dark";
   };
 
   # Enable CUPS to print documents.
@@ -227,7 +227,7 @@
     nerdfonts
     luajit
     polkit-kde-agent
-    cliphist
+    # cliphist
     libgcc
     libgccjit
     gcc_multi

@@ -14,6 +14,9 @@ end
 
 module_manager.use({
 	name = "codecompanion.nvim",
+	keys = {
+		{ "n", "<leader>a", "<cmd>CodeCompanionChat<CR>" },
+	},
 	config = function()
 		require("codecompanion").setup({
 			adapters = {

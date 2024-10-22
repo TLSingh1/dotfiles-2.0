@@ -17,6 +17,7 @@
       pp = "pnpm";
       bb = "bun";
       tf = "terraform";
+      zed = "env -u WAYLAND_DISPLAY zeditor";
     };
     functions = {
       yy = ''

@@ -86,6 +86,7 @@
       helpview-nvim
       # no-neck-pain-nvim
       render-markdown
+      neominimap-nvim
     ];
 
     extraLuaConfig = builtins.readFile ./lua/core/init.lua;
